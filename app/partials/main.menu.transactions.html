@@ -1,11 +1,11 @@
 
 
 <fa-modifier fa-align="[0,1.085]" fa-translate="getTranslating">
-  <fa-scroll-view fa-pipe-from="eventHandler">
-		<fa-modifier ng-repeat="trans in transactions" fa-size="[undefined,100]">
 	  	<fa-render-node fa-node="transaction" ng-controller="TransactionCtrl">
+	  	<!-- 	<fa-scroll-view fa-pipe-from="eventHandler">
+		<fa-modifier ng-repeat="trans in transactions" fa-size="[undefined,100]"> -->
           <!-- <fa-surface fa-background-color="'#ffffff'" fa-pipe-to="eventHandler" fa-pipe-from="eventHandler" fa-size="[undefined, 100]">Surface {{$index + 1}}</fa-surface> -->
+<!-- 		</fa-modifier>
+  </fa-scroll-view> -->
       </fa-render-node>
-		</fa-modifier>
-  </fa-scroll-view>
 </fa-modifier>

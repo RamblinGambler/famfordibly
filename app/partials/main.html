@@ -1,6 +1,21 @@
+<fa-modifier fa-align='[0,.085]'>
+  <fa-scroll-view fa-pipe-from="eventHandler">
+	  <fa-modifier fa-size="[undefined,260]">
+      <fa-surface fa-index="0" fa-pipe-to="eventHandler" fa-background-color="'#ffffff'">Surface 1</fa-surface>
+	  </fa-modifier>
+	  <fa-modifier fa-size="[undefined,210]">
+      <fa-surface fa-index="1" fa-pipe-to="eventHandler" fa-background-color="'#ffffff'">Surface 2</fa-surface>
+	  </fa-modifier>
+	  <fa-modifier fa-size="[undefined,210]">
+      <fa-surface fa-index="2" fa-pipe-to="eventHandler" fa-background-color="'#ffffff'">Surface 3</fa-surface>
+	  </fa-modifier>
+	</fa-scroll-view>
+</fa-modifier>
 
-<fa-modifier fa-size="[undefined, 50]" fa-translate="getTranslatinger">
-  <fa-surface fa-background-color="'#BADA55'"></fa-surface>
+<fa-modifier fa-size="[undefined, 50]" fa-translate="getTranslatinger" fa-align="[0,-.004]">
+	<fa-modifier fa-translate="[0,0,0]">
+	  <fa-surface fa-background-color="'#BADA55'"></fa-surface>
+	</fa-modifier>
   <fa-grid-layout fa-options='{dimensions: [3,1]}'>
 	  <fa-modifier fa-origin="[.2, .5]" fa-scale="[1.2, 1.2]">
 	    <fa-surface fa-size="[true, true]" fa-background-color="'#ffffff'" fa-color="'#BADA55'" fa-tap="settings()">
@@ -20,18 +35,5 @@
   </fa-grid-layout>
 </fa-modifier>
 
-<fa-modifier fa-align='[0,.085]'>
-  <fa-scroll-view fa-pipe-from="eventHandler">
-	  <fa-modifier fa-size="[undefined,260]">
-      <fa-surface fa-index="0" fa-pipe-to="eventHandler" fa-background-color="'#ffffff'">Surface 1</fa-surface>
-	  </fa-modifier>
-	  <fa-modifier fa-size="[undefined,210]">
-      <fa-surface fa-index="1" fa-pipe-to="eventHandler" fa-background-color="'#ffffff'">Surface 2</fa-surface>
-	  </fa-modifier>
-	  <fa-modifier fa-size="[undefined,210]">
-      <fa-surface fa-index="2" fa-pipe-to="eventHandler" fa-background-color="'#ffffff'">Surface 3</fa-surface>
-	  </fa-modifier>
-	</fa-scroll-view>
-</fa-modifier>
 
 <ui-view>
