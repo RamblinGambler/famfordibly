@@ -25,9 +25,9 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-    <div ui-view></div>
-
+    <fa-app class="full-screen">
+        <ui-view>
+    </fa-app>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -58,6 +58,13 @@
     <!-- build:js({app,.tmp}) scripts/main.js -->
     <script src="scripts/famousAngularStarter.js"></script>
     <script src="scripts/main/main-ctrl.js"></script>
+    <script src="scripts/main/menu-ctrl.js"></script>
+    <script src="scripts/main/institutions-ctrl.js"></script>
+    <script src="scripts/main/transactions-ctrl.js"></script>
+    <script src="scripts/main/transaction-ctrl.js"></script>
+    <script src="scripts/main/accounts-ctrl.js"></script>
+    <script src="scripts/main/finances-ctrl.js"></script>
+    <script src="scripts/main/settings-ctrl.js"></script>
     <!-- inject:partials -->
     <!-- endinject -->
     <!-- endbuild -->

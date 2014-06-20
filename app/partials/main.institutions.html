@@ -1,0 +1,13 @@
+<fa-modifier fa-align='[1,0]'  fa-translate="getTranslate" fa-size="[undefined,100]">
+  <fa-view>
+	<fa-scroll-view fa-pipe-from="eventHandler" fa-size="[undefined,100]">
+  <fa-view ng-repeat="institution in institutions">
+	  <fa-modifier fa-size="[undefined,50]">
+      <fa-surface fa-pipe-to="eventHandler" fa-background-color="'#ffffff'">
+      {{institution.name}}
+    </fa-surface>
+	  </fa-modifier>
+	</fa-view>
+</fa-scroll-view>
+	</fa-view>
+</fa-modifier>
