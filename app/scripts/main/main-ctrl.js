@@ -3,11 +3,11 @@
 Affordably.controller('MainCtrl', function ($scope, $famous, $state) {
 
     var EventHandler = $famous['famous/core/EventHandler'];
-    var Transitionable = $famous['famous/transitions/Transitionable'];
+    // var Transitionable = $famous['famous/transitions/Transitionable'];
 
     $scope.eventHandler = new EventHandler();
     //set things up
-    var translateTrans = new Transitionable([0,0,0]);
+    // var translateTrans = new Transitionable([0,0,0]);
 
     // $scope.sizeModifier = new Modifier();
 		// $scope.sizeModifier = function(){

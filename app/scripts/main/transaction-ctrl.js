@@ -42,7 +42,7 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 			for (var i = 0; i < 15; i++) {
 
 			  var container = new ContainerSurface({
-			    size: [undefined, 50],
+			    size: [undefined, 75],
 			    properties: {
 			      overflow: 'hidden'
 			    }
@@ -57,26 +57,39 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 
 			  draggable.on('end', function(e) {
 			    if (e.position[0] == 160) {
+    	    	var that = this
+    	    	setTimeout(function() {
+    		      that.setPosition([0,0,0], {
+    		        curve: Easing.outBounce,
+    		        duration: 300
+    		      });
+    	    	}, 300);
 			      console.log('yes surface', this.dragId);
 			    }
 			    else if (e.position[0] == -160) {
+			    	var that = this
+			    	setTimeout(function() {
+				      that.setPosition([0,0,0], {
+				        curve: Easing.outBounce,
+				        duration: 300
+				      });
+			    	}, 300);
 			      console.log('no surface', this.dragId);
-			    }
-			    else {
-			      this.setPosition([0,0,0], {
-			        curve: Easing.outBounce,
-			        duration: 300
-			      });
+			    } else {
+			    	this.setPosition([0,0,0], {
+			    	  curve: Easing.outBounce,
+			    	  duration: 300
+			    	});
 			    }
 			  });
 
 			  var item = new Surface({
 			    content: "Item: " + (i + 1),
-			    size: [undefined, 50],
+			    size: [undefined, 75],
 			    properties: {
 			      backgroundColor: "lightgrey",
 			      borderBottom: "1px solid grey",
-			      lineHeight: "50px",
+			      lineHeight: "75px",
 			      textAlign: "center",
 			      zIndex:4
 			    }
@@ -88,11 +101,11 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 			    opacity:0
 			  });
 			  var backgroundYes = new Surface({
-			    content: "Yes",
-			    size: [160, 50],
+			    content: "Fixed",
+			    size: [160, 75],
 			    properties: {
 			      backgroundColor: "rgba(0,255,0,0.2)",
-			      lineHeight: "50px",
+			      lineHeight: "75px",
 			      textAlign: "center"
 			    }
 			  });
@@ -102,11 +115,11 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 			    opacity: 0
 			  });
 			  var backgroundNo = new Surface({
-			    content: "No",
-			    size: [160, 50],
+			    content: "Discretionary",
+			    size: [160, 75],
 			    properties: {
 			      backgroundColor: "rgba(255,0,0,0.2)",
-			      lineHeight: "50px",
+			      lineHeight: "75px",
 			      textAlign: "center"
 			    }
 			  });

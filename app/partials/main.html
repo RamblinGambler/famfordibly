@@ -1,4 +1,4 @@
-<fa-modifier fa-align='[0,.085]'>
+<fa-modifier fa-align='[0,.085]' fa-translate="[0,0,0,]">
   <fa-scroll-view fa-pipe-from="eventHandler">
 	  <fa-modifier fa-size="[undefined,260]">
       <fa-surface fa-index="0" fa-pipe-to="eventHandler" fa-background-color="'#ffffff'">Surface 1</fa-surface>
@@ -12,10 +12,8 @@
 	</fa-scroll-view>
 </fa-modifier>
 
-<fa-modifier fa-size="[undefined, 50]" fa-translate="getTranslatinger" fa-align="[0,-.004]">
-	<fa-modifier fa-translate="[0,0,0]">
+<fa-modifier fa-size="[undefined, 50]" fa-translate="[0,0,0]" fa-align="[0,-.004]">
 	  <fa-surface fa-background-color="'#BADA55'"></fa-surface>
-	</fa-modifier>
   <fa-grid-layout fa-options='{dimensions: [3,1]}'>
 	  <fa-modifier fa-origin="[.2, .5]" fa-scale="[1.2, 1.2]">
 	    <fa-surface fa-size="[true, true]" fa-background-color="'#ffffff'" fa-color="'#BADA55'" fa-tap="settings()">
@@ -23,14 +21,14 @@
 	    </fa-surface>
 	  </fa-modifier>
 	  <fa-modifier fa-origin="[.5, .5]" fa-scale="[1.5, 1.5]">
-	    <fa-surface fa-size="[true, true]" fa-background-color="'#ffffff'" fa-color="'#BADA55'" fa-tap="settings()">
+	    <fa-surface fa-size="[true, true]" fa-background-color="'#ffffff'" fa-color="'#BADA55'">
 	      Affordably
 	    </fa-surface>
 	  </fa-modifier>
 	  <fa-modifier fa-origin="[.8, .5]" fa-scale="[1.2, 1.2]">
-	    <fa-surface fa-size="[true, true]" fa-background-color="'#ffffff'" fa-color="'#BADA55'" fa-tap="institutions()">
-	    <a ui-sref=".institutions">+</a>
-	    </fa-surface>
+	  <fa-surface fa-size="[true, true]" fa-background-color="'#ffffff'" fa-color="'#BADA55'" fa-tap="settings()">
+	  <a ui-sref=".institutions">=</a>
+	  </fa-surface>
 	  </fa-modifier>
   </fa-grid-layout>
 </fa-modifier>
