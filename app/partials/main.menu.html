@@ -1,8 +1,11 @@
-  <fa-modifier fa-align='[-1,0]' fa-translate="getTranslated">
-  	<fa-sequential-layout>
+	<fa-modifier fa-size="[33, undefined]" fa-align="[.9,0]"	fa-background-color="'#BADA55'" fa-translate="getTranslater">
+		 <fa-surface fa-tap="main($event)"></fa-surface>
+	</fa-modifier>
+	<fa-modifier fa-align='[-1,0]' fa-translate="getTranslated">
+ 	<fa-sequential-layout>
 	  	<fa-view>
 		  <fa-modifier fa-size="[undefined,62]">
-        <fa-surface fa-index="" fa-background-color="'#ffffff'">
+        <fa-surface fa-background-color="'#ffffff'">
 	      </fa-surface>
       </fa-modifier>
     </fa-view>
@@ -69,8 +72,7 @@
     </fa-view>
     <fa-view>
 		  <fa-modifier fa-size="[290,50]" fa-align="[.09,0]">
-        <fa-surface fa-background-color="'#ffffff'" fa-tap="main()">
-	        <!-- <a ui-sref="main" > -->Daily Cash<!-- </a> -->
+        <fa-surface fa-background-color="'#ffffff'" fa-tap="main()">Daily Cash
 	      </fa-surface>
       </fa-modifier>
     </fa-view>

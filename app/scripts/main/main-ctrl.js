@@ -15,6 +15,8 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $state) {
 	    // return [0.5 * size[0],0.5 * size[1]];
 		// });
 
+
+
 		// if($state.is('main')) {
 		// 	$scope.getTranslate = [0,0,1];
 		// } else {

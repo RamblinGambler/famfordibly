@@ -61,7 +61,7 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
     	    	setTimeout(function() {
     		      that.setPosition([0,0,0], {
     		        curve: Easing.outBounce,
-    		        duration: 300
+    		        duration: 400
     		      });
     	    	}, 300);
 			      console.log('yes surface', this.dragId);
@@ -71,7 +71,7 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 			    	setTimeout(function() {
 				      that.setPosition([0,0,0], {
 				        curve: Easing.outBounce,
-				        duration: 300
+				        duration: 400
 				      });
 			    	}, 300);
 			      console.log('no surface', this.dragId);
