@@ -16,13 +16,61 @@ body {
     right: 0;
 }
 
-* {
-	border: 1px solid black;
-}
-
 
 .transaction {
     /*height:80px;*/
     /*background-color: #ffffff;*/
 
+}
+
+/* Daily Surface */
+.dailyCash{
+    margin-left: 30%;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-size: 2em;
+}
+
+.dailyCashText{
+    margin-left:25%;
+    padding-top:0px;
+    margin-top:0px;
+}
+
+.dailyCenter{
+    margin-left:15%;
+    margin-top:25%;
+}
+
+/* Overview Surface */
+.overviewSurface{
+    background-color: #ffffff;
+    border-top: 0.1em solid #888888;
+}
+
+.overviewContent{
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 20%;
+}
+
+.overviewLine{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-top: 12px;
+}
+
+.overviewLabel{
+    color:#666666;
+}
+
+.overviewText{
+    float:right;
+}
+
+
+/* Graph Surface */
+.graphSurface{
+    background-color:lightblue;
 }

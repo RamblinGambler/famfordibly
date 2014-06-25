@@ -15,7 +15,7 @@ Affordably.controller('InstitutionsCtrl', function ($scope, $famous, $state) {
   translateTrans.set([-287,0,0  ], {duration: 500, curve: 'easeOut'});
   $scope.eventHandler = new EventHandler();
 
-  $scope.institutions = [{name: '1'}, {name: '2'}, {name: '3'}, {name: '4'}];
+  $scope.institutions = [{name: 'Wells Fargo'}, {name: 'Chase'}, {name: 'Bank of America'}, {name: 'Citi Bank'}, {name: 'Charles Schwab'}, {name: 'American Express'}, {name: 'Ally Financial'}, {name: 'HSBC'}, {name: 'Capital One'}, {name: 'BBVA'}, {name: 'First Republic'}];
 
   $scope.back = function () {
   translateTranny.set([-50,0,0]);
