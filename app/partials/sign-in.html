@@ -1,0 +1,24 @@
+<fa-modifier fa-size="[undefined, undefined]">
+  <fa-surface fa-background-color="'yellow'"></fa-surface>
+</fa-modifier>
+<fa-modifier fa-size="[undefined, 300]" fa-origin="[0,.25]">
+  <fa-surface>
+		  <div class="sign">
+				<h2>Affordably</h2>
+				<h4 class="title">The Fitness Coach for Your Finances</h4>
+				<div class="email">
+					<input type="text" placeholder="Email" data-ng-model="email"/>
+				</div>
+				<div class="password">
+					<input type="text" placeholder="Password" data-ng-model="password"/>
+				</div>
+
+					<button type="submit" ng-click="submit(email, password)">Log In</button>
+
+					<h1>{{email}} | {{password}}</h1>
+
+				<p>Don't have an account?</p>
+				<h4><a ui-sref="signUp">Sign Up</a></h4>
+		  </div>
+	</fa-surface>
+</fa-modifier>

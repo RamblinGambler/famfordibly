@@ -21,8 +21,18 @@ body {
 }
 
 
-.transaction {
-    /*height:80px;*/
-    /*background-color: #ffffff;*/
+/*SIGN IN*/
+.sign {
+    text-align: center;
+}
 
+.title {
+    margin-bottom: 40%;
+}
+
+.email {
+    margin:10% 0;
+}
+.password {
+    margin:5% 0;
 }
