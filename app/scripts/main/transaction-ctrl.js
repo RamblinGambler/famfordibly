@@ -12,13 +12,13 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 	var Easing = require('famous/transitions/Easing');
 
 	$scope.transaction = new View();
-  $scope.eventHandler = new EventHandler();
+    $scope.eventHandler = new EventHandler();
 	var translateT = new Transitionable([0,0,0]);
 	$scope.getTranslating = translateT.get.bind(translateT);
-	  translateT.set([0,-567,0], {duration: 500, curve: 'easeOut'});
+	translateT.set([0,-567,0], {duration: 500, curve: 'easeOut'});
 	var translateTra = new Transitionable([0,0,0]);
 	$scope.getTranslatinger = translateTra.get.bind(translateTra);
-	    translateTra.set([0,300,0], {duration: 500, curve: 'easeOut'});
+	translateTra.set([0,300,0], {duration: 500, curve: 'easeOut'});
 
 	var Draggable = require(['famous/modifiers/Draggable'], function(Draggable) {
 		var StateModifier = require(['famous/modifiers/StateModifier'], function(StateModifier) {

@@ -6,7 +6,6 @@ Affordably.controller('SettingsCtrl', function ($scope, $famous, $state) {
 
   var translateT = new Transitionable([0,0,0]);
 
-
   $scope.back = function (deferred) {
       $scope.getTranslating = translateT.get.bind(translateT);
       $scope.$emit('back');

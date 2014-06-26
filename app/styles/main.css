@@ -20,7 +20,18 @@ body {
 .transaction {
     /*height:80px;*/
     /*background-color: #ffffff;*/
+}
 
+.mainContainer{
+    background-color: #ffffff;
+}
+
+.faded{
+    background-color: #999999 !important;
+}
+
+.topButton{
+    text-decoration:none;
 }
 
 /* Daily Surface */
