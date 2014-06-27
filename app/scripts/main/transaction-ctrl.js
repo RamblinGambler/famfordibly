@@ -21,8 +21,8 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 	$scope.getTranslatinger = translateTra.get.bind(translateTra);
 	translateTra.set([0,300,0], {duration: 500, curve: 'easeOut'});
 
-	var Draggable = require(['famous/modifiers/Draggable'], function(Draggable) {
-		var StateModifier = require(['famous/modifiers/StateModifier'], function(StateModifier) {
+	require(['famous/modifiers/Draggable'], function(Draggable) {
+		require(['famous/modifiers/StateModifier'], function(StateModifier) {
 
 
 			var scrollview = new Scrollview();

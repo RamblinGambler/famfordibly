@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9e491af-9d46-4694-9a95-54f12265b3b5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/services/authInterceptor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/services/fuse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/main/institution-ctrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/main/institution-select-ctrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/partials/institution-select.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/main/sign-in-ctrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/partials/sign-in.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/main/sign-up-ctrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/partials/sign-up.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/famousAngularStarter.js" afterPath="$PROJECT_DIR$/app/scripts/famousAngularStarter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.css" afterPath="$PROJECT_DIR$/app/styles/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/main.menu.finances.html" afterPath="$PROJECT_DIR$/app/partials/main.menu.finances.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/main.menu.settings.html" afterPath="$PROJECT_DIR$/app/partials/main.menu.settings.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/main.menu.transactions.html" afterPath="$PROJECT_DIR$/app/partials/main.menu.transactions.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/main/transaction-ctrl.js" afterPath="$PROJECT_DIR$/app/scripts/main/transaction-ctrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -39,11 +48,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.menu.settings.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.menu.settings.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/partials/main.menu.settings.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6842975" vertical-offset="0" max-vertical-offset="630">
+            <state vertical-scroll-proportion="-15.333333" vertical-offset="0" max-vertical-offset="630">
               <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/styles/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.49612403" vertical-offset="1192" max-vertical-offset="3006">
+              <caret line="84" column="22" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -89,8 +108,8 @@
         <option value="$PROJECT_DIR$/app/partials/main.menu.transactions.html" />
         <option value="$PROJECT_DIR$/app/scripts/main/transaction-ctrl.js" />
         <option value="$PROJECT_DIR$/app/partials/main.menu.finances.html" />
-        <option value="$PROJECT_DIR$/app/styles/main.css" />
         <option value="$PROJECT_DIR$/app/partials/main.menu.settings.html" />
+        <option value="$PROJECT_DIR$/app/styles/main.css" />
       </list>
     </option>
   </component>
@@ -171,7 +190,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
+              <option name="myItemId" value="styles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -527,14 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6139535" vertical-offset="0" max-vertical-offset="2178">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/partials/main.menu.finances.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="576">
@@ -553,8 +564,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/partials/main.menu.settings.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6842975" vertical-offset="0" max-vertical-offset="630">
+        <state vertical-scroll-proportion="-15.333333" vertical-offset="0" max-vertical-offset="630">
           <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49612403" vertical-offset="1192" max-vertical-offset="3006">
+          <caret line="84" column="22" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
           <folding />
         </state>
       </provider>

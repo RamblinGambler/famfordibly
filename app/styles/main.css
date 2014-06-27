@@ -24,7 +24,6 @@ body {
     color: #999;
 }
 
-
 .transaction {
     /*height:80px;*/
     /*background-color: #ffffff;*/
@@ -38,9 +37,55 @@ body {
     background-color: #999999 !important;
 }
 
-.topButton{
-    text-decoration:none;
+.topButton {
+    text-decoration: none;
 }
+
+/*SIGN IN*/
+.sign {
+    text-align: center;
+    /*margin-top: 15%;*/
+}
+/*
+.title {
+    margin-bottom: 20%;
+}
+
+
+.email {
+    margin:10% 0;
+>>>>>>> 50aa2fe4d5781f7f9e60c87eac308190ab55374e
+}
+.password {
+    margin:5% 0;
+}*/
+
+input[type=text] {
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
+    width: 70%;
+    font-size: 1em;
+}
+
+button[type=submit] {
+    border: 0;
+    width: 70%;
+    height: 40px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    background-color: #4A97F1;
+    color: #FFFFFF;
+    border-radius: 4px;
+}
+
+/*Bank Selection*/
+
+.bank {
+background-color: blue;
+}
+
+
 
 /* Daily Surface */
 .dailyCash{
