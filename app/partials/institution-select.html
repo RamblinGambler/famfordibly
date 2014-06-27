@@ -1,22 +1,31 @@
-<fa-modifier fa-size="[undefined, undefined]">
-  <fa-surface fa-background-color="'yellow'"></fa-surface>
+<fa-modifier fa-size="[undefined, undefined]" fa-translate="slide" fa-align="[0,1]">
+  <fa-surface fa-background-color="'#ffffff'"></fa-surface>
 </fa-modifier>
-<fa-modifier fa-size="[undefined, 300]" fa-origin="[0,.25]">
-  <fa-surface>
-	  <div class="sign">
-			<h2>Affordably</h2>
-			<h4 class="title">The Fitness Coach for Your Finances</h4>
-			<div class="email">
-				<input type="text" ng-model="name">
-			</div>
-			<div class="password">
-				<input type="text" ng-model="password">
-			</div>
-
-				<input type="button" value="Login" ng-click="search()">
-
-			<p>Don't have an account?</p>
-			<h4><a ui-sref="signUp">Sign Up</a></h4>
-	  </div>
-	</fa-surface>
+<fa-modifier fa-size="[undefined, 200]" fa-align="[0,0]" fa-translate="[0,0,1]">
+  <fa-surface fa-background-color="'#ffffff'"></fa-surface>
+</fa-modifier>
+<fa-modifier fa-size="[undefined, 200]" fa-translate="slide" fa-align="[0,1.1]">
+	<fa-modifier fa-translate="[0,0,2]">
+	  <fa-surface>
+	    <div class="sign">
+	  		<h1>Affordably</h1>
+	  		<h5 class="title">Choose Your Bank</h5>
+	  		<div class="email">
+	  			<input type="text" placeholder="Enter Your Bank" data-ng-model="bank" ng-change="search(bank)"/>
+	  		</div>
+		</fa-surface>
+	</fa-modifier >
+	<fa-modifier fa-align="[0,.5]" fa-translate="[0,0,0]">
+	<fa-scroll-view fa-pipe-from="eventHandler">
+    <fa-view ng-repeat="bank in banks" ng-controller="InstitutionCtrl">
+      <fa-modifier fa-size="[undefined, 50]" fa-translate="show" fa-align="[0,-1]">
+        <fa-surface fa-pipe-to="eventHandler" fa-background-color="'blue'"  fa-tap="select()">
+          <div class="sign bank">
+      	    {{bank.name}}
+          </div>
+        </fa-surface>
+       </fa-modifier>
+    </fa-view>
+	</fa-scroll-view>
+	</fa-modifier>
 </fa-modifier>

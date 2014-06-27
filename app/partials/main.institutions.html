@@ -4,19 +4,23 @@
 
 <fa-modifier fa-size="[undefined,50]" fa-align="[1,0]" fa-translate="getTranslate">
 	<fa-surface fa-background-color="'#ffffff'" fa-tap="back()" >
-		Yo
-	</fa-surface>
-</fa-modifier>
-<fa-modifier fa-align='[1,.085]'  fa-translate="getTranslate" fa-size="[undefined,100]">
-  <fa-view>
-	<fa-scroll-view fa-pipe-from="eventHandler" fa-size="[undefined,100]">
-  <fa-view ng-repeat="institution in institutions">
-	  <fa-modifier fa-size="[undefined,50]">
-      <fa-surface fa-pipe-to="eventHandler" fa-background-color="'#ffffff'">
-      {{institution.name}}
+        <input type="text" my-on-key-down-call="" placeholder="Search Banks" id="searchBanks">
     </fa-surface>
-	  </fa-modifier>
-	</fa-view>
-</fa-scroll-view>
-	</fa-view>
+</fa-modifier>
+
+<fa-modifier fa-align='[1,.085]'  fa-translate="getTranslate" fa-size="[undefined,100]">
+    <fa-view>
+	    <fa-scroll-view fa-pipe-from="eventHandler" fa-size="[undefined,100]">
+            <fa-view ng-repeat="institution in institutions">
+	            <fa-modifier fa-size="[undefined,50]">
+                    <fa-surface fa-pipe-to="eventHandler" class="bankSelections">
+                        <span>
+                            <img src="images/magnify.png" class="bankLetter" />
+                            <p class="bankText">{{institution.name}}</p>
+                        </span>
+                    </fa-surface>
+	            </fa-modifier>
+	        </fa-view>
+        </fa-scroll-view>
+    </fa-view>
 </fa-modifier>

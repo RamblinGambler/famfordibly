@@ -16,23 +16,100 @@ body {
     right: 0;
 }
 
-* {
-	border: 1px solid black;
-}
-
 
 /*SIGN IN*/
 .sign {
     text-align: center;
+    /*margin-top: 15%;*/
+}
+/*
+.title {
+    margin-bottom: 20%;
 }
 
-.title {
-    margin-bottom: 40%;
-}
 
 .email {
     margin:10% 0;
 }
 .password {
     margin:5% 0;
+}*/
+
+input[type=text] {
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
+    width: 70%;
+    font-size: 1em;
+}
+
+button[type=submit] {
+    border: 0;
+    width: 70%;
+    height: 40px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    background-color: #4A97F1;
+    color: #FFFFFF;
+    border-radius: 4px;
+}
+
+/*Bank Selection*/
+
+.bank {
+background-color: 'blue';
+}
+
+
+
+/* Daily Surface */
+.dailyCash{
+    margin-left: 30%;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-size: 2em;
+}
+
+.dailyCashText{
+    margin-left:25%;
+    padding-top:0px;
+    margin-top:0px;
+}
+
+.dailyCenter{
+    margin-left:15%;
+    margin-top:25%;
+}
+
+/* Overview Surface */
+.overviewSurface{
+    background-color: #ffffff;
+    border-top: 0.1em solid #888888;
+}
+
+.overviewContent{
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 20%;
+}
+
+.overviewLine{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-top: 12px;
+}
+
+.overviewLabel{
+    color:#666666;
+}
+
+.overviewText{
+    float:right;
+}
+
+
+/* Graph Surface */
+.graphSurface{
+    background-color:lightblue;
 }

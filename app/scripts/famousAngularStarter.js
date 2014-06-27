@@ -4,16 +4,9 @@ var Affordably = angular.module('famousAngularStarter',
   ['ngAnimate', 'ngCookies',
     'ngTouch', 'ngSanitize',
     'ngResource', 'ui.router',
-    'famous.angular', 'Devise']);
+    'famous.angular']);
 
-Affordably.config(function(AuthProvider) {
-
-  // Customise register
-  AuthProvider.registerMethod('POST');
-  AuthProvider.registerPath('http://localhost:3000/api/v1/tokens/new');
-});
-
-Affordably.config(function ($stateProvider, $urlRouterProvider) {
+Affordably.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
   $stateProvider
   .state('signIn', {
     url: '/',
@@ -24,6 +17,11 @@ Affordably.config(function ($stateProvider, $urlRouterProvider) {
     url: '/sign-up',
     templateUrl: 'partials/sign-up.html',
     controller: 'SignUpCtrl',
+  })
+  .state('institutionSelect', {
+    url: '/institution-select',
+    templateUrl: 'partials/institution-select.html',
+    controller: 'InstitutionSelectCtrl',
   })
 
   .state('main', {
@@ -67,5 +65,6 @@ Affordably.config(function ($stateProvider, $urlRouterProvider) {
         controller: 'SettingsCtrl'
       });
 
+  $httpProvider.interceptors.push('authInterceptor');
   $urlRouterProvider.otherwise('/');
 });

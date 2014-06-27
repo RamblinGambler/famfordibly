@@ -1,3 +1,3 @@
-Affordably.service('fuse', function () {
-  // return new Fuse();
+Affordably.service('institutions', function (array, options) {
+  return new Fuse(array, options);
 });

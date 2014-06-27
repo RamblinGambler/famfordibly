@@ -2,7 +2,7 @@
 <html class="no-js" ng-app="famousAngularStarter">
   <head>
     <meta charset="utf-8">
-    <title>Famo.us/Angular</title>
+    <title>Affordably</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -14,6 +14,8 @@
 
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/institutions.css">
+      <link rel="stylesheet" href="styles/menu.css">
     <!-- endbuild -->
     <link rel="stylesheet" href="bower_components/famous-angular/dist/famous-angular.css">
 
@@ -47,7 +49,6 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-devise/lib/devise-min.js"></script>
     <script src="bower_components/requirejs/require.js"></script>
     <script>
       //set requirejs's base to where the famous lib folder lives
@@ -58,11 +59,13 @@
 
     <!-- build:js({app,.tmp}) scripts/main.js -->
     <script src="scripts/famousAngularStarter.js"></script>
-    <!-- <script src="scripts/services/ng-rails-csrf.js"></script> -->
     <script src="scripts/services/fuse.js"></script>
+    <script src="scripts/services/authInterceptor.js"></script>
     <script src="scripts/main/main-ctrl.js"></script>
     <script src="scripts/main/menu-ctrl.js"></script>
     <script src="scripts/main/institutions-ctrl.js"></script>
+    <script src="scripts/main/institution-ctrl.js"></script>
+    <script src="scripts/main/institution-select-ctrl.js"></script>
     <script src="scripts/main/transactions-ctrl.js"></script>
     <script src="scripts/main/transaction-ctrl.js"></script>
     <script src="scripts/main/accounts-ctrl.js"></script>
