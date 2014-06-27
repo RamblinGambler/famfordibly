@@ -5,6 +5,7 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 	var EventHandler     = require("famous/core/EventHandler");
 	var Surface    = require("famous/core/Surface");
 	var Scrollview = require("famous/views/Scrollview");
+    var Scroller = require("famous/views/Scroller");
 	var RenderNode = require('famous/core/RenderNode');
 	var Transform = require('famous/core/Transform');
 	var ContainerSurface = require("famous/surfaces/ContainerSurface");
@@ -64,7 +65,6 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
     		        duration: 400
     		      });
     	    	}, 300);
-			      console.log('yes surface', this.dragId);
 			    }
 			    else if (e.position[0] == -160) {
 			    	var that = this
@@ -74,7 +74,6 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 				        duration: 400
 				      });
 			    	}, 300);
-			      console.log('no surface', this.dragId);
 			    } else {
 			    	this.setPosition([0,0,0], {
 			    	  curve: Easing.outBounce,
@@ -154,7 +153,6 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 
 			      var position = draggable.getPosition();
 
-			      console.log(position);
 			      if (position[0] < 0) {
 				      if ( position[0] > fadeStartf ) {
 

@@ -1,11 +1,30 @@
-<fa-modifier fa-size="[undefined,50]" fa-align="[0,0]">
-	<fa-surface fa-background-color="'#ffffff'" fa-tap="back()" >
-		Yo
-	</fa-surface>
+<fa-modifier  fa-translate="[0,0,1]">
+    <fa-surface class="transactionHeader" fa-tap="back()">
+        <p class="hamburger">=</p>
+        <p class="transactionTitle">Settings</p>
+    </fa-surface>
 </fa-modifier>
 <fa-modifier fa-translate="getTranslating">
-	<fa-modifier fa-align="[0,1.085]" >
-  	<fa-render-node fa-node="transaction" ng-controller="TransactionCtrl">
-    </fa-render-node>
-	</fa-modifier>
+    <fa-modifier fa-align="[0,1.095]" >
+        <fa-view>
+            <fa-surface fa-background-color="'lightblue'" fa-tap="select()" class="menuSelections">
+                <div class="form-container">
+                    <label>Weekly Emails: Short emails that give you a view of the week</label>
+                    <input type="checkbox" class="checkbox"/>
+                </div>
+                <div class="form-container">
+                    <label>Daily Texts: Daily texts that arrive at an hour of your choosing letting you know your remaining daily cash</label>
+                    <input type="checkbox" class="checkbox"/>
+                </div>
+                <div class="form-container">
+                    <label>Phone Number</label>
+                    <input type="text" placeholder="(512)555-3333" class="financeForm"/>
+                </div>
+                <div class="form-container">
+                    <label>Daily Notification Time</label>
+                    <input type="text" placeholder="2AM" class="financeForm"/>
+                </div>
+            </fa-surface>
+        </fa-view>
+    </fa-modifier>
 </fa-modifier>
