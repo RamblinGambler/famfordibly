@@ -1,20 +1,18 @@
 'use strict';
 
-Affordably.controller('InstitutionSelectCtrl', function ($scope, $famous, $state, $http) {
+Affordably.controller('InstitutionSelectCtrl', function ($scope, $famous, $state, $http, institutions) {
   var EventHandler = $famous['famous/core/EventHandler'];
   var Transitionable = $famous['famous/transitions/Transitionable'];
 
   require(["fuse/src/fuse.min"], function(Fuse) {
 
-    var institutions = [];
+    var institutiondata;
+    var data = institutions.query();
 
-    $http({
-      method: "GET",
-      url:"http://localhost:3000/institutions"
-    }).success(function(data) {
-      // console.log(response);
+      data.$promise.then(function(data) {
+        console.log(data);
+        institutiondata = data
 
-    var institutions = data
 
 
 
@@ -22,15 +20,17 @@ Affordably.controller('InstitutionSelectCtrl', function ($scope, $famous, $state
       keys: ['name']
     };
 
-    var f = new Fuse(institutions, options);
+    var f = new Fuse(institutiondata, options);
 
+  });
     $scope.search = function (bank) {
       $scope.banks = "";
+      // console.log($event)
+      var result = [{name: "yupjdhsbvkj"}];
       var result = f.search(bank);
       $scope.banks = result;
       $scope.$broadcast('bankChange', result);
     }
-  });
 
   var translateTrans = new Transitionable([0,0,0]);
   $scope.slide = translateTrans.get.bind(translateTrans);
