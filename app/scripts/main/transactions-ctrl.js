@@ -16,7 +16,7 @@ Affordably.controller('TransactionsCtrl', function ($scope, $famous, $state, $in
     };
 
     $scope.getTranslating = translateT.get.bind(translateT);
-	    translateT.set([0,-567,0], {duration: 500, curve: 'easeOut'});
+	translateT.set([0,-567,0], {duration: 500, curve: 'easeOut'});
 
     $scope.transactions = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 

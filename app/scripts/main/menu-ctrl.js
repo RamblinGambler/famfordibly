@@ -10,14 +10,15 @@ Affordably.controller('MenuCtrl', function ($scope, $famous, $state) {
 
   $scope.getTranslated = translateTrans.get.bind(translateTrans);
   $scope.getTranslater = translateTranny.get.bind(translateTranny);
-  //now make things animate
+  $(".mainContainer").addClass("faded");
+
   $scope.select = function () {
     translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'});
   };
 
   $scope.main = function($event) {
-    console.log($event);
   translateTranny.set([50,0,0]);
+    $(".mainContainer").removeClass("faded");
     translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'}, function() {
       $state.go('main')
     });

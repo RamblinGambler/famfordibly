@@ -1,0 +1,37 @@
+.transactionHeader{
+    background-color:#ffffff;
+}
+
+.transactionTitle{
+    display: inline-block;
+    margin-left: 27%;
+    font-size: 1.2em;
+    margin-top: 5%;
+}
+
+.hamburger{
+    display:inline-block;
+    margin-left: 5%;
+    margin-top:5%;
+}
+
+.transactionButtons{
+    background:lightblue;
+    margin-top: 15%;
+}
+
+.outgoingButton{
+    margin-left: 5%;
+    width: 44%;
+    margin-right: -10px;
+    padding-right: 0px;
+    margin-top: 2.5%;
+    height: 35px;
+}
+
+.incomingButton{
+    padding-left: 0px;
+    width: 45%;
+    margin-top: 2%;
+    height: 35px;
+}

@@ -1,11 +1,27 @@
-<fa-modifier fa-size="[undefined,50]" fa-align="[0,0]">
-	<fa-surface fa-background-color="'#ffffff'" fa-tap="back()" >
-		Yo
-	</fa-surface>
+<fa-modifier  fa-translate="[0,0,1]">
+    <fa-surface class="transactionHeader" fa-tap="back()">
+        <p class="hamburger">=</p>
+        <p class="transactionTitle">Finances</p>
+        <p class="rightMenu">Edit</p>
+    </fa-surface>
 </fa-modifier>
 <fa-modifier fa-translate="getTranslating">
-	<fa-modifier fa-align="[0,1.085]" >
-  	<fa-render-node fa-node="transaction" ng-controller="TransactionCtrl">
-    </fa-render-node>
+	<fa-modifier fa-align="[0,1.095]" >
+        <fa-view>
+            <fa-surface fa-background-color="'lightblue'" fa-tap="select()" class="menuSelections">
+                <div class="form-container">
+                    <label>Money left in your account at the end of the month?</label>
+                    <input type="text" placeholder="$0.00" class="financeForm"/>
+                </div>
+                <div class="form-container">
+                    <label>Monthly income after taxes?</label>
+                    <input type="text" placeholder="$0.00" class="financeForm"/>
+                </div>
+                <div class="form-container">
+                    <label>Total fixed expenses per month (rent, mortgage, bills, etc.)?</label>
+                    <input type="text" placeholder="$0.00" class="financeForm"/>
+                </div>
+            </fa-surface>
+        </fa-view>
 	</fa-modifier>
 </fa-modifier>

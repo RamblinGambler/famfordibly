@@ -16,6 +16,30 @@ body {
     right: 0;
 }
 
+.rightMenu{
+    float: right;
+    margin-right: 5%;
+    margin-top: 5%;
+    font-size: 1.25em;
+    color: #999;
+}
+
+.transaction {
+    /*height:80px;*/
+    /*background-color: #ffffff;*/
+}
+
+.mainContainer{
+    background-color: #ffffff;
+}
+
+.faded{
+    background-color: #999999 !important;
+}
+
+.topButton {
+    text-decoration: none;
+}
 
 /*SIGN IN*/
 .sign {
@@ -30,6 +54,7 @@ body {
 
 .email {
     margin:10% 0;
+>>>>>>> 50aa2fe4d5781f7f9e60c87eac308190ab55374e
 }
 .password {
     margin:5% 0;
@@ -57,7 +82,7 @@ button[type=submit] {
 /*Bank Selection*/
 
 .bank {
-background-color: 'blue';
+background-color: blue;
 }
 
 
@@ -112,4 +137,25 @@ background-color: 'blue';
 /* Graph Surface */
 .graphSurface{
     background-color:lightblue;
+}
+
+
+/* Form page styles */
+.form-container label{
+    width: 75%;
+    font-size: 0.95em;
+    margin-left: 5%;
+    margin-top: 5%;
+    display: inherit;
+    color: #888;
+}
+
+.form-container input{
+    width: 100%;
+    border: 0px;
+    height: 35px;
+    margin-top: 5%;
+    padding-left:5%;
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #999999;
 }

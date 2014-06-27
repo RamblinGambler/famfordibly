@@ -1,16 +1,18 @@
-
-<fa-modifier fa-translate="getTranslating" fa-align="[0,1]">
-	<fa-sequential-layout>
-		<fa-view>
-			<fa-modifier fa-size="[undefined,100]" fa-align="[0,0]">
-					<fa-surface fa-background-color="'#ffffff'" fa-tap="back()">
-						Yo
-				</fa-surface>
-			</fa-modifier>
-		</fa-view>
-		<fa-view>
-		  	<fa-render-node fa-node="transaction" ng-controller="TransactionCtrl">
-			    </fa-render-node>
-		<fa-view>
-	</fa-sequential-layout>
+<fa-modifier  fa-translate="[0,0,1]">
+    <fa-surface class="transactionHeader" fa-tap="back()">
+        <p class="hamburger">=</p>
+        <p class="transactionTitle">Cash flow</p>
+    </fa-surface>
+    <fa-surface class="transactionButtons" fa-tap="back()">
+        <button class="outgoingButton">Outgoing</button>
+        <button class="incomingButton">Incoming</button>
+    </fa-surface>
+</fa-modifier>
+<fa-modifier fa-translate="getTranslating" fa-translate="[0,0,0]" fa-align="[0,1]">
+    <fa-modifier fa-align="[0,1.185]">
+        <fa-view>
+          <fa-render-node fa-node="transaction" ng-controller="TransactionCtrl"></fa-render-node>
+        </fa-view>
+        <fa-surface fa-background-color="'white'"></fa-surface>
+    </fa-modifier>
 </fa-modifier>

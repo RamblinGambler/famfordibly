@@ -1,7 +1,7 @@
 <fa-modifier fa-align='[0,.085]' fa-translate="[0,0,0,]" fa-size="[undefined,516]">
     <fa-scroll-view fa-pipe-from="eventHandler" fa size="[500,0]">
 	    <fa-modifier fa-size="[undefined,260]">
-            <fa-surface fa-index="0" fa-pipe-to="eventHandler" fa-background-color="'#ffffff'">
+            <fa-surface fa-index="0" fa-pipe-to="eventHandler" class="mainContainer">
                 <div class="dailyCenter">
                     <p class="dailyCash">$37</p>
                     <p class="dailyCashText">of daily cash <br/> left to spend</p>
@@ -9,7 +9,7 @@
             </fa-surface>
 	    </fa-modifier>
 	    <fa-modifier fa-size="[undefined,210]">
-            <fa-surface fa-index="1" fa-pipe-to="eventHandler" class="overviewSurface">
+            <fa-surface fa-index="1" fa-pipe-to="eventHandler" class="overviewSurface mainContainer">
                 <div class="overviewContent">
                     <p class="sectionTitle">Overview</p>
                     <p class="overviewLine"><span class="overviewLabel">Total Balance:</span><span class="overviewText">$799</span></p>
@@ -33,7 +33,7 @@
         <fa-grid-layout fa-options='{dimensions: [3,1]}'>
 	        <fa-modifier fa-origin="[.2, .5]" fa-scale="[1.2, 1.2]">
 	            <fa-surface fa-size="[true, true]" fa-background-color="'#ffffff'" fa-color="'#BADA55'">
-	                <a ui-sref=".menu">=</a>
+	                <a ui-sref=".menu" class="topButton">=</a>
 	            </fa-surface>
 	        </fa-modifier>
             <fa-modifier fa-origin="[.5, .5]" fa-scale="[1.5, 1.5]">
@@ -43,7 +43,7 @@
             </fa-modifier>
             <fa-modifier fa-origin="[.8, .5]" fa-scale="[1.2, 1.2]">
                 <fa-surface fa-size="[true, true]" fa-background-color="'#ffffff'" fa-color="'#BADA55'">
-                    <a ui-sref=".institutions">+</a>
+                    <a ui-sref=".institutions" class="topButton">+</a>
                 </fa-surface>
             </fa-modifier>
         </fa-grid-layout>
