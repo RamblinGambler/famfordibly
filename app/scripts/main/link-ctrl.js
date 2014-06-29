@@ -1,6 +1,6 @@
 'use strict';
 
-Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $window) {
+Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $window, $stateParams) {
   var Transitionable = $famous['famous/transitions/Transitionable'];
 
   var translateTrans = new Transitionable([0,0,0]);
@@ -9,11 +9,13 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
   // var password = $scope.password;
   // var email = $scope.email;
 
+    console.log($stateParams)
   $scope.submit = function(email, password) {
     var credentials = {
       password: password,
       user_email: email
     };
+    $scope.inst = $stateParams
 
     $http({
       method: 'POST',

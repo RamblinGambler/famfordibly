@@ -10,11 +10,7 @@ Affordably.controller('InstitutionSelectCtrl', function ($scope, $famous, $state
     var data = institutions.query();
 
     data.$promise.then(function(data) {
-        institutiondata = data;
-        console.log(institutiondata);
-
-
-
+    institutiondata = data;
 
     var options = {
       keys: ['institution_name']
@@ -23,7 +19,7 @@ Affordably.controller('InstitutionSelectCtrl', function ($scope, $famous, $state
     var f = new Fuse(institutiondata, options);
 
     $scope.search = function (bank) {
-      $scope.banks = [];
+      // $scope.banks = [];
       var result = f.search(bank);
       $scope.banks = result;
       $scope.$broadcast('bankChange', result);

@@ -19,7 +19,7 @@
 	<fa-scroll-view fa-pipe-from="eventHandler">
     <fa-view ng-repeat="bank in banks" ng-controller="InstitutionCtrl">
       <fa-modifier fa-size="[undefined, 50]" fa-translate="show" fa-align="[0,-1]">
-        <fa-surface fa-pipe-to="eventHandler" fa-background-color="'blue'"  fa-tap="select($event)">
+        <fa-surface fa-pipe-to="eventHandler" fa-background-color="'blue'"  fa-tap="select(bank)">
           <div class="sign bank">
       	    {{bank.institution_name}}
           </div>

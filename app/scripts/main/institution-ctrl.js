@@ -1,6 +1,7 @@
 'use strict';
 
-Affordably.controller('InstitutionCtrl', function ($scope, $famous, $state, $filter) {
+Affordably.controller('InstitutionCtrl', function ($scope, $famous, $state, $filter, $http,
+  $window) {
 
   var Transitionable = $famous['famous/transitions/Transitionable'];
 
@@ -17,7 +18,19 @@ Affordably.controller('InstitutionCtrl', function ($scope, $famous, $state, $fil
     // }
   });
 
-  $scope.select = function() {
+  $scope.select = function(bank) {
+    console.log(bank.intuit_inst_id);
 
+    $http({
+      method: 'GET',
+      url: "http://localhost:3000/api/v1/institution",
+      params: {bank: bank.intuit_inst_id, auth_token: $window.sessionStorage.token}
+    }).success(function(data) {
+      // console.log(data.result.institution_detail);
+      translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'}, function() {
+        $state.go('link', {details: data.result.institution_detail});
+      });
+    }).error(function(error) {
+    });
   };
 });
