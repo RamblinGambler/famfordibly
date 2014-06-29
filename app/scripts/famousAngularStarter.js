@@ -4,7 +4,7 @@ var Affordably = angular.module('famousAngularStarter',
   ['ngAnimate', 'ngCookies',
     'ngTouch', 'ngSanitize',
     'ngResource', 'ui.router',
-    'famous.angular']);
+    'famous.angular'  ]);
 
 Affordably.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
   $stateProvider
@@ -22,6 +22,11 @@ Affordably.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
     url: '/institution-select',
     templateUrl: 'partials/institution-select.html',
     controller: 'InstitutionSelectCtrl',
+  })
+  .state('link', {
+    url: '/link',
+    templateUrl: 'partials/account-link.html',
+    controller: 'LinkCtrl',
   })
 
   .state('main', {
@@ -65,6 +70,29 @@ Affordably.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
         controller: 'SettingsCtrl'
       });
 
-  $httpProvider.interceptors.push('authInterceptor');
+  $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
+
+    var interceptor = ['$location', '$rootScope', '$q', function($location, $rootScope, $q) {
+        function success(response) {
+            return response
+        };
+
+        function error(response) {
+            if (response.status == 401) {
+                $rootScope.$broadcast('event:unauthorized');
+                $location.path('/users/login');
+                return response;
+            };
+            return $q.reject(response);
+        };
+
+        return function(promise) {
+            return promise.then(success, error);
+        };
+    }];
+
+  $httpProvider.responseInterceptors.push(interceptor);
+
+
   $urlRouterProvider.otherwise('/');
 });
