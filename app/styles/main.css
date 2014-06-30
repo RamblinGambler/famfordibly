@@ -3,6 +3,62 @@ body {
     font-family: sans-serif;
 }
 
+@font-face {
+    font-family: 'Rubrik';
+    src: url('styles/fonts/Rubrik/Rubrik-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: proxima-nova, sans-serif;
+    src: url('styles/fonts/ProximaNova/ProximaNova-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: proxima-nova, sans-serif;
+    src: url('styles/fonts/ProximaNova/ProximaNova-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1{
+    font-family: 'Rubrik', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+h2, h3, h4{
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+p{
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: lighter;
+}
+
+.logo {
+    color: #4bbc7a;
+}
+
+
+.title {
+    font-family: 'Rubrik', sans-serif;
+    font-weight: normal;
+    margin-top: -5px;
+}
+
+.pageTitle{
+    font-family: 'Rubrik', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 0.65em;
+}
+
 .center-box {
     padding: 15px 50px 15px 50px;
     text-align: center;
@@ -24,12 +80,28 @@ body {
     color: #999;
 }
 
+.titleHeader{
+    background-color:#ffffff;
+    border-bottom: 1px solid #e6eaed;
+}
+
+.labelText{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 0.85em;
+    color: #666;
+}
+
 .transaction {
     /*height:80px;*/
     /*background-color: #ffffff;*/
 }
 
 .mainContainer{
+    background-color: #ffffff;
+}
+
+.cashContainer{
     background-color: #ffffff;
 }
 
@@ -42,30 +114,30 @@ body {
 }
 
 /*SIGN IN*/
-.sign {
-    text-align: center;
-    /*margin-top: 15%;*/
-}
-/*
-.title {
-    margin-bottom: 20%;
+
+.signIn{
+    margin-top: 5%;
+    display: inline-block;
+    width: 100%;
 }
 
+.sign {
+    text-align: center;
+    margin-top: 12.5%;
+}
 
 .email {
     margin:10% 0;
->>>>>>> 50aa2fe4d5781f7f9e60c87eac308190ab55374e
 }
+
 .password {
-    margin:5% 0;
-}*/
+    margin: 5% 0;
+}
 
 input[type=text] {
     border: 0;
-    background: transparent;
-    border-bottom: 1px solid black;
-    width: 70%;
     font-size: 1em;
+    margin-top: 15px;
 }
 
 button[type=submit] {
@@ -77,6 +149,52 @@ button[type=submit] {
     background-color: #4A97F1;
     color: #FFFFFF;
     border-radius: 4px;
+}
+
+.signInInput{
+    border-bottom: 1px solid #e6eaed !important;
+    width: 70%;
+}
+.signInInput::-webkit-input-placeholder {
+    margin-left:15px;
+    color: #888;
+    font-size: 85%;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    margin-left:15px;
+    color: #888;
+    font-size: 85%;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    margin-left:15px;
+    color: #888;
+    font-size: 85%;
+}
+
+:-ms-input-placeholder {
+    margin-left:15px;
+    color: #888;
+    font-size: 85%;
+}
+
+#noAccountMessage{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-size: 0.8em;
+    color: #888;
+}
+
+#signUpLink{
+    margin-top: 5px;
+    padding-top: 0px;
+    font-size: 0.9em;
+}
+
+#signUpLink a{
+    text-decoration: none;
 }
 
 /*Bank Selection*/
@@ -107,9 +225,8 @@ background-color: blue;
 }
 
 /* Overview Surface */
-.overviewSurface{
-    background-color: #ffffff;
-    border-top: 0.1em solid #888888;
+.overviewContainer{
+    background-color: #f4f8fb;
 }
 
 .overviewContent{
@@ -119,10 +236,14 @@ background-color: blue;
 }
 
 .overviewLine{
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: lighter;
+    font-size: 1em;
+    letter-spacing: 0.5px;
     margin-bottom: 0px;
     padding-bottom: 0px;
     padding-top: 0px;
-    margin-top: 12px;
+    margin-top: 15px;
 }
 
 .overviewLabel{
@@ -142,20 +263,47 @@ background-color: blue;
 
 /* Form page styles */
 .form-container label{
-    width: 75%;
+    width: 35%;
     font-size: 0.95em;
-    margin-left: 5%;
     margin-top: 5%;
     display: inherit;
     color: #888;
 }
 
-.form-container input{
+/*.form-container input{
     width: 100%;
     border: 0px;
     height: 35px;
     margin-top: 5%;
+    margin-bottom: 5%;
     padding-left:5%;
     border-top: 1px solid #999999;
     border-bottom: 1px solid #999999;
+}*/
+
+
+/* Settings Styles */
+.settingBackground{
+    background-color:#f4f8fb;
+    border-top: 1px solid #e6eaed;
+}
+
+.fieldHolder{
+    width: 100%;
+    background-color: white;
+    padding-left:5%;
+    height:45px;
+    padding-right:5%;
+    border-top: 1px solid #e6eaed;
+    border-bottom: 1px solid #e6eaed;
+}
+
+.settingLabel{
+    float: left;
+    width: 35%;
+}
+
+.settingCheckbox{
+    margin-top:18px;
+    width: 5% !important;
 }

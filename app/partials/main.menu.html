@@ -10,11 +10,11 @@
             </fa-modifier>
         </fa-view>
         <fa-view>
-		    <fa-modifier fa-size="[290,50]" fa-align="[.09,0]">
+		    <fa-modifier fa-size="[290,52]" fa-align="[.09,0]">
                 <fa-surface fa-background-color="'#ffffff'" fa-tap="select()" class="menuSelections">
-	                <a ui-sref=".accounts">
-                        <img src="images/magnify.png" class="menuIcon" />
-                        <p class="menuText">Accounts</p>
+	                <a ui-sref=".accounts" class="menuLink">
+                        <img src="images/servers_hover_select.png" class="menuIcon accountsIcon" />
+                        <p class="menuText accountsText">Accounts</p>
                     </a>
 	            </fa-surface>
 		    </fa-modifier>
@@ -22,8 +22,8 @@
         <fa-view>
 		    <fa-modifier fa-size="[290,50]" fa-align="[.09,0]">
                 <fa-surface fa-background-color="'#ffffff'" fa-tap="select()" class="menuSelections">
-	                <a ui-sref= ".transactions">
-                        <img src="images/magnify.png" class="menuIcon" />
+	                <a ui-sref= ".transactions" class="menuLink">
+                        <img src="images/coins_hover_select.png" class="menuIcon" />
                         <p class="menuText">Cash Flow</p>
                     </a>
 	            </fa-surface>
@@ -37,8 +37,8 @@
         <fa-view>
 		    <fa-modifier fa-size="[290,50]" fa-align="[.09,0]">
                 <fa-surface fa-background-color="'#ffffff'" fa-tap="select()" class="menuSelections">
-	                <a ui-sref=".settings">
-                        <img src="images/magnify.png" class="menuIcon" />
+	                <a ui-sref=".settings" class="menuLink">
+                        <img src="images/settings_hover_select.png" class="menuIcon" />
                         <p class="menuText">Settings</p>
                     </a>
 	            </fa-surface>
@@ -46,16 +46,14 @@
         </fa-view>
         <fa-view>
 		    <fa-modifier fa-size="[290,50]" fa-align="[.09,0]">
-                <fa-surface class="menuButtonContainer">
-                    <button class="menuButton">Questions</button>
-	            </fa-surface>
+                <fa-surface class="menuButtonContainer"></fa-surface>
 		    </fa-modifier>
 		</fa-view>
         <fa-view>
 		    <fa-modifier fa-size="[290,50]" fa-align="[.09,0]">
                 <fa-surface fa-background-color="'#ffffff'" fa-tap="select()" class="menuSelections">
-	                <a ui-sref=".finances">
-                        <img src="images/magnify.png" class="menuIcon" />
+	                <a ui-sref=".finances" class="menuLink">
+                        <img src="images/box_hover_select.png" class="menuIcon" />
                         <p class="menuText">Finances</p>
                     </a>
 	            </fa-surface>
@@ -63,29 +61,30 @@
         </fa-view>
         <fa-view>
 		    <fa-modifier fa-size="[290,50]" fa-align="[.09,0]">
-                <fa-surface class="menuSpace">
+                <fa-surface class="menuSpace nameContainer">
                     <img src="images/magnify.png" class="menuIcon" />
                     <p class="menuText">Gamble McAdam</p>
 	            </fa-surface>
 		    </fa-modifier>
         </fa-view>
         <fa-view>
-		    <fa-modifier fa-size="[undefined,62]">
-                <fa-surface class="menuSpace"></fa-surface>
+		    <fa-modifier fa-size="[undefined,40]">
+                <fa-surface class="menuSpace noBorder"></fa-surface>
             </fa-modifier>
         </fa-view>
         <fa-view>
-		    <fa-modifier fa-size="[290,50]" fa-align="[.09,0]">
+		    <fa-modifier fa-size="[290,70]" fa-align="[.09,0]">
                 <fa-surface class="menuButtonContainer">
-                    <button class="menuButton">Add Accounts</button>
+                    <button class="menuButton addAccounts">Add Accounts</button>
+                    <button class="menuButton questions">Questions</button>
 	            </fa-surface>
 		    </fa-modifier>
         </fa-view>
         <fa-view>
 		    <fa-modifier fa-size="[290,50]" fa-align="[.09,0]">
                 <fa-surface fa-background-color="'#ffffff'" fa-tap="main()" class="menuSelections">
-                    <img src="images/magnify.png" class="menuIcon" />
-                    <p class="menuText">Daily Cash</p>
+                    <img src="images/coin_hover_select.png" class="menuIcon cashIcon" />
+                    <p class="menuText dailyCashText">Daily Cash</p>
                 </fa-surface>
             </fa-modifier>
         </fa-view>
