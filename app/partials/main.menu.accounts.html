@@ -1,11 +1,30 @@
-<fa-modifier fa-size="[undefined,50]" fa-align="[0,0]">
-	<fa-surface fa-background-color="'#ffffff'" fa-tap="back()" >
-		Yo
-	</fa-surface>
+<fa-modifier  fa-translate="[0,0,1]">
+    <fa-surface class="titleHeader" fa-tap="back()">
+        <p class="hamburger">=</p>
+        <p class="transactionTitle pageTitle">Accounts</p>
+    </fa-surface>
 </fa-modifier>
 <fa-modifier fa-translate="getTranslating">
-	<fa-modifier fa-align="[0,1.085]" >
-  	<fa-render-node fa-node="transaction" ng-controller="TransactionCtrl">
-    </fa-render-node>
-	</fa-modifier>
+    <fa-modifier fa-align="[0,1.095]" >
+        <fa-view>
+            <fa-surface fa-tap="select()" class="settingBackground">
+                <div class="form-container">
+                    <p class="labelText">Wells Fargo</p>
+                    <div class="fieldHolder">
+                        <p>Checking - $1234.12</p>
+                    </div>
+                    <div class="fieldHolder">
+                        <p>Savings - $11,234.12</p>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <p class="labelText">Chase</p>
+                    <div class="fieldHolder">
+                        <p>Credit - $234.00</p>
+                    </div>
+                </div>
+            </fa-surface>
+        </fa-view>
+    </fa-modifier>
 </fa-modifier>
