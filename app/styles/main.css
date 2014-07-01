@@ -1,3 +1,5 @@
+
+
 body {
     margin: 0;
     font-family: sans-serif;
@@ -153,7 +155,7 @@ p{
 }
 
 input[type=text] {
-    border: 0;
+    border: 1px solid;
     font-size: 1em;
     margin-top: 15px;
 }

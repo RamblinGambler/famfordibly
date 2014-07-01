@@ -5,7 +5,7 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 	var EventHandler     = require("famous/core/EventHandler");
 	var Surface    = require("famous/core/Surface");
 	var Scrollview = require("famous/views/Scrollview");
-    var Scroller = require("famous/views/Scroller");
+  var Scroller = require("famous/views/Scroller");
 	var RenderNode = require('famous/core/RenderNode');
 	var Transform = require('famous/core/Transform');
 	var ContainerSurface = require("famous/surfaces/ContainerSurface");

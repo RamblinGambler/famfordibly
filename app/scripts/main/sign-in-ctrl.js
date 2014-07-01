@@ -17,7 +17,7 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
 
     $http({
       method: 'POST',
-      url:"http://localhost:3000/api/v1/tokens/new",
+      url: "http://localhost:3000/api/v1/tokens/new",
       data: credentials
     }).success(function(data, status, headers, config) {
       $window.sessionStorage.token = data.token;

@@ -24,11 +24,15 @@ Affordably.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
     controller: 'InstitutionSelectCtrl',
   })
   .state('link', {
-    url: '/link',
+    url: '/link/:id',
     templateUrl: 'partials/account-link.html',
     controller: 'LinkCtrl',
   })
-
+  .state('wait', {
+    url: '/wait/:job',
+    templateUrl: 'partials/wait.html',
+    controller: 'WaitCtrl',
+  })
   .state('main', {
     url: '/main',
     templateUrl: 'partials/main.html',
