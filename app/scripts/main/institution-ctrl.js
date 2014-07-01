@@ -19,7 +19,6 @@ Affordably.controller('InstitutionCtrl', function ($scope, $famous, $state, $fil
   });
 
   $scope.select = function(bank) {
-    console.log(bank.intuit_inst_id);
 
       translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'}, function() {
         $state.go('link', {id: bank.intuit_inst_id});

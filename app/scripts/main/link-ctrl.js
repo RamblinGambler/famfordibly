@@ -7,6 +7,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
   $scope.success = translateTrans.get.bind(translateTrans);
 
   $scope.third = true;
+  $scope.inst = $stateParams.id
 
   var fields = [];
   $http({
@@ -14,27 +15,20 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
     url: "http://localhost:3000/api/v1/institution",
     params: {bank: $stateParams.id, auth_token: $window.sessionStorage.token}
   }).success(function(data) {
-  	$scope.inst = data.result.institution_detail;
-    // console.log(data.result.institution_detail);
-  	for(var i = 0;i < data.result.institution_detail.keys.key.length; i++) {
-  		if (data.result.institution_detail.keys.key[i].display_flag == 'true') {
-				fields.push(data.result.institution_detail.keys.key[i]);
-  		}
-  	}
-  	if (fields.length < 3) {
-  		$scope.third = false
-  	}
-		$scope.fields = fields
-		// $scope.load = false;
+    $scope.inst = data.result.institution_detail;
+    for(var i = 0;i < data.result.institution_detail.keys.key.length; i++) {
+      if (data.result.institution_detail.keys.key[i].display_flag == 'true') {
+        fields.push(data.result.institution_detail.keys.key[i]);
+      }
+    }
+    if (fields.length < 3) {
+      $scope.third = false;
+    };
+    $scope.fields = fields;
   }).error(function(error) {
+    console.log(error);
   });
 
-
-  // var password = $scope.password;
-  // var email = $scope.email;
-
-    // console.log($stateParams)
-    $scope.inst = $stateParams.id
   $scope.submit = function(user_id, password, pin) {
   	var id = arguments[0], parameters, callback;
   	if (arguments.length == 2) { // only two arguments supplied
@@ -49,7 +43,6 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
   	    callback = arguments[2];
   	}
 
-  	// PARAMS: institution: count:(for MFA) password2: password3:
 	  $http({
 	    method: 'POST',
 	    url: "http://localhost:3000/api/v1/add_account",
@@ -62,7 +55,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
 	    	institution: $stateParams.id
 	    }
 	  }).success(function(data) {
-	  	console.log("data", data)
+      $state.go('wait', {job: data.job})
 	  }).error(function(error) {
 	  	$http({
 	  	  method: 'POST',
@@ -77,15 +70,10 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
   	  	  login_id: error.id
 	  	  }
 	  	}).success(function(data) {
-	  	console.log("data", data)
-		  })
-		  // .error(function(error) {
-	  	// console.log("error", error)
-			 //  }
-		  // 	console.log("error",error.id)
+        $state.go('wait', {job: data.job});
+		  }).error(function(error) {
+  	  	console.log("error", error)
+		  });
 	  });
-  console.log(user_id);
-  console.log(password);
-  console.log(pin);
   };
 });
