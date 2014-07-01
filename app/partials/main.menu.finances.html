@@ -1,25 +1,31 @@
 <fa-modifier  fa-translate="[0,0,1]">
-    <fa-surface class="transactionHeader" fa-tap="back()">
+    <fa-surface class="titleHeader" fa-tap="back()">
         <p class="hamburger">=</p>
-        <p class="transactionTitle">Finances</p>
+        <p class="transactionTitle pageTitle">Finances</p>
         <p class="rightMenu">Edit</p>
     </fa-surface>
 </fa-modifier>
 <fa-modifier fa-translate="getTranslating">
 	<fa-modifier fa-align="[0,1.095]" >
         <fa-view>
-            <fa-surface fa-background-color="'lightblue'" fa-tap="select()" class="menuSelections">
+            <fa-surface fa-tap="select()" class="settingBackground">
                 <div class="form-container">
-                    <label>Money left in your account at the end of the month?</label>
-                    <input type="text" placeholder="$0.00" class="financeForm"/>
+                    <p class="labelText">Money left in your account at the end of the month?</p>
+                    <div class="fieldHolder">
+                        <input type="text" placeholder="$0.00" class="financeForm"/>
+                    </div>
                 </div>
                 <div class="form-container">
-                    <label>Monthly income after taxes?</label>
-                    <input type="text" placeholder="$0.00" class="financeForm"/>
+                    <p class="labelText">Monthly income after taxes?</p>
+                    <div class="fieldHolder">
+                        <input type="text" placeholder="$0.00" class="financeForm"/>
+                    </div>
                 </div>
                 <div class="form-container">
-                    <label>Total fixed expenses per month (rent, mortgage, bills, etc.)?</label>
-                    <input type="text" placeholder="$0.00" class="financeForm"/>
+                    <p class="labelText">Total fixed expenses per month (rent, mortgage, bills, etc.)?</p>
+                    <div class="fieldHolder">
+                        <input type="text" placeholder="$0.00" class="financeForm"/>
+                    </div>
                 </div>
             </fa-surface>
         </fa-view>
