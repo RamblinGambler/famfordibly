@@ -4,6 +4,7 @@
     border: 0px;
     background: url(images/magnify.png) no-repeat scroll 7px 7px limegreen;
     padding-left:45px;
+    margin-top:0px;
 }
 
 #searchBanks::-webkit-input-placeholder {
@@ -29,7 +30,8 @@
 .bankSelections{
     background-color:white;
     height:100px;
-    border-bottom: 1px solid #666666;
+    border-top: 1px solid #e6eaed;
+    border-bottom: 1px solid #e6eaed;
 }
 
 .bankText{

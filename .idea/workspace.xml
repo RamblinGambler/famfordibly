@@ -2,7 +2,103 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9e491af-9d46-4694-9a95-54f12265b3b5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/X_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/X_icon@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/box@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/box_hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/box_hover@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/coin@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/coin_hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/coin_hover@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/coins@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/coins_hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/coins_hover@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/flash_notification.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/flash_notification@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/flash_notification_hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/flash_notification_hover@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/gray_button.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/gray_button@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/gray_button_hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/gray_button_hover@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/green_button.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/green_button@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/green_button_hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/green_button_hover@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/green_circle@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/login_background.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/login_background@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/notification.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/notification@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/notification_hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/notification_hover@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/orange_button.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/orange_button@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/orange_button_hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/orange_button_hover@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/orange_circle@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/outline_background_large.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/outline_background_large@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/outline_background_standard.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/outline_background_standard@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/servers@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/servers_hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/servers_hover@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/settings@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/settings_hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/images/settings_hover@2x.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/box_hover_select.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/button_gray.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/button_gray_hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/button_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/button_green_hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/button_orange.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/button_orange_hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/button_outline.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/button_outline_hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/button_small_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/button_small_blue_hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/button_small_orange.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/button_small_orange_hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/circle_selected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/circle_unselected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/coin_hover_select.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/coins_hover_select.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/dropdown_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/flash_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/flash_blue_hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/food.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/money.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/notification_orange.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/notification_orange_hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/pagination_left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/pagination_right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/right_arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/servers_hover_select.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/settings_hover_select.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/text_frames_hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/x_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/x_2.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/box.png" afterPath="$PROJECT_DIR$/app/images/box.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/coin.png" afterPath="$PROJECT_DIR$/app/images/coin.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/coins.png" afterPath="$PROJECT_DIR$/app/images/coins.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/green_circle.png" afterPath="$PROJECT_DIR$/app/images/green_circle.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/orange_circle.png" afterPath="$PROJECT_DIR$/app/images/orange_circle.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/servers.png" afterPath="$PROJECT_DIR$/app/images/servers.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/settings.png" afterPath="$PROJECT_DIR$/app/images/settings.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/institutions.css" afterPath="$PROJECT_DIR$/app/styles/institutions.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.css" afterPath="$PROJECT_DIR$/app/styles/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/main.html" afterPath="$PROJECT_DIR$/app/partials/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/main.institutions.html" afterPath="$PROJECT_DIR$/app/partials/main.institutions.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/main.menu.accounts.html" afterPath="$PROJECT_DIR$/app/partials/main.menu.accounts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/main.menu.finances.html" afterPath="$PROJECT_DIR$/app/partials/main.menu.finances.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/main.menu.html" afterPath="$PROJECT_DIR$/app/partials/main.menu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/main.menu.settings.html" afterPath="$PROJECT_DIR$/app/partials/main.menu.settings.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/main.menu.transactions.html" afterPath="$PROJECT_DIR$/app/partials/main.menu.transactions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/menu.css" afterPath="$PROJECT_DIR$/app/styles/menu.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/main/transaction-ctrl.js" afterPath="$PROJECT_DIR$/app/scripts/main/transaction-ctrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/transactions.css" afterPath="$PROJECT_DIR$/app/styles/transactions.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="famfordibly.iws" />
@@ -20,36 +116,37 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="famfordibly" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.menu.finances.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/partials/main.menu.finances.html">
+      <file leaf-file-name="main.menu.transactions.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/partials/main.menu.transactions.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="684">
-              <caret line="15" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="14" />
+            <state vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="360">
+              <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/styles/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1" vertical-offset="2577" max-vertical-offset="5652">
-              <caret line="155" column="9" selection-start-line="155" selection-start-column="9" selection-end-line="155" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.menu.accounts.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.menu.accounts.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/partials/main.menu.accounts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.73220336" vertical-offset="0" max-vertical-offset="630">
-              <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+            <state vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="630">
+              <caret line="2" column="61" selection-start-line="2" selection-start-column="61" selection-end-line="2" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.menu.finances.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/partials/main.menu.finances.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.058252428" vertical-offset="0" max-vertical-offset="684">
+              <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -68,32 +165,32 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/partials/main.institutions.html" />
-        <option value="$PROJECT_DIR$/app/styles/institutions.css" />
         <option value="$PROJECT_DIR$/app/scripts/main/accounts-ctrl.js" />
-        <option value="$PROJECT_DIR$/app/scripts/main/main-ctrl.js" />
         <option value="$PROJECT_DIR$/app/scripts/main/transactions-ctrl.js" />
         <option value="$PROJECT_DIR$/app/scripts/main/institutions-ctrl.js" />
         <option value="$PROJECT_DIR$/app/scripts/main/settings-ctrl.js" />
         <option value="$PROJECT_DIR$/app/scripts/main/menu-ctrl.js" />
-        <option value="$PROJECT_DIR$/app/scripts/main/transaction-ctrl.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/partials/sign-in.html" />
-        <option value="$PROJECT_DIR$/app/partials/main.html" />
-        <option value="$PROJECT_DIR$/app/partials/main.menu.html" />
-        <option value="$PROJECT_DIR$/app/styles/menu.css" />
         <option value="$PROJECT_DIR$/app/styles/transactions.css" />
-        <option value="$PROJECT_DIR$/app/partials/main.menu.transactions.html" />
-        <option value="$PROJECT_DIR$/app/partials/main.menu.settings.html" />
-        <option value="$PROJECT_DIR$/app/partials/main.menu.finances.html" />
+        <option value="$PROJECT_DIR$/app/scripts/main/transaction-ctrl.js" />
+        <option value="$PROJECT_DIR$/app/styles/institutions.css" />
+        <option value="$PROJECT_DIR$/app/scripts/main/main-ctrl.js" />
+        <option value="$PROJECT_DIR$/app/partials/main.institutions.html" />
+        <option value="$PROJECT_DIR$/app/styles/menu.css" />
+        <option value="$PROJECT_DIR$/app/partials/main.menu.html" />
+        <option value="$PROJECT_DIR$/app/partials/main.html" />
         <option value="$PROJECT_DIR$/app/styles/main.css" />
+        <option value="$PROJECT_DIR$/app/partials/main.menu.settings.html" />
+        <option value="$PROJECT_DIR$/app/partials/main.menu.transactions.html" />
         <option value="$PROJECT_DIR$/app/partials/main.menu.accounts.html" />
+        <option value="$PROJECT_DIR$/app/partials/main.menu.finances.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="24" />
-    <option name="width" value="854" />
+    <option name="width" value="1366" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -306,7 +403,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="854" height="744" extended-state="4" />
+    <frame x="0" y="24" width="1366" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -314,7 +411,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30569306" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27954546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40296295" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -322,12 +419,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32766616" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -350,6 +447,30 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/scripts/main/transaction-ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3546">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/partials/main.menu.transactions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="432">
+          <caret line="2" column="75" selection-start-line="2" selection-start-column="75" selection-end-line="2" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/partials/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="403" max-vertical-offset="1008">
+          <caret line="35" column="57" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/partials/main.menu.finances.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
@@ -378,7 +499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="991" max-vertical-offset="1566">
           <caret line="32" column="13" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -457,13 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/main/main-ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/main/institutions-ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4272152" vertical-offset="0" max-vertical-offset="632">
@@ -478,13 +591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/main/menu-ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55813956" vertical-offset="0" max-vertical-offset="756">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/main/transactions-ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5023256" vertical-offset="0" max-vertical-offset="645">
@@ -492,66 +598,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/main/transaction-ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80930233" vertical-offset="0" max-vertical-offset="3546">
-          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.59669423" vertical-offset="937" max-vertical-offset="1566">
           <caret line="32" column="13" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/institutions.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22325581" vertical-offset="0" max-vertical-offset="972">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="26" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/main.menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.982456" vertical-offset="1207" max-vertical-offset="1782">
-          <caret line="86" column="52" selection-start-line="86" selection-start-column="52" selection-end-line="86" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/menu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.8333335" vertical-offset="641" max-vertical-offset="1512">
-          <caret line="47" column="37" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/transactions.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1008">
-          <caret line="0" column="39" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/main.menu.transactions.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.029126214" vertical-offset="0" max-vertical-offset="618">
-          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -559,23 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/main.institutions.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49514562" vertical-offset="0" max-vertical-offset="618">
-          <caret line="17" column="79" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/main.menu.settings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34488735" vertical-offset="35" max-vertical-offset="900">
-          <caret line="13" column="40" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -583,30 +616,117 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7175043" vertical-offset="0" max-vertical-offset="577">
           <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/transactions.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3906977" vertical-offset="0" max-vertical-offset="1044">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/main/transaction-ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.655814" vertical-offset="0" max-vertical-offset="3744">
+          <caret line="131" column="30" selection-start-line="131" selection-start-column="30" selection-end-line="131" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/institutions.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4951613" vertical-offset="287" max-vertical-offset="1008">
+          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/main/menu-ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55813956" vertical-offset="0" max-vertical-offset="756">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/main/main-ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/menu.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="558" max-vertical-offset="1512">
+          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/partials/main.institutions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4561403" vertical-offset="19" max-vertical-offset="594">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/partials/main.menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56173915" vertical-offset="1207" max-vertical-offset="1782">
+          <caret line="85" column="67" selection-start-line="85" selection-start-column="66" selection-end-line="85" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1" vertical-offset="2577" max-vertical-offset="5652">
-          <caret line="155" column="9" selection-start-line="155" selection-start-column="9" selection-end-line="155" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.53953487" vertical-offset="678" max-vertical-offset="6210">
+          <caret line="57" column="20" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/main.menu.finances.html">
+    <entry file="file://$PROJECT_DIR$/app/partials/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="684">
-          <caret line="15" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.6173913" vertical-offset="437" max-vertical-offset="1206">
+          <caret line="44" column="116" selection-start-line="44" selection-start-column="65" selection-end-line="44" selection-end-column="116" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/partials/main.menu.settings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0892562" vertical-offset="0" max-vertical-offset="900">
+          <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/partials/main.menu.transactions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="360">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/partials/main.menu.accounts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73220336" vertical-offset="0" max-vertical-offset="630">
-          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        <state vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="630">
+          <caret line="2" column="61" selection-start-line="2" selection-start-column="61" selection-end-line="2" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/partials/main.menu.finances.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.058252428" vertical-offset="0" max-vertical-offset="684">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
           <folding />
         </state>
       </provider>

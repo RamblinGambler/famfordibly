@@ -12,22 +12,42 @@
 }
 
 .transactionButtons{
-    background:lightblue;
+    background-color:#f4f8fb;
     margin-top: 15%;
+    border-top: 1px solid #e6eaed;
+}
+
+.button {
+    border: 0;
+    width: 70%;
+    height: 40px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    background-color: #4A97F1;
+    color: #FFFFFF;
+    border-radius: 4px;
 }
 
 .outgoingButton{
     margin-left: 5%;
-    width: 44%;
+    width: 46%;
     margin-right: -10px;
     padding-right: 0px;
     margin-top: 2.5%;
     height: 35px;
+    background-color: #4bbc7a;
+    border-bottom: 3px solid #3fa46a;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
 }
 
 .incomingButton{
     padding-left: 0px;
     width: 45%;
-    margin-top: 2%;
+    margin-top: 5%;
     height: 35px;
+    background-color: #d2d6d9;
+    border-bottom: 3px solid #abafb2;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
 }

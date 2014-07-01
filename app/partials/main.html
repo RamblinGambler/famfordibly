@@ -2,8 +2,9 @@
     <fa-scroll-view fa-pipe-from="eventHandler" fa size="[500,0]">
 	    <fa-modifier fa-size="[undefined,235]">
             <fa-surface fa-index="0" fa-pipe-to="eventHandler" class="cashContainer">
+                <canvas id="dailyCircle" width="500" height="235"></canvas>
                 <div class="dailyCenter">
-                    <p class="dailyCash">$37</p>
+                    <h3 class="dailyCash"><span class="dollarBills">$</span><span class="cashText">37</span></h3>
                     <p class="dailyCashText">of daily cash <br/> left to spend</p>
                 </div>
             </fa-surface>
@@ -21,9 +22,7 @@
             </fa-surface>
 	    </fa-modifier>
 	    <fa-modifier fa-size="[undefined,245]">
-            <fa-surface fa-index="2" fa-pipe-to="eventHandler" class="graphSurface">
-                Surface 3
-            </fa-surface>
+            <fa-surface fa-index="2" fa-pipe-to="eventHandler" class="graphSurface"></fa-surface>
 	    </fa-modifier>
 	</fa-scroll-view>
 </fa-modifier>
@@ -33,7 +32,7 @@
         <fa-grid-layout fa-options='{dimensions: [3,1]}'>
 	        <fa-modifier fa-origin="[.2, .5]" fa-scale="[1.2, 1.2]">
 	            <fa-surface fa-size="[true, true]" fa-background-color="'#ffffff'" fa-color="'#BADA55'">
-	                <a ui-sref=".menu" class="topButton">=</a>
+	                <a ui-sref=".menu" class="topButton"><img src="images/hamburger.png" class="hamburgerIcon" /></a>
 	            </fa-surface>
 	        </fa-modifier>
             <fa-modifier fa-origin="[.5, .5]" fa-scale="[1.5, 1.5]">
@@ -43,9 +42,21 @@
             </fa-modifier>
             <fa-modifier fa-origin="[.8, .5]" fa-scale="[1.2, 1.2]">
                 <fa-surface fa-size="[true, true]" fa-background-color="'#ffffff'" fa-color="'#BADA55'">
-                    <a ui-sref=".institutions" class="topButton">+</a>
+                    <a ui-sref=".institutions" class="topButton"><img src="images/plus.png" class="hamburgerIcon" /></a>
                 </fa-surface>
             </fa-modifier>
         </fa-grid-layout>
 </fa-modifier>
 <ui-view>
+
+<script>
+    $(function() {
+        var can = document.getElementById('dailyCircle');
+        var ctx = can.getContext('2d');
+        ctx.beginPath()
+        ctx.arc(152.5,115,100,0,Math.PI*2, false); // outer (filled)
+        ctx.arc(152.5,115,88,0,Math.PI*2, true); // inner (unfills it)
+        ctx.fillStyle = '#dbdbdb';
+        ctx.fill();
+    });
+</script>
