@@ -1,23 +1,33 @@
 <fa-modifier fa-size="[undefined, undefined]" fa-translate="success">
   <fa-surface fa-background-color="'#ffffff'"></fa-surface>
 </fa-modifier>
-<fa-modifier fa-size="[undefined, 300]" fa-origin="[0,.25]" fa-translate="success">
+
+<fa-modifier fa-size="[undefined, undefined]" fa-align="[.15,.05]" fa-translate="success">
   <fa-surface>
-	  <div class="sign">
 			<h1>Affordably</h1>
-			<h5 class="title">The Fitness Coach for Your Finances</h5>
-			<div class="email">
-				<input type="text" placeholder="Email" data-ng-model="email"/>
-			</div>
-			<div class="password">
-				<input type="text" placeholder="Password" data-ng-model="password"/>
-			</div>
-
-				<button type="submit" ng-click="submit(email, password)">Log In</button>
-				<div ng-model="message"></div>
-
-			<p>Don't have an account?</p>
-			<h4><a ui-sref="signUp">Sign Up</a></h4>
-	  </div>
-	</fa-surface>
+			<h5 class="title">Sign into your {{inst.institution_name}} account</h5>
+  </fa-surface>
+	 <fa-modifier fa-align="[0,.2]">
+		 <fa-view>
+		  <fa-surface>
+				<label ng-bind="fields[0].description"></label>
+				<br>
+				<input type="text" name="user_id" data-ng-model="user_id"/>
+				<br>
+				<label ng-bind="fields[1].description"></label>
+				<br>
+				<input type="text" name="password" data-ng-model="password"/>
+				<br>
+				<div ng-show="third">
+					<label ng-bind="fields[2].description"></label>
+					<br>
+					<input type="text" name="PIN" data-ng-model="pin"/>
+				</div>
+				<div ng-bind="link.content"></div>
+				<button type="submit" ng-click="submit(user_id, password, pin)">Log In</button>
+				<p>Don't have an account?</p>
+				<h4><a ui-sref="signUp">Sign Up</a></h4>
+		  </fa-surface>
+		</fa-view>
+	</fa-modifier>
 </fa-modifier>

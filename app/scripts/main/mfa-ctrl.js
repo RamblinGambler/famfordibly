@@ -53,36 +53,10 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
 	  $http({
 	    method: 'POST',
 	    url: "http://localhost:3000/api/v1/add_account",
-	    params: {
-	    	username: user_id,
-	    	auth_token: $window.sessionStorage.token,
-	    	password: password,
-	    	pin: pin,
-	    	count: 1,
-	    	institution: $stateParams.id
-	    }
+	    params: {username: user_id, auth_token: $window.sessionStorage.token, password: password, pin: pin, count: 1, institution: $stateParams.id}
 	  }).success(function(data) {
-	  	console.log("data", data)
+	  	console.log(data)
 	  }).error(function(error) {
-	  	$http({
-	  	  method: 'POST',
-	  	  url: "http://localhost:3000/api/v1/refresh_submit",
-	  	  params: {
-	  	  	username: user_id,
-  	  	  auth_token: $window.sessionStorage.token,
-  	  	  password: password,
-  	  	  pin: pin,
-  	  	  count: 1,
-  	  	  institution: $stateParams.id,
-  	  	  login_id: error.id
-	  	  }
-	  	}).success(function(data) {
-	  	console.log("data", data)
-		  })
-		  // .error(function(error) {
-	  	// console.log("error", error)
-			 //  }
-		  // 	console.log("error",error.id)
 	  });
   console.log(user_id);
   console.log(password);
