@@ -85,7 +85,6 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 			  });
 
 			  var item = new Surface({
-			    content: "Item: " + (i + 1),
 			    size: [undefined, 65],
 			    properties: {
 			      backgroundColor: "white",
@@ -95,6 +94,8 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
                   zIndex: 4
 			    }
 			  });
+
+              item.setContent('<img class="transactionIcon" src="/images/coin.png" /><div class="transactionNameDate"><h3 class="nameText">LOWES</h3><p class="dateText">May 27</p></div><div class="transactionPrice"><h3>$125.05</h3></div>');
 
 			  var backgroundYesModifier = new StateModifier({
 			    //on the left
