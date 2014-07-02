@@ -133,6 +133,11 @@ p{
     text-decoration: none;
 }
 
+.chartTitle{
+    color: white;
+    margin-left: 5%;
+}
+
 /*SIGN IN*/
 
 .signIn{

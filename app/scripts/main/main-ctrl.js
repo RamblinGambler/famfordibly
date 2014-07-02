@@ -1,7 +1,6 @@
 'use strict';
 
 Affordably.controller('MainCtrl', function ($scope, $famous, $state) {
-
     var EventHandler = $famous['famous/core/EventHandler'];
     // var Transitionable = $famous['famous/transitions/Transitionable'];
 
@@ -28,5 +27,4 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $state) {
     $scope.settings = function() {
 	    // translateTrans.set([317,0,0], {duration: 500, curve: 'easeOut'});
     };
-
-  });
+});
