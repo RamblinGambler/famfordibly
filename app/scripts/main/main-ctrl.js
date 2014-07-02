@@ -1,28 +1,25 @@
 'use strict';
 
-Affordably.controller('MainCtrl', function ($scope, $famous, $state) {
+Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $http) {
 
     var EventHandler = $famous['famous/core/EventHandler'];
     // var Transitionable = $famous['famous/transitions/Transitionable'];
 
     $scope.eventHandler = new EventHandler();
-    //set things up
-    // var translateTrans = new Transitionable([0,0,0]);
 
-    // $scope.sizeModifier = new Modifier();
-		// $scope.sizeModifier = function(){
-	    // var size = mainContext.getSize();
-	    // return [0.5 * size[0],0.5 * size[1]];
-		// });
+  	$http({
+  	  method: 'GET',
+  	  url: "http://localhost:3000/api/v1/index",
+  	  params: {
+  	  	auth_token: $window.sessionStorage.token
+  	  }
+  	}).success(function(data) {
+      // $state.go('wait', {job: data.job});
+	  	console.log("data", data)
+	  }).error(function(error) {
+	  	console.log("error", error)
+	  });
 
-
-
-		// if($state.is('main')) {
-		// 	$scope.getTranslate = [0,0,1];
-		// } else {
-	 //    $scope.getTranslate = [0,0,0];
-
-		// };
 
     //now make things animate
     $scope.settings = function() {
