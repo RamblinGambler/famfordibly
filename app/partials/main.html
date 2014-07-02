@@ -4,7 +4,7 @@
             <fa-surface fa-index="0" fa-pipe-to="eventHandler" class="cashContainer">
                 <canvas id="dailyCircle" width="500" height="235"></canvas>
                 <div class="dailyCenter">
-                    <h3 class="dailyCash"><span class="dollarBills">$</span><span class="cashText">37</span></h3>
+                    <h3 class="dailyCash"><span class="dollarBills"></span><span class="cashText" ng-bind="data.daily_cash | noFractionCurrency"></span></h3>
                     <p class="dailyCashText">of daily cash <br/> left to spend</p>
                 </div>
             </fa-surface>
@@ -13,11 +13,11 @@
             <fa-surface fa-index="1" fa-pipe-to="eventHandler" class="overviewSurface overviewContainer">
                 <div class="overviewContent">
                     <p class="sectionTitle">Overview</p>
-                    <h5 class="overviewLine"><span class="overviewLabel">Total Balance:</span><span class="overviewText">$799</span></h5>
-                    <h5 class="overviewLine"><span class="overviewLabel">Total Spent Today:</span><span class="overviewText">$0</span></h5>
-                    <h5 class="overviewLine"><span class="overviewLabel">Upcoming Bills:</span><span class="overviewText">$72</span></h5>
-                    <h5 class="overviewLine"><span class="overviewLabel">Money Leftover:</span><span class="overviewText">$761</span></h5>
-                    <h5 class="overviewLine"><span class="overviewLabel">Money Saved:</span><span class="overviewText">$18</span></h5>
+                    <h5 class="overviewLine"><span class="overviewLabel">Total Balance:</span><span class="overviewText" ng-bind="data.total_available | noFractionCurrency"></span></h5>
+                    <h5 class="overviewLine"><span class="overviewLabel">Total Spent Today:</span><span class="overviewText" ng-bind="data.daily_spent | noFractionCurrency"></span></h5>
+                    <h5 class="overviewLine"><span class="overviewLabel">Upcoming Bills:</span><span class="overviewText" ng-bind="data.fixed_left | noFractionCurrency"></span></h5>
+                    <h5 class="overviewLine"><span class="overviewLabel">Money Leftover:</span><span class="overviewText" ng-bind="data.money_leftover | noFractionCurrency"></span></h5>
+                    <h5 class="overviewLine"><span class="overviewLabel">Money Saved:</span><span class="overviewText" ng-bind="data.saved | noFractionCurrency"></span></h5>
                 </div>
             </fa-surface>
 	    </fa-modifier>

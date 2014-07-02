@@ -4,7 +4,7 @@ var Affordably = angular.module('famousAngularStarter',
   ['ngAnimate', 'ngCookies',
     'ngTouch', 'ngSanitize',
     'ngResource', 'ui.router',
-    'famous.angular'  ]);
+    'famous.angular']);
 
 Affordably.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
   $stateProvider
@@ -32,6 +32,11 @@ Affordably.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
     url: '/wait/:job',
     templateUrl: 'partials/wait.html',
     controller: 'WaitCtrl',
+  })
+  .state('mfa', {
+    url: '/mfa',
+    templateUrl: 'partials/mfa.html',
+    controller: 'MfaCtrl',
   })
   .state('main', {
     url: '/main',
