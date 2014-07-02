@@ -42,7 +42,7 @@
             </fa-modifier>
             <fa-modifier fa-origin="[.8, .5]" fa-scale="[1.2, 1.2]">
                 <fa-surface fa-size="[true, true]" fa-background-color="'#ffffff'" fa-color="'#BADA55'">
-                    <a ui-sref=".institutions" class="topButton"><img src="images/plus.png" class="hamburgerIcon" /></a>
+                    <a ui-sref=".institutions" class="topButton"><img src="images/hamburger.png" class="hamburgerIcon" /></a>
                 </fa-surface>
             </fa-modifier>
         </fa-grid-layout>
@@ -58,5 +58,18 @@
         ctx.arc(152.5,115,88,0,Math.PI*2, true); // inner (unfills it)
         ctx.fillStyle = '#dbdbdb';
         ctx.fill();
+
+        var percentage = 0.24; // no specific length
+        var degrees = percentage * 360.0;
+        var radians = degrees * (Math.PI / 180);
+        var s = 0;//1.5 * Math.PI;
+
+        ctx.beginPath();
+        ctx.lineWidth = 5;
+        ctx.arc(152.5, 115, 94, s, radians, false);
+        ctx.lineWidth=12;
+        ctx.strokeStyle="#49bc79";
+        ctx.rotate(1.57);
+        ctx.stroke();
     });
 </script>

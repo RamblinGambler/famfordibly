@@ -155,7 +155,7 @@ p{
 }
 
 input[type=text] {
-    border: 1px solid;
+    border: 0px;
     font-size: 1em;
     margin-top: 15px;
 }

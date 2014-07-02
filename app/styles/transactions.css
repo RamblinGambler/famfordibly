@@ -1,6 +1,6 @@
 .transactionTitle{
     display: inline-block;
-    margin-left: 27%;
+    margin-left: 24%;
     font-size: 1.2em;
     margin-top: 5%;
 }
@@ -15,6 +15,11 @@
     background-color:#f4f8fb;
     margin-top: 15%;
     border-top: 1px solid #e6eaed;
+    z-index: 2;
+}
+
+.transactionHeader{
+    z-index:2;
 }
 
 .button {
@@ -50,4 +55,35 @@
     border-bottom: 3px solid #abafb2;
     border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
+}
+
+.transactionIcon{
+    float: left;
+    margin-top: 9%;
+    margin-left: 5%;
+}
+
+.transactionNameDate{
+    display: inline-block;
+    margin-top: -10%;
+    margin-left: 3%;
+    float: left;
+}
+
+.nameText{
+    margin-top: 40%;
+    font-size: 94%;
+}
+
+.dateText{
+    margin-top: -134%;
+    margin-left: -27%;
+    font-size: 0.7em;
+    color: #666;
+}
+
+.transactionPrice{
+    float: right;
+    margin-top: -7%;
+    margin-right: 9%;
 }
