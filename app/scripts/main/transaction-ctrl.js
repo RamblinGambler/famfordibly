@@ -21,6 +21,7 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 	$scope.getTranslatinger = translateTra.get.bind(translateTra);
 	translateTra.set([0,300,0], {duration: 500, curve: 'easeOut'});
 
+
 	require(['famous/modifiers/Draggable'], function(Draggable) {
 		require(['famous/modifiers/StateModifier'], function(StateModifier) {
 
@@ -31,19 +32,20 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 			scrollview.sequenceFrom(surfaces);
 
 			var inFrontModifier = new StateModifier({
-			  transform: Transform.translate(0, 0, 1)
+			    transform: Transform.translate(0, 0, 1)
 			});
-		  var opacityMod = new StateModifier({
+
+		    var opacityMod = new StateModifier({
 				opacity: 1,
 				properties: {
 					backgroundColor: 'red'
 				}
-		  });
+		    });
 
 			for (var i = 0; i < 15; i++) {
 
 			  var container = new ContainerSurface({
-			    size: [undefined, 75],
+			    size: [undefined, 65],
 			    properties: {
 			      overflow: 'hidden'
 			    }
@@ -84,13 +86,13 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 
 			  var item = new Surface({
 			    content: "Item: " + (i + 1),
-			    size: [undefined, 75],
+			    size: [undefined, 65],
 			    properties: {
-			      backgroundColor: "lightgrey",
-			      borderBottom: "1px solid grey",
+			      backgroundColor: "white",
+			      borderBottom: "1px solid #e6eaed",
 			      lineHeight: "75px",
 			      textAlign: "center",
-			      zIndex:4
+                  zIndex: 4
 			    }
 			  });
 
@@ -101,7 +103,7 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 			  });
 			  var backgroundYes = new Surface({
 			    content: "Fixed",
-			    size: [160, 75],
+			    size: [160, 65],
 			    properties: {
 			      backgroundColor: "rgba(0,255,0,0.2)",
 			      lineHeight: "75px",
@@ -115,13 +117,21 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 			  });
 			  var backgroundNo = new Surface({
 			    content: "Discretionary",
-			    size: [160, 75],
+			    size: [160, 65],
 			    properties: {
 			      backgroundColor: "rgba(255,0,0,0.2)",
 			      lineHeight: "75px",
 			      textAlign: "center"
 			    }
 			  });
+
+              var spacer = new Surface({
+                size: [160, 5],
+                properties: {
+                    backgroundColor: "#f4f8fb",
+                    zIndex: '6'
+                }
+              });
 
 			  var node = new RenderNode(draggable);
 			  node.add(item);
@@ -137,6 +147,7 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 			  item.pipe(draggable);
 			  item.pipe(scrollview);
 			  surfaces.push(container);
+              surfaces.push(spacer);
 			  $scope.transaction.add(scrollview);
 
 

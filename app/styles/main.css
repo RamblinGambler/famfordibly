@@ -22,9 +22,17 @@ body {
 @font-face {
     font-family: proxima-nova, sans-serif;
     src: url('styles/fonts/ProximaNova/ProximaNova-Regular.otf') format('opentype');
-    font-weight: normal;
+    font-weight: 500;
     font-style: normal;
 }
+
+@font-face {
+    font-family: proxima-nova, sans-serif;
+    src: url('styles/fonts/ProximaNova/ProximaNova-Semibold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 
 h1{
     font-family: 'Rubrik', sans-serif;
@@ -43,6 +51,15 @@ p{
     font-weight: lighter;
 }
 
+.hamburgerIcon{
+    width: 68%;
+}
+
+.hamburgerIcon2{
+    width: 5%;
+    margin-left: 5%;
+}
+
 .logo {
     color: #4bbc7a;
 }
@@ -58,7 +75,8 @@ p{
     font-family: 'Rubrik', sans-serif;
     font-weight: normal;
     font-style: normal;
-    font-size: 0.65em;
+    margin-left: -5%;
+    font-size: 0.73em;
 }
 
 .center-box {
@@ -205,25 +223,38 @@ button[type=submit] {
 background-color: blue;
 }
 
-
-
 /* Daily Surface */
 .dailyCash{
-    margin-left: 30%;
+    margin-left: 26%;
     margin-bottom: 0px;
     padding-bottom: 0px;
-    font-size: 2em;
+    font-size: 300%;
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.dollarBills{
+    color: #dbdbdb;
+}
+
+.cashText{
+    color: #49bc79;
 }
 
 .dailyCashText{
     margin-left:25%;
     padding-top:0px;
     margin-top:0px;
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #dbdbdb;
 }
 
 .dailyCenter{
-    margin-left:15%;
-    margin-top:25%;
+    margin-left: 11%;
+    margin-top: -65%;
 }
 
 /* Overview Surface */
@@ -259,7 +290,7 @@ background-color: blue;
 
 /* Graph Surface */
 .graphSurface{
-    background-color:lightblue;
+    background-color:#5698d5;
 }
 
 
