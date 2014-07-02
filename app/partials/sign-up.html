@@ -1,22 +1,24 @@
-<fa-modifier fa-size="[undefined, undefined]">
-  <fa-surface fa-background-color="'yellow'"></fa-surface>
+<fa-modifier fa-size="[undefined, undefined]" fa-translate="success">
+    <fa-surface fa-background-color="'#ffffff'"></fa-surface>
 </fa-modifier>
-<fa-modifier fa-size="[undefined, 300]" fa-origin="[0,.25]">
-  <fa-surface>
-	  <div class="sign">
-			<h2>Affordably</h2>
-			<h4 class="title">The Fitness Coach for Your Finances</h4>
-			<div class="email">
-				<input type="text" ng-model="email">
-			</div>
-			<div class="password">
-				<input type="text" ng-model="password">
-			</div>
+<fa-modifier fa-size="[undefined, 300]" fa-origin="[0,.25]" fa-translate="success">
+    <fa-surface>
+        <div class="sign">
+            <h1 class="logo">Affordably</h1>
+            <h5 class="title">The Fitness Coach for Your Finances</h5>
+            <form class="signIn">
+                <div class="email">
+                    <input type="text" placeholder="Email" ng-model="email" class="signInInput" />
+                </div>
+                <div class="password">
+                    <input type="password" placeholder="Password" ng-model="password" class="signInInput" />
+                </div>
 
-				<input type="button" value="Login" ng-click="submit()">
-
-			<p>Don't have an account?</p>
-			<h4>Sign Up</h4>
-	  </div>
-	</fa-surface>
+                <button type="submit" ng-click="submit(email, password)" class="signInButton">Create Account</button>
+                <div ng-model="message"></div>
+            </form>
+            <p id="noAccountMessage">Already have an account?</p>
+            <h4 id="signUpLink"><a ui-sref="signIn">Sign In</a></h4>
+        </div>
+    </fa-surface>
 </fa-modifier>
