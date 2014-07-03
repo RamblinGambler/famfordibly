@@ -9,19 +9,9 @@
         <fa-view>
             <fa-surface fa-tap="select()" class="settingBackground">
                 <div class="form-container">
-                    <p class="labelText">Wells Fargo</p>
+                    <p class="labelText" ng-bind="data.banking.bank[0].name"></p>
                     <div class="fieldHolder">
-                        <p>Checking - $1234.12</p>
-                    </div>
-                    <div class="fieldHolder">
-                        <p>Savings - $11,234.12</p>
-                    </div>
-                </div>
-
-                <div class="form-container">
-                    <p class="labelText">Chase</p>
-                    <div class="fieldHolder">
-                        <p>Credit - $234.00</p>
+                        <p>Checking - {{data.banking.bank[0].balance | currency}}</p>
                     </div>
                 </div>
             </fa-surface>

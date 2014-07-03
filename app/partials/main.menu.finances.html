@@ -1,8 +1,8 @@
 <fa-modifier  fa-translate="[0,0,1]" fa-size="[undefined,50]">
-    <fa-surface class="titleHeader" fa-tap="back()">
-        <img src="images/hamburger.png" class="hamburgerIcon2" />
+    <fa-surface class="titleHeader">
+        <img src="images/hamburger.png" class="hamburgerIcon2" ng-click="back()"/>
         <p class="transactionTitle pageTitle">Finances</p>
-        <p class="rightMenu">Edit</p>
+        <p class="rightMenu" ng-click="save(data.money_leftover, data.income, data.monthly_fixed)">Save</p>
     </fa-surface>
 </fa-modifier>
 <fa-modifier fa-translate="getTranslating">
@@ -12,19 +12,19 @@
                 <div class="form-container">
                     <p class="labelText">Money left in your account at the end of the month?</p>
                     <div class="fieldHolder">
-                        <input type="text" placeholder="$0.00" class="financeForm"/>
+                        <input type="text" ng-model="data.money_leftover" class="financeForm"/>
                     </div>
                 </div>
                 <div class="form-container">
                     <p class="labelText">Monthly income after taxes?</p>
                     <div class="fieldHolder">
-                        <input type="text" placeholder="$0.00" class="financeForm"/>
+                        <input type="text" ng-model="data.income" class="financeForm"/>
                     </div>
                 </div>
                 <div class="form-container">
                     <p class="labelText">Total fixed expenses per month (rent, mortgage, bills, etc.)?</p>
                     <div class="fieldHolder">
-                        <input type="text" placeholder="$0.00" class="financeForm"/>
+                        <input type="text" ng-model="data.monthly_fixed" class="financeForm"/>
                     </div>
                 </div>
             </fa-surface>

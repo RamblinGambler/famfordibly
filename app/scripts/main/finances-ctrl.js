@@ -1,6 +1,6 @@
 'use strict';
 
-Affordably.controller('FinancesCtrl', function ($scope, $famous, $state) {
+Affordably.controller('FinancesCtrl', function ($scope, $famous, $state, $filter) {
   var Transitionable = $famous['famous/transitions/Transitionable'];
   var EventHandler = $famous['famous/core/EventHandler'];
 
@@ -13,6 +13,13 @@ Affordably.controller('FinancesCtrl', function ($scope, $famous, $state) {
       translateT.set([0,0,0], {duration: 500, curve: 'easeOut'}, function() {
           $state.go('main.menu');
       });
+  };
+
+  $scope.save = function(leftover, income, fixed) {
+    // POST TO PROFILE
+    console.log(leftover);
+    console.log(income);
+    console.log(fixed);
   };
 
   $scope.getTranslating = translateT.get.bind(translateT);

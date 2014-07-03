@@ -71,15 +71,17 @@
 }
 
 .nameText{
-    margin-top: 40%;
     font-size: 94%;
 }
 
 .dateText{
-    margin-top: -134%;
-    margin-left: -27%;
+    /*position: relative;*/
+    margin-top: -65px;
+    margin-left: 17%;
     font-size: 0.7em;
     color: #666;
+    /*width:100%;*/
+    float: left;
 }
 
 .transactionPrice{
