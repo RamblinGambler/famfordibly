@@ -66,6 +66,23 @@ p{
     color: #4bbc7a;
 }
 
+.linkAccountForm{
+    margin-top: 15%;
+    width: 70% !important;
+    margin-left: 15%;
+    margin-top:10%;
+}
+
+.linkAccountLabel{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-size: 0.8em;
+}
+
+.linkButton{
+    margin-top: 5%;
+    width: 100%;
+}
 
 .title {
     font-family: 'Rubrik', sans-serif;
@@ -171,6 +188,19 @@ input[type=password] {
     border: 0px;
     font-size: 1em;
     margin-top: 15px;
+}
+
+.linkInput{
+    background-color: #f4f8fb;
+    height: 40px;
+    margin-top: 0px !important;
+    width: 100%;
+}
+
+.inputLine{
+    height: 0px;
+    border:0px;
+    border-bottom: 1px solid #ebebeb;
 }
 
 button {
