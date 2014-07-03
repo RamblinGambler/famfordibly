@@ -6,15 +6,20 @@
         <div class="sign">
             <h1 class="logo">Affordably</h1>
             <h5 class="title">The Fitness Coach for Your Finances</h5>
-            <form class="signIn">
-                <div class="email">
-                    <input type="text" placeholder="Email" ng-model="email" class="signInInput" />
+            <form class="signIn signForm">
+                <div class="email linkAccountContainer">
+                    <p class="linkAccountLabel">Email</p>
+                    <hr class="inputLine">
+                    <input type="text" placeholder="Email" ng-model="email" class="linkInput"/>
+                    <br>
                 </div>
-                <div class="password">
-                    <input type="password" placeholder="Password" ng-model="password" class="signInInput" />
+                <div class="password linkAccountContainer">
+                    <p class="linkAccountLabel">Password</p>
+                    <hr class="inputLine">
+                    <input type="password" placeholder="Password" ng-model="password" class="linkInput"/>
+                    <br>
                 </div>
-
-                <button type="submit" ng-click="submit(email, password)" class="signInButton">Create Account</button>
+                <button type="submit" ng-click="submit(email, password)" class="signUpButton">Sign Up</button>
                 <div ng-model="message"></div>
             </form>
             <p id="noAccountMessage">Already have an account?</p>
