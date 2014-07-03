@@ -2,31 +2,37 @@
   <fa-surface fa-background-color="'#ffffff'"></fa-surface>
 </fa-modifier>
 
-<fa-modifier fa-size="[undefined, undefined]" fa-align="[.15,.05]" fa-translate="success">
+<fa-modifier fa-size="[undefined, undefined]" fa-align="[0,0]" fa-translate="success">
   <fa-surface>
-			<h1>Affordably</h1>
+      <div class="bankSearch">
+			<h1 class="affordablyFont">Affordably</h1>
 			<h5 class="title">Sign into your {{inst.institution_name}} account</h5>
+      </div>
   </fa-surface>
-	 <fa-modifier fa-align="[0,.2]">
+	 <fa-modifier fa-align="[0,0.2]">
 		 <fa-view>
-		  <fa-surface>
-				<label ng-bind="fields[0].description"></label>
-				<br>
-				<input type="text" name="user_id" data-ng-model="user_id"/>
-				<br>
-				<label ng-bind="fields[1].description"></label>
-				<br>
-				<input type="text" name="password" data-ng-model="password"/>
-				<br>
-				<div ng-show="third">
-					<label ng-bind="fields[2].description"></label>
-					<br>
-					<input type="text" name="PIN" data-ng-model="pin"/>
-				</div>
+		  <fa-surface class="linkAccountForm">
+                <div ng-repeat="field in fields">
+                    <div ng-if="field.display_order == '1'">
+                        <p ng-bind="field.description" class="linkAccountLabel"></p>
+                        <hr class="inputLine">
+                        <input type="text" name="user_id" data-ng-model="user_id" class="linkInput"/>
+                        <br>
+                    </div>
+                    <div ng-if="field.display_order == '2'">
+                        <p ng-bind="field.description" class="linkAccountLabel"></p>
+                        <hr class="inputLine">
+                        <input type="password" name="password" data-ng-model="password" class="linkInput"/>
+                        <br>
+                    </div>
+                    <div ng-if="field.display_order == '3'" ng-show="third">
+                        <p ng-bind="field.description" class="linkAccountLabel"></p>
+                        <hr class="inputLine">
+                        <input type="password" name="PIN" data-ng-model="pin" class="linkInput"/>
+                    </div>
+                </div>
 				<div ng-bind="link.content"></div>
-				<button type="submit" ng-click="submit(user_id, password, pin)">Log In</button>
-				<p>Don't have an account?</p>
-				<h4><a ui-sref="signUp">Sign Up</a></h4>
+				<button type="submit" ng-click="submit(user_id, password, pin)" class="linkButton">Link Account</button>
 		  </fa-surface>
 		</fa-view>
 	</fa-modifier>

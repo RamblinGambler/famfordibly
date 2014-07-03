@@ -1,31 +1,28 @@
 <fa-modifier fa-size="[undefined, undefined]" fa-translate="slide" fa-align="[0,1]">
-  <fa-surface fa-background-color="'#ffffff'"></fa-surface>
+    <fa-surface fa-background-color="'#ffffff'"></fa-surface>
 </fa-modifier>
 <fa-modifier fa-size="[undefined, 200]" fa-align="[0,0]" fa-translate="[0,0,1]">
-  <fa-surface fa-background-color="'#ffffff'"></fa-surface>
+    <fa-surface fa-background-color="'#ffffff'"></fa-surface>
 </fa-modifier>
-<fa-modifier fa-size="[undefined, 200]" fa-translate="slide" fa-align="[0,1.1]">
-	<fa-modifier fa-translate="[0,0,2]">
-	  <fa-surface>
-	    <div class="sign">
-	  		<h1>Affordably</h1>
-	  		<h5 class="title">Choose Your Bank</h5>
-	  		<div class="email">
-	  			<input type="text" placeholder="Enter Your Bank" data-ng-model="bank" ng-change="search(bank)"/>
+<fa-modifier fa-size="[undefined, 200]" fa-translate="slide" fa-align="[0,1]">
+    <fa-modifier fa-translate="[0,0,2]">
+	    <fa-surface>
+	        <div class="bankSearch">
+                <h1 class="affordablyFont">Affordably</h1>
+                <h5 class="title">Find your bank to get started</h5>
+	  			<input type="text" placeholder="Search for your bank here" data-ng-model="bank" ng-change="search(bank)" class="signInInput"/>
 	  		</div>
 		</fa-surface>
-	</fa-modifier >
-	<fa-modifier fa-align="[0,.5]" fa-translate="[0,0,0]">
-	<fa-scroll-view fa-pipe-from="eventHandler">
-    <fa-view ng-repeat="bank in banks" ng-controller="InstitutionCtrl">
-      <fa-modifier fa-size="[undefined, 50]" fa-translate="show" fa-align="[0,-1]">
-        <fa-surface fa-pipe-to="eventHandler" fa-background-color="'blue'"  fa-tap="select(bank)">
-          <div class="sign bank">
-      	    {{bank.institution_name}}
-          </div>
-        </fa-surface>
-       </fa-modifier>
-    </fa-view>
-	</fa-scroll-view>
+    </fa-modifier >
+	<fa-modifier fa-align="[0,.65]" fa-translate="[0,0,0]">
+        <fa-scroll-view fa-pipe-from="eventHandler">
+            <fa-view ng-repeat="bank in banks" ng-controller="InstitutionCtrl">
+                <fa-modifier fa-size="[undefined, 50]" fa-translate="show" fa-align="[0,-1]">
+                    <fa-surface fa-pipe-to="eventHandler" fa-tap="select(bank)" class="sign bank">
+                        <button class="institutionButton">{{bank.institution_name}}</button>
+                    </fa-surface>
+               </fa-modifier>
+            </fa-view>
+        </fa-scroll-view>
 	</fa-modifier>
 </fa-modifier>
