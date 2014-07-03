@@ -24,7 +24,7 @@
 	    <fa-modifier fa-size="[undefined,250]">
             <fa-surface fa-index="2" fa-pipe-to="eventHandler" class="graphSurface">
                 <p class="chartTitle">Week of Spending</p>
-                <canvas id="dailyChart" width="150" height="95"></canvas>
+                <canvas id="dailyChart"></canvas>
             </fa-surface>
 	    </fa-modifier>
 	</fa-scroll-view>
@@ -74,6 +74,8 @@
         ctx.stroke();
 
         var context = document.getElementById("dailyChart").getContext("2d");
+        context.canvas.width = 300;
+        context.canvas.height = 175;
         var data = {
             labels: ["M", "T", "W", "T", "F", "S", "S"],
             datasets: [
@@ -92,8 +94,6 @@
         var options = {
 
             animation: false,
-
-            responsive: true,
 
             ///Boolean - Whether grid lines are shown across the chart
             scaleShowGridLines : true,
@@ -151,5 +151,6 @@
 
         };
         var dailyChart = new Chart(context).Line(data, options);
+
     });
 </script>
