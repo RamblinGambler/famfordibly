@@ -1,6 +1,6 @@
 'use strict';
 
-Affordably.controller('FinancesCtrl', function ($scope, $famous, $state, $filter) {
+Affordably.controller('FinancesCtrl', function ($scope, $famous, $state, $filter, $http, $window) {
   var Transitionable = $famous['famous/transitions/Transitionable'];
   var EventHandler = $famous['famous/core/EventHandler'];
 
@@ -16,14 +16,23 @@ Affordably.controller('FinancesCtrl', function ($scope, $famous, $state, $filter
   };
 
   $scope.save = function(leftover, income, fixed) {
-    // POST TO PROFILE
-    console.log(leftover);
-    console.log(income);
-    console.log(fixed);
+    $http({
+      method: 'POST',
+      url: 'http://localhost:3000/api/v1/finances',
+      params: {
+        income: income,
+        monthly_fixed: fixed,
+        money_leftover: leftover,
+        auth_token: $window.sessionStorage.token
+      }
+    }).success(function(data) {
+      console.log(data);
+      $scope.message = "Your finances have been saved"
+    }).error(function(error) {
+      console.log(error)
+    });
   };
 
   $scope.getTranslating = translateT.get.bind(translateT);
     translateT.set([0,-567,0], {duration: 500, curve: 'easeOut'});
-
-  $scope.transactions = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   });

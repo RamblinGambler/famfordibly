@@ -15,9 +15,6 @@ Affordably.controller('AccountsCtrl', function ($scope, $famous, $state, mainDat
       });
   };
 
-
-
   $scope.getTranslating = translateT.get.bind(translateT);
     translateT.set([0,-567,0], {duration: 500, curve: 'easeOut'});
-
 });

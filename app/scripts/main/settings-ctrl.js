@@ -1,6 +1,6 @@
 'use strict';
 
-Affordably.controller('SettingsCtrl', function ($scope, $famous, $state) {
+Affordably.controller('SettingsCtrl', function ($scope, $famous, $state, $window, $http) {
   var Transitionable = $famous['famous/transitions/Transitionable'];
   var EventHandler = $famous['famous/core/EventHandler'];
 
@@ -19,8 +19,8 @@ Affordably.controller('SettingsCtrl', function ($scope, $famous, $state) {
     settings: {}
   };
 
-  var data = mainData.loadMain();
-  data.then(function(data) {
+  // var data = mainData.loadMain();
+  // data.then(function(data) {
     //     $scope.data.outgoings = data.data.outgoings;
     //     $scope.data.incomings = data.data.incomings;
     //     $scope.data.user = data.data.user;
@@ -32,7 +32,7 @@ Affordably.controller('SettingsCtrl', function ($scope, $famous, $state) {
     //     $scope.data.daily_spent = data.data.daily_spent;
     //     $scope.data.fixed_left = data.data.fixed_left;
     //     $scope.data.money_leftover = data.data.money_leftover;
-        $scope.data.settings = data.data.settings;
+        // $scope.data.settings = data.data.settings;
     //     $scope.data.saved = data.data.saved;
     //     $scope.data.income = data.data.income);
     //     $scope.data.housing = data.data.housing);
@@ -44,21 +44,30 @@ Affordably.controller('SettingsCtrl', function ($scope, $famous, $state) {
     //       };
     //     };
 
-    console.log($scope.data.settings)
+    // console.log($scope.data.settings)
 
-    $scope.week = function(weekly) {
+    $scope.save = function(weekly, daily, phone) {
       console.log(weekly);
-    };
-    $scope.day = function(daily) {
       console.log(daily);
-    };
-    $scope.phoneNum = function(phone) {
       console.log(phone);
+
+      $http({
+        method: 'PUT',
+        url: 'http://localhost:3000/api/v1/settings',
+        params: {
+          weekly: weekly,
+          daily: daily,
+          phone_num: phone,
+          auth_token: $window.sessionStorage.token
+        }
+      }).success(function(data) {
+        console.log(data);
+        $scope.message = "Your settings have been saved"
+      }).error(function(error) {
+        console.log(error)
+      });
     };
-    $scope.notTime = function(time) {
-      console.log(time);
-    };
-  });
+  // });
 
   $scope.getTranslating = translateT.get.bind(translateT);
     translateT.set([0,-567,0], {duration: 500, curve: 'easeOut'});

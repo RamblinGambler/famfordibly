@@ -159,11 +159,11 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 				  };
 
 				  if(transactions.outgoings[i].category_id == 1) {
-				  	$scope.image = '/images/coin.png';
-				  	item.setContent('<img class="transactionIcon" src="{{image}}"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
+				  	var image = '/images/coin.png';
+				  	item.setContent('<img class="transactionIcon" src="' + image + '"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
 				  } else if(transactions.outgoings[i].category_id == 2) {
-				  	$scope.image = '/images/box.png';
-					  item.setContent('<img class="transactionIcon" src="{{image}}" ng-show="fixed"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
+				  	var image = '/images/box.png';
+					  item.setContent('<img class="transactionIcon" src="' + image +'" ng-show="fixed"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
 				  };
 
 

@@ -1,8 +1,9 @@
 <fa-modifier  fa-translate="[0,0,1]" fa-size="[undefined,50]">
     <fa-surface>
-        <div class="titleHeader" fa-tap="back()">
-            <img src="images/hamburger.png" class="hamburgerIcon2" />
+        <div class="titleHeader">
+            <img src="images/hamburger.png" class="hamburgerIcon2" ng-click="back()"/>
             <p class="transactionTitle pageTitle">Settings</p>
+            <p class="rightMenu" ng-click="save(data.settings.weekly, data.settings.daily, data.settings.phone_num)">Save</p>
         </div>
     </fa-surface>
 </fa-modifier>
@@ -13,7 +14,7 @@
                 <p class="labelText">Weekly Emails: Short emails that give you a view of the week</p>
                 <div class="fieldHolder">
                     <label class='settingLabel'>Enable Emails?</label>
-                    <input type="checkbox" class="settingCheckbox" ng-model="data.settings.weekly" ng-change="week(data.settings.weekly)"/>
+                    <input type="checkbox" class="settingCheckbox" ng-model="data.settings.weekly"/>
                 </div>
             </div>
             <br/>
@@ -21,14 +22,14 @@
                 <p class="labelText">Daily Texts: Texts that arrive at an hour of your choosing letting you know your remaining daily cash</p>
                 <div class="fieldHolder">
                     <label class='settingLabel'>Enable Texts?</label>
-                    <input type="checkbox" class="settingCheckbox" ng-model="data.settings.daily" ng-change="day(data.settings.daily)"/>
+                    <input type="checkbox" class="settingCheckbox" ng-model="data.settings.daily"/>
                 </div>
             </div>
             <br/>
             <div class="form-container">
                 <p class="labelText">Phone Number</p>
                 <div class="fieldHolder">
-                    <input type="text" placeholder="(512)555-3333" ng-model="data.settings.phone_num" class="financeForm" ng-change="phoneNum(data.settings.phone_num)"/>
+                    <input type="text" placeholder="(512)555-3333" ng-model="data.settings.phone_num" class="financeForm"/>
                 </div>
             </div>
             <br/>
@@ -38,6 +39,7 @@
                     <input type="text" placeholder="2AM" class="financeForm" ng-model="data.settings.not_hour" ng-change="notTime(data.settings.not_hour)"/>
                 </div> -->
             </div>
+            <div ng-bind="message"></div>
         </fa-surface>
     </fa-view>
 </fa-modifier>

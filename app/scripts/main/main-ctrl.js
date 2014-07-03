@@ -32,8 +32,7 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
   var data = mainData.loadMain();
   data.then(function(data) {
     var currencyFilter = $filter('currency');
-    console.log(data.data.users_daily[0].values)
-    $scope.chart = data.data.users_daily[0].values
+    console.log(data.data.settings)
     $scope.data.outgoings = data.data.outgoings;
     $scope.data.incomings = data.data.incomings;
     $scope.data.user = data.data.user;
@@ -44,14 +43,14 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
     $scope.data.total_available = 0;
     $scope.data.daily_spent = data.data.daily_spent;
     $scope.data.fixed_left = data.data.fixed_left;
-    $scope.data.money_leftover = currencyFilter(data.data.money_leftover, '$');
+    $scope.data.money_leftover = currencyFilter(data.data.money_leftover, '');
     $scope.data.money_left = data.data.money_leftover;
     $scope.data.settings = data.data.settings;
     $scope.data.saved = data.data.saved;
-    $scope.data.income = currencyFilter(data.data.income, '$');
+    $scope.data.income = currencyFilter(data.data.income, '');
     $scope.data.housing = data.data.housing;
     $scope.data.banking = data.data.banking;
-    $scope.data.monthly_fixed = currencyFilter(data.data.monthly_fixed, '$');
+    $scope.data.monthly_fixed = currencyFilter(data.data.monthly_fixed, '');
 		for (var i = 0; i < data.data.banking.bank.length; i++) {
 		  if (data.data.banking.bank[i].primary === true) {
 		    $scope.data.total_available += data.data.banking.bank[i].balance
