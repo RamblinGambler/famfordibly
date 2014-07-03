@@ -71,6 +71,21 @@ p{
     width: 70% !important;
     margin-left: 15%;
     margin-top:10%;
+    text-align:left;
+}
+
+.signForm{
+    margin-top: 15%;
+    width: 70% !important;
+    /* margin-left: 15%; */
+    margin-top: 10%;
+    text-align: left;
+}
+
+.linkAccountContainer{
+    padding: 0px;
+    margin: 0px;
+    width: 100% !important;
 }
 
 .linkAccountLabel{
@@ -160,14 +175,13 @@ p{
 /*SIGN IN*/
 
 .signIn{
-    margin-top: 5%;
+    margin-top: 0%;
     display: inline-block;
     width: 100%;
 }
 
 .sign {
     text-align: center;
-    margin-top: 12.5%;
 }
 
 .email {
@@ -229,9 +243,22 @@ button {
     border-bottom: 3px solid #3fa46a;
 }
 
+.signUpButton{
+    color: #FFFFFF;
+    margin-top: 0%;
+    margin-bottom: 15px;
+    border: 0;
+    border-radius: 4px;
+    width: 100%;
+    height: 42px;
+    font-size: 1em;
+    background-color: #4bbc7a;
+    border-bottom: 3px solid #3fa46a;
+}
+
 .signInButton{
     border: 0;
-    width: 70%;
+    width: 100%;
     height: 40px;
     font-size: 1em;
     margin-bottom: 10px;
