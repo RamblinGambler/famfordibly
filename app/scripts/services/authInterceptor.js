@@ -1,4 +1,5 @@
 Affordably.factory('authInterceptor', function ($rootScope, $q, $window) {
+  'use strict';
   return {
     request: function (config) {
       config.headers = config.headers || {};

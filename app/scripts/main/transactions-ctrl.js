@@ -1,6 +1,5 @@
-'use strict';
-
 Affordably.controller('TransactionsCtrl', function ($scope, $famous, $state, $injector, $q, $resolve, mainData) {
+  'use strict';
   var Transitionable = $famous['famous/transitions/Transitionable'];
   var EventHandler = $famous['famous/core/EventHandler'];
 
