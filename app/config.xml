@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.phonegap.example"
+        versionCode = "10"
+        version     = "1.0.0" >
+
+  <!-- versionCode is optional and Android only -->
+
+  <name>Affordably</name>
+
+  <description>
+    Personal financial management made easy.
+  </description>
+
+  <author href="https://www.affordably.me/about" email="founders@affordably.me">
+    Affordably Team
+  </author>
+
+  <gap:platform name="ios" />
+  <gap:platform name="android" />
+
+  <access origin="http://127.0.0.1*" />
+  <content src="./app/index.html" />
+</widget>
