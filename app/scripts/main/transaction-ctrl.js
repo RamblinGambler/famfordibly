@@ -104,7 +104,8 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 	    	    	}, 300);
 	    	    	// transactions.outgoings[draggable.dragId].category_id = 2
 	    	    	$scope.fixed = false;
-	    	    	console.log(item.commit("poop"));
+	    	    	// item.setContent("<div>poop</div>");
+	    	    	// item.commit();
 	    	    	console.log(item);
 				    }
 				    else if (e.position[0] == -160) {
@@ -123,13 +124,14 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 				    	});
 				    }
 
-			      if(transactions.outgoings[draggable.dragId].category_id == 1) {
-			      	var image = '/images/coin.png';
-			      	item.setContent('<img class="transactionIcon" src="' + image + '" ng-show="fixed"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
-			      } else if(transactions.outgoings[draggable.dragId].category_id == 2) {
-			      	var image = '/images/box.png';
-			    	  item.setContent('<img class="transactionIcon" src="' + image + '" ng-show="fixed"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
-			      };
+			      // if(transactions.outgoings[draggable.dragId].category_id == 1) {
+			      // 	var image = '/images/coin.png';
+			      // 	item.setContent("<div>Poop<div>");
+			      // 	// item.setContent('<img class="transactionIcon" src="' + image + '" ng-show="fixed"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
+			      // } else if(transactions.outgoings[draggable.dragId].category_id == 2) {
+			      // 	var image = '/images/box.png';
+			    	 //  item.setContent('<img class="transactionIcon" src="' + image + '" ng-show="fixed"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
+			      // };
 				  });
 
 				  var item = new Surface({
@@ -144,7 +146,7 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 				  });
 
 
-				  var name = transactions.outgoings[i].name.toLowerCase();
+				  var name = transactions.outgoings[i].name;
 				  name = capitaliseFirstLetter(name);
 				  if(name.length > 20) name = name.substring(0,20);
 
