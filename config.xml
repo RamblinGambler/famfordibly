@@ -20,6 +20,6 @@
   <gap:platform name="ios" />
   <gap:platform name="android" />
 
-  <access origin="http://127.0.0.1*" />
+  <access origin="*" />
   <content src="app/index.html" />
 </widget>
