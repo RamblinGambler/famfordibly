@@ -11,8 +11,8 @@
         </fa-view>
         <fa-view>
 		    <fa-modifier fa-size="[290,52]" fa-align="[.09,0]">
-                <fa-surface fa-background-color="'#ffffff'" fa-tap="select()" class="menuSelections">
-	                <a ui-sref=".accounts" class="menuLink">
+                <fa-surface fa-background-color="'#ffffff'" class="menuSelections">
+	                <a ui-sref=".accounts" ng-click="select()" class="menuLink">
                         <img src="images/servers.png" class="menuIcon accountsIcon" />
                         <p class="menuText accountsText">Accounts</p>
                     </a>
@@ -21,8 +21,8 @@
         </fa-view>
         <fa-view>
 		    <fa-modifier fa-size="[290,50]" fa-align="[.09,0]">
-                <fa-surface fa-background-color="'#ffffff'" fa-tap="select()" class="menuSelections">
-	                <a ui-sref= ".transactions" class="menuLink">
+                <fa-surface fa-background-color="'#ffffff'" class="menuSelections">
+	                <a ui-sref=".transactions" ng-click="select()" class="menuLink">
                         <img src="images/coins.png" class="menuIcon" />
                         <p class="menuText">Cash Flow</p>
                     </a>
@@ -36,8 +36,8 @@
         </fa-view>
         <fa-view>
 		    <fa-modifier fa-size="[290,50]" fa-align="[.09,0]">
-                <fa-surface fa-background-color="'#ffffff'" fa-tap="select()" class="menuSelections">
-	                <a ui-sref=".settings" class="menuLink">
+                <fa-surface fa-background-color="'#ffffff'" class="menuSelections">
+	                <a ui-sref=".settings" ng-click="select()" class="menuLink">
                         <img src="images/settings.png" class="menuIcon" />
                         <p class="menuText">Settings</p>
                     </a>
@@ -51,8 +51,8 @@
 		</fa-view>
         <fa-view>
 		    <fa-modifier fa-size="[290,50]" fa-align="[.09,0]">
-                <fa-surface fa-background-color="'#ffffff'" fa-tap="select()" class="menuSelections">
-	                <a ui-sref=".finances" class="menuLink">
+                <fa-surface fa-background-color="'#ffffff'" class="menuSelections">
+	                <a ui-sref=".finances" ng-click="select()" class="menuLink">
                         <img src="images/box.png" class="menuIcon" />
                         <p class="menuText">Finances</p>
                     </a>

@@ -322,15 +322,27 @@ button {
 
 }
 
+.center {
+    position:absolute;
+    text-align: center;
+}
+
 /* Daily Surface */
 .dailyCash{
-    margin-left: 26%;
+    position: relative;
+    right: 18%;
+    /*margin-left: 26%;*/
     margin-bottom: 0px;
-    padding-bottom: 0px;
+    padding-top: 20%;
     font-size: 300%;
     font-family: 'proxima-nova', sans-serif;
     font-weight: 700;
     font-style: normal;
+}
+
+#dailyCircle {
+    position: relative;
+    right: 18%;
 }
 
 .dollarBills{
@@ -342,9 +354,11 @@ button {
 }
 
 .dailyCashText{
-    margin-left:25%;
-    padding-top:0px;
-    margin-top:0px;
+    position: relative;
+    right: 18%;
+    /*margin-left:25%;*/
+    /*padding-top:10%;*/
+    /*margin-top:0px;*/
     font-family: 'proxima-nova', sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -352,7 +366,7 @@ button {
 }
 
 .dailyCenter{
-    margin-left: 11%;
+    /*margin-left: 11%;*/
     margin-top: -65%;
 }
 

@@ -28,11 +28,11 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
       banking: {},
       monthly_fixed: ""
     }
-  var chart;
+
+
   var data = mainData.loadMain();
   data.then(function(data) {
     var currencyFilter = $filter('currency');
-    console.log(data.data.settings)
     $scope.data.outgoings = data.data.outgoings;
     $scope.data.incomings = data.data.incomings;
     $scope.data.user = data.data.user;
@@ -51,10 +51,161 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
     $scope.data.housing = data.data.housing;
     $scope.data.banking = data.data.banking;
     $scope.data.monthly_fixed = currencyFilter(data.data.monthly_fixed, '');
-		for (var i = 0; i < data.data.banking.bank.length; i++) {
-		  if (data.data.banking.bank[i].primary === true) {
-		    $scope.data.total_available += data.data.banking.bank[i].balance
-		  };
-		};
+    // console.log(data.data.users_daily[0].values);
+    $scope.chart = {
+      labels: ["M", "T", "W", "T", "F", "S", "S"],
+      datasets: [
+        {
+          label: "Spent",
+          fillColor: "rgba(220,220,220,0)",
+          strokeColor: "white",
+          pointColor: "white",
+          pointStrokeColor: "#fff",
+          pointHighlightFill: "#fff",
+          pointHighlightStroke: "rgba(220,220,220,1)",
+          data: data.data.users_daily[0].values
+        }
+      ]
+    };
+    $scope.myChartData = [
+      {
+        value: 50,
+        color:"#49BC79"
+      },
+      {
+        value : 50,
+        color : "#DBDBDB"
+      }
+    ];
+
+  $scope.myChartOptions =  {
+      //Boolean - Whether we should show a stroke on each segment
+      segmentShowStroke : true,
+
+      //String - The colour of each segment stroke
+      segmentStrokeColor : "#DBDBDB",
+
+      //The percentage of the chart that we cut out of the middle.
+      percentageInnerCutout : 90,
+
+      //Boolean - Whether we should animate the chart
+      animation : true,
+
+      //Number - Amount of animation steps
+      animationSteps : 100,
+
+      //String - Animation easing effect
+      animationEasing : "easeOutBounce",
+
+      //Boolean - Whether we animate the rotation of the Doughnut
+      animateRotate : true,
+
+      //Boolean - Whether we animate scaling the Doughnut from the centre
+      animateScale : false,
+
+      //Function - Will fire on animation completion.
+      onAnimationComplete : null
+  };
+
+  //   $scope.ChartData = [
+  //     {
+  //         value: .3,
+  //         color:"#2D3E4F"
+  //     }
+  // ];
+
+  // $scope.ChartOptions =  {
+  //     //Boolean - Whether we should show a stroke on each segment
+  //     segmentShowStroke : false,
+
+  //     //String - The colour of each segment stroke
+  //     segmentStrokeColor : "#000",
+
+  //     //The percentage of the chart that we cut out of the middle.
+  //     percentageInnerCutout : 80,
+
+  //     //Boolean - Whether we should animate the chart
+  //     animation : false,
+
+  //     //Number - Amount of animation steps
+  //     // animationSteps : 100,
+
+  //     //String - Animation easing effect
+  //     animationEasing : "easeOut",
+
+  //     //Boolean - Whether we animate the rotation of the Doughnut
+  //     animateRotate : true,
+
+  //     //Boolean - Whether we animate scaling the Doughnut from the centre
+  //     animateScale : false,
+
+  //     //Function - Will fire on animation completion.
+  //     onAnimationComplete : null
+  // };
+
+    $scope.options = {
+
+      animation: false,
+
+      ///Boolean - Whether grid lines are shown across the chart
+      scaleShowGridLines : true,
+
+      //String - Colour of the grid lines
+      scaleGridLineColor : "#40719e",
+
+      //Number - Width of the grid lines
+      scaleGridLineWidth : 1,
+
+      scaleOverride: true,
+
+      scaleSteps: 5,
+
+      scaleStepWidth: 20,
+
+      scaleStartValue: 0,
+
+      scaleFontFamily: "'proxima-nova', sans-serif",
+
+      scaleFontSize: 18,
+
+      scaleFontStyle: "normal",
+
+      scaleFontColor: "#40719e",
+
+      scaleLineColor: "#40719e",
+
+      //Boolean - Whether the line is curved between points
+      bezierCurve : false,
+
+      //Boolean - Whether to show a dot for each point
+      pointDot : true,
+
+      //Number - Radius of each point dot in pixels
+      pointDotRadius : 5,
+
+      //Number - Pixel width of point dot stroke
+      pointDotStrokeWidth : 1,
+
+      //Number - amount extra to add to the radius to cater for hit detection outside the drawn point
+      pointHitDetectionRadius : 20,
+
+      //Boolean - Whether to show a stroke for datasets
+      datasetStroke : true,
+
+      //Number - Pixel width of dataset stroke
+      datasetStrokeWidth : 2,
+
+      //Boolean - Whether to fill the dataset with a colour
+      datasetFill : true,
+
+      //String - A legend template
+      legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].lineColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
+
+    };
+    for (var i = 0; i < data.data.banking.bank.length; i++) {
+      if (data.data.banking.bank[i].primary === true) {
+        $scope.data.total_available += data.data.banking.bank[i].balance
+      };
+    };
   });
 });
