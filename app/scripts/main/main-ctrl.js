@@ -26,7 +26,8 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
       income: "",
       housing: "",
       banking: {},
-      monthly_fixed: ""
+      monthly_fixed: "",
+      budget: ""
     }
 
 
@@ -50,6 +51,7 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
     $scope.data.income = currencyFilter(data.data.income, '');
     $scope.data.housing = data.data.housing;
     $scope.data.banking = data.data.banking;
+    $scope.data.budget = data.data.budget;
     $scope.data.monthly_fixed = currencyFilter(data.data.monthly_fixed, '');
     // console.log(data.data.users_daily[0].values);
     $scope.chart = {
@@ -67,13 +69,14 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
         }
       ]
     };
+
     $scope.myChartData = [
       {
-        value: 50,
+        value: data.data.budget,
         color:"#49BC79"
       },
       {
-        value : 50,
+        value : data.data.daily_spent,
         color : "#DBDBDB"
       }
     ];
