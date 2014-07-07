@@ -6,7 +6,6 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
   var translateTrans = new Transitionable([0,0,0]);
   $scope.success = translateTrans.get.bind(translateTrans);
 
-  $scope.third = true;
   $scope.inst = $stateParams.id
 
   var fields = [];
@@ -21,27 +20,27 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
         fields.push(data.result.institution_detail.keys.key[i]);
       }
     }
-    if (fields.length < 3) {
-      $scope.third = false;
-    };
     $scope.fields = fields;
+    console.log(fields)
   }).error(function(error) {
     console.log(error);
   });
 
   $scope.submit = function(user_id, password, pin) {
-  	var id = arguments[0], parameters, callback;
-  	if (arguments.length == 2) { // only two arguments supplied
-  	  if (Object.prototype.toString.call(arguments[1]) == "[object Function]") {
-  	    callback = arguments[1]; // if is a function, set as 'callback'
-  	  } else {
-  	    parameters = arguments[1]; // if not a function, set as 'parameters'
-  	    console.log("Error handling");
-  	  }
-  	} else if (arguments.length == 3) { // three arguments supplied
-  	    parameters = arguments[1];
-  	    callback = arguments[2];
-  	}
+  	// var id = arguments[0], parameters, callback;
+  	// if (arguments.length == 2) { // only two arguments supplied
+  	//   if (Object.prototype.toString.call(arguments[1]) == "[object Function]") {
+  	//     callback = arguments[1]; // if is a function, set as 'callback'
+  	//   } else {
+  	//     parameters = arguments[1]; // if not a function, set as 'parameters'
+  	//     console.log("Error handling");
+  	//   }
+  	// } else if (arguments.length == 3) { // three arguments supplied
+  	//     parameters = arguments[1];
+  	//     callback = arguments[2];
+  	// }
+    console.log(user_id);
+    console.log(password);
 
 	  $http({
 	    method: 'POST',
@@ -57,24 +56,24 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
 	  }).success(function(data) {
       $state.go('wait', {job: data.job})
 	  }).error(function(error) {
-      console.log(error);
-	  	$http({
-	  	  method: 'POST',
-	  	  url: "http://localhost:3000/api/v1/refresh_submit",
-	  	  params: {
-	  	  	username: user_id,
-  	  	  auth_token: $window.sessionStorage.token,
-  	  	  password: password,
-  	  	  pin: pin,
-  	  	  count: 1,
-  	  	  institution: $stateParams.id,
-  	  	  login_id: error.id
-	  	  }
-	  	}).success(function(data) {
-        $state.go('wait', {job: data.job});
-		  }).error(function(error) {
-  	  	// console.log("error", error)
-		  });
+      console.log(error.id);
+	  	// $http({
+	  	//   method: 'POST',
+	  	//   url: "http://localhost:3000/api/v1/refresh_submit",
+	  	//   params: {
+	  	//   	username: user_id,
+  	 //  	  auth_token: $window.sessionStorage.token,
+  	 //  	  password: password,
+  	 //  	  pin: pin,
+  	 //  	  count: 1,
+  	 //  	  institution: $stateParams.id,
+  	 //  	  login_id: error.id
+	  	//   }
+	  	// }).success(function(data) {
+    //     $state.go('wait', {job: data.job});
+		  // }).error(function(error) {
+  	 //  	// console.log("error", error)
+		  // });
 	  });
   };
 });

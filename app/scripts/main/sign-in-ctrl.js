@@ -6,9 +6,6 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
   var translateTrans = new Transitionable([0,0,0]);
   $scope.success = translateTrans.get.bind(translateTrans);
 
-  // var password = $scope.password;
-  // var email = $scope.email;
-
   $scope.submit = function(email, password) {
     var credentials = {
       password: password,

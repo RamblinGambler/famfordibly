@@ -9,12 +9,12 @@ Affordably.controller('AccountsCtrl', function ($scope, $famous, $state, mainDat
 
 
   $scope.back = function (deferred) {
-      $scope.getTranslating = translateT.get.bind(translateT);
-      $scope.$emit('back');
-      translateTr.set([0,0,0], {duration: 500, curve: 'easeOut'});
-      translateT.set([0,0,0], {duration: 500, curve: 'easeOut'}, function() {
-          $state.go('main.menu');
-      });
+    $scope.getTranslating = translateT.get.bind(translateT);
+    $scope.$emit('back');
+    translateTr.set([0,0,0], {duration: 500, curve: 'easeOut'});
+    translateT.set([0,0,0], {duration: 500, curve: 'easeOut'}, function() {
+        $state.go('main.menu');
+    });
   };
 
   $scope.getTranslating = translateT.get.bind(translateT);
