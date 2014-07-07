@@ -85,6 +85,7 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 				    yRange: [0, 0]
 				  });
 
+
 				  draggable.dragId = i;
 
 				  draggable.on('end', function(e) {
@@ -98,9 +99,8 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 	    	    	}, 300);
 	    	    	// transactions.outgoings[draggable.dragId].category_id = 2
 	    	    	$scope.fixed = false;
-	    	    	// item.setContent("<div>poop</div>");
-	    	    	// item.commit();
-	    	    	console.log(item);
+	    	    	// item.commit($scope.transaction);
+	    	    	// console.log(item);
 				    }
 				    else if (e.position[0] == -160) {
 				    	var that = this
@@ -117,27 +117,8 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 				    	  duration: 300
 				    	});
 				    }
-
-			      // if(transactions.outgoings[draggable.dragId].category_id == 1) {
-			      // 	var image = '/images/coin.png';
-			      // 	item.setContent("<div>Poop<div>");
-			      // 	// item.setContent('<img class="transactionIcon" src="' + image + '" ng-show="fixed"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
-			      // } else if(transactions.outgoings[draggable.dragId].category_id == 2) {
-			      // 	var image = '/images/box.png';
-			    	 //  item.setContent('<img class="transactionIcon" src="' + image + '" ng-show="fixed"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
-			      // };
 				  });
 
-				  var item = new Surface({
-				    size: [undefined, 65],
-				    properties: {
-				      backgroundColor: "white",
-				      borderBottom: "1px solid #e6eaed",
-				      lineHeight: "75px",
-				      textAlign: "center",
-              zIndex: 4
-				    }
-				  });
 
 
 				  var name = transactions.outgoings[i].name;
@@ -154,13 +135,31 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 				  	var month = "";
 				  };
 
+
+				  var item = new Surface({
+				    size: [undefined, 65],
+				    properties: {
+				      backgroundColor: "white",
+				      borderBottom: "1px solid #e6eaed",
+				      lineHeight: "75px",
+				      textAlign: "center",
+              zIndex: 4,
+              content: "<h1 class='transactionPrice'><poodqwerewq2e12r343grfdgnyjmdsvbfghjmhnbdsfbgrenhte</h1>"
+              // '<img class="transactionIcon" src="' + image + '"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>'
+				    }
+				  });
+
 				  if(transactions.outgoings[i].category_id == 1) {
 				  	var image = '/images/coin.png';
-				  	item.setContent('<img class="transactionIcon" src="' + image + '"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
+				  	// item.setContent('<img class="transactionIcon" src="' + image + '"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
 				  } else if(transactions.outgoings[i].category_id == 2) {
 				  	var image = '/images/box.png';
-					  item.setContent('<img class="transactionIcon" src="' + image +'" ng-show="fixed"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
+					  // item.setContent('<img class="transactionIcon" src="' + image +'" ng-show="fixed"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
 				  };
+				  item.on('mouseup', function() {
+				    // draggable.setPosition([0,0,0], trans);
+	    	    	item.setContent('<img class="transactionIcon" src="' + image + '"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
+				  });
 
 
 				  var backgroundYesModifier = new StateModifier({

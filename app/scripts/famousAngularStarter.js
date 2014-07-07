@@ -18,6 +18,11 @@ Affordably.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
     templateUrl: 'partials/sign-up.html',
     controller: 'SignUpCtrl',
   })
+  .state('goal', {
+    url: '/goal',
+    templateUrl: 'partials/goal.html',
+    controller: 'GoalCtrl',
+  })
   .state('institutionSelect', {
     url: '/institution-select',
     templateUrl: 'partials/institution-select.html',

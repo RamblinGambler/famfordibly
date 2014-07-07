@@ -11,13 +11,13 @@
         <div class="linkAccountForm">
             <div ng-repeat="field in fields"  class="linkAccountContainer">
                 <div ng-if="field.display_order == '1'">
-                    <p ng-bind="field.description" class="linkAccountLabel"></p>
+                    <p class="linkAccountLabel">User ID</p>
                     <hr class="inputLine">
                     <input type="text" name="user_id" data-ng-model="user_id" class="linkInput"/>
                     <br>
                 </div>
                 <div ng-if="field.display_order == '2'">
-                    <p ng-bind="field.description" class="linkAccountLabel"></p>
+                    <p class="linkAccountLabel"> Password</p>
                     <hr class="inputLine">
                     <input type="password" name="password" data-ng-model="password" class="linkInput"/>
                     <br>

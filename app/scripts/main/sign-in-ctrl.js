@@ -23,7 +23,7 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
       $window.sessionStorage.token = data.token;
       console.log(data);
       translateTrans.set([-287,0,0  ], {duration: 500, curve: 'easeOut'}, function() {
-      $state.go('institutionSelect')
+      $state.go('goal');
       });
       $scope.message = 'Welcome';
     }).error(function(data, status, headers, config) {

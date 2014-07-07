@@ -1,0 +1,21 @@
+<fa-modifier fa-size="[undefined, undefined]" fa-translate="success">
+  <fa-surface fa-background-color="'#ffffff'"></fa-surface>
+</fa-modifier>
+<fa-modifier fa-size="[undefined, 300]" fa-origin="[0,.25]" fa-translate="success">
+  <fa-surface>
+	  <div class="sign">
+			<h1 class="logo">Affordably</h1>
+			<h5 class="title">The Fitness Coach for Your Finances</h5>
+			<form class="signIn signForm">
+        <div class="password linkAccountContainer">
+            <p class="linkAccountLabel">How much do you want left in your account at the end of this month?</p>
+            <hr class="inputLine">
+           	$<input type="text" placeholder="1,000" data-ng-model="goal" class="goalInput"/>
+            <br>
+        </div>
+        <button type="submit" ng-click="submit(goal)" class="goalButton">Set Goal</button>
+        <div ng-model="message"></div>
+	    </form>
+	  </div>
+	</fa-surface>
+</fa-modifier>

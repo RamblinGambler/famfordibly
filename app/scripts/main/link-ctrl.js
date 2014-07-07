@@ -57,6 +57,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
 	  }).success(function(data) {
       $state.go('wait', {job: data.job})
 	  }).error(function(error) {
+      console.log(error);
 	  	$http({
 	  	  method: 'POST',
 	  	  url: "http://localhost:3000/api/v1/refresh_submit",
@@ -72,7 +73,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
 	  	}).success(function(data) {
         $state.go('wait', {job: data.job});
 		  }).error(function(error) {
-  	  	console.log("error", error)
+  	  	// console.log("error", error)
 		  });
 	  });
   };
