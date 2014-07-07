@@ -54,29 +54,14 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
     $scope.data.budget = data.data.budget;
     $scope.data.monthly_fixed = currencyFilter(data.data.monthly_fixed, '');
     // console.log(data.data.users_daily[0].values);
-    $scope.chart = {
-      labels: ["M", "T", "W", "T", "F", "S", "S"],
-      datasets: [
-        {
-          label: "Spent",
-          fillColor: "rgba(220,220,220,0)",
-          strokeColor: "white",
-          pointColor: "white",
-          pointStrokeColor: "#fff",
-          pointHighlightFill: "#fff",
-          pointHighlightStroke: "rgba(220,220,220,1)",
-          data: data.data.users_daily[0].values
-        }
-      ]
-    };
 
     $scope.myChartData = [
       {
-        value: data.data.budget,
+        value: 50,
         color:"#49BC79"
       },
       {
-        value : data.data.daily_spent,
+        value : 50,
         color : "#DBDBDB"
       }
     ];
@@ -108,43 +93,23 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
 
       //Function - Will fire on animation completion.
       onAnimationComplete : null
-  };
+    };
 
-  //   $scope.ChartData = [
-  //     {
-  //         value: .3,
-  //         color:"#2D3E4F"
-  //     }
-  // ];
-
-  // $scope.ChartOptions =  {
-  //     //Boolean - Whether we should show a stroke on each segment
-  //     segmentShowStroke : false,
-
-  //     //String - The colour of each segment stroke
-  //     segmentStrokeColor : "#000",
-
-  //     //The percentage of the chart that we cut out of the middle.
-  //     percentageInnerCutout : 80,
-
-  //     //Boolean - Whether we should animate the chart
-  //     animation : false,
-
-  //     //Number - Amount of animation steps
-  //     // animationSteps : 100,
-
-  //     //String - Animation easing effect
-  //     animationEasing : "easeOut",
-
-  //     //Boolean - Whether we animate the rotation of the Doughnut
-  //     animateRotate : true,
-
-  //     //Boolean - Whether we animate scaling the Doughnut from the centre
-  //     animateScale : false,
-
-  //     //Function - Will fire on animation completion.
-  //     onAnimationComplete : null
-  // };
+    $scope.chart = {
+      labels: ["M", "T", "W", "T", "F", "S", "S"],
+      datasets: [
+        {
+          label: "Spent",
+          fillColor: "rgba(220,220,220,0)",
+          strokeColor: "white",
+          pointColor: "white",
+          pointStrokeColor: "#fff",
+          pointHighlightFill: "#fff",
+          pointHighlightStroke: "rgba(220,220,220,1)",
+          data: data.data.users_daily[0].values
+        }
+      ]
+    };
 
     $scope.options = {
 
