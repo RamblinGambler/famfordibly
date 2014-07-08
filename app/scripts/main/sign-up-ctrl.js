@@ -1,8 +1,9 @@
 'use strict';
 
-Affordably.controller('SignUpCtrl', function ($scope, $famous, $state, $http, $window) {
+var signUp = Affordably.controller('SignUpCtrl', function ($scope, $famous, $state, $http, $window, flash) {
     var Transitionable = $famous['famous/transitions/Transitionable'];
-
+    var EventHandler = $famous['famous/core/EventHandler'];
+    $scope.eventHandler = new EventHandler();
     var translateTrans = new Transitionable([0,0,0]);
     $scope.success = translateTrans.get.bind(translateTrans);
 
@@ -20,7 +21,7 @@ Affordably.controller('SignUpCtrl', function ($scope, $famous, $state, $http, $w
         }).success(function(data, status, headers, config) {
             if (data.message){
                 delete $window.sessionStorage.token;
-                $scope.message = data.message;
+                flash.error = data.message;
             }
             else {
                 $window.sessionStorage.token = data.token;
@@ -28,11 +29,13 @@ Affordably.controller('SignUpCtrl', function ($scope, $famous, $state, $http, $w
                 translateTrans.set([-287, 0, 0  ], {duration: 500, curve: 'easeOut'}, function () {
                     $state.go('goal');
                 });
-                $scope.message = 'Welcome';
+                flash.success = 'Welcome back!';
             }
         }).error(function(data, status, headers, config) {
             delete $window.sessionStorage.token;
-            $scope.message = 'Error: Invalid user or password';
+            flash.error = data.message;
         });
     };
 });
+
+signUp.$inject = ['flash'];

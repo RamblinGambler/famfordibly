@@ -49,6 +49,23 @@ p{
     font-weight: lighter;
 }
 
+.errorHide{
+    display:none;
+}
+
+.errorShow{
+    background-color: #ffa35b;
+    height: 40px;
+}
+
+.alert-span{
+    display: inline-block;
+    margin-top: 15px;
+    color: white;
+    float: left;
+    width: 100%;
+}
+
 .affordablyFont{
     color: #4cbc7b;
 }

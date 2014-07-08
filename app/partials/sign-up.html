@@ -1,12 +1,15 @@
 <fa-modifier fa-size="[undefined, undefined]" fa-translate="success">
     <fa-surface fa-background-color="'#ffffff'"></fa-surface>
 </fa-modifier>
-<fa-modifier fa-size="[undefined, 300]" fa-origin="[0,.25]" fa-translate="success">
-    <fa-scroll-view>
-        <fa-surface>
+<fa-modifier fa-size="[undefined, 300]" fa-origin="[0,.15]" fa-translate="success">
+    <fa-scroll-view fa-pipe-from="eventHandler">
+        <fa-surface fa-pipe-to="eventHandler">
             <div class="sign">
                 <h1 class="logo">Affordably</h1>
                 <h5 class="title">The Fitness Coach for Your Finances</h5>
+                <div flash-alert="error" active-class="in" class="alert fade">
+                    <span class="alert-message">{{flash.message}}</span>
+                </div>
                 <form class="signIn signForm">
                     <div class="email linkAccountContainer">
                         <p class="linkAccountLabel">Email</p>

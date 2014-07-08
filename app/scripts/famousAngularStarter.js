@@ -4,49 +4,50 @@ var Affordably = angular.module('famousAngularStarter',
   ['ngAnimate', 'ngCookies',
     'ngTouch', 'ngSanitize',
     'ngResource', 'ui.router',
-    'famous.angular', 'angles']);
+    'famous.angular', 'angles','angular-flash.service',
+    'angular-flash.flash-alert-directive']);
 
 Affordably.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
   $stateProvider
   .state('signIn', {
     url: '/',
     templateUrl: 'partials/sign-in.html',
-    controller: 'SignInCtrl',
+    controller: 'SignInCtrl'
   })
   .state('signUp', {
     url: '/sign-up',
     templateUrl: 'partials/sign-up.html',
-    controller: 'SignUpCtrl',
+    controller: 'SignUpCtrl'
   })
   .state('goal', {
     url: '/goal',
     templateUrl: 'partials/goal.html',
-    controller: 'GoalCtrl',
+    controller: 'GoalCtrl'
   })
   .state('institutionSelect', {
     url: '/institution-select',
     templateUrl: 'partials/institution-select.html',
-    controller: 'InstitutionSelectCtrl',
+    controller: 'InstitutionSelectCtrl'
   })
   .state('link', {
     url: '/link/:id',
     templateUrl: 'partials/account-link.html',
-    controller: 'LinkCtrl',
+    controller: 'LinkCtrl'
   })
   .state('wait', {
     url: '/wait/:job',
     templateUrl: 'partials/wait.html',
-    controller: 'WaitCtrl',
+    controller: 'WaitCtrl'
   })
   .state('mfa', {
     url: '/mfa',
     templateUrl: 'partials/mfa.html',
-    controller: 'MfaCtrl',
+    controller: 'MfaCtrl'
   })
   .state('main', {
     url: '/main',
     templateUrl: 'partials/main.html',
-    controller: 'MainCtrl',
+    controller: 'MainCtrl'
   })
 
       .state('main.institutions', {
