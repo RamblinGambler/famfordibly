@@ -12,7 +12,7 @@ Affordably.controller('GoalCtrl', function ($scope, $famous, $state, mainData, $
     console.log(goal);
     $http({
       method: 'POST',
-      url: "http://localhost:3000/api/v1/goal",
+      url: "https://guavaplan-staging.herokuapp.com/api/v1/goal",
       params: {goal: goal, auth_token: $window.sessionStorage.token}
     }).success(function(data) {
       $state.go('institutionSelect')

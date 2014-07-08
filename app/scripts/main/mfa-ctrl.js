@@ -9,6 +9,6 @@ Affordably.controller('MfaCtrl', function ($scope, $famous, $state, $http, $wind
 
   console.log($scope.data.type)
   $scope.submit = function(choice) {
-    console.log(choice);
+
   };
 });

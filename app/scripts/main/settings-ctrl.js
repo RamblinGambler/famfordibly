@@ -30,7 +30,7 @@ Affordably.controller('SettingsCtrl', function ($scope, $famous, $state, $window
 
       $http({
         method: 'PUT',
-        url: 'http://localhost:3000/api/v1/settings',
+        url: 'https://guavaplan-staging.herokuapp.com/api/v1/settings',
         params: {
           weekly: weekly,
           daily: daily,

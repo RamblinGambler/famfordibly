@@ -1,10 +1,13 @@
 'use strict';
 
-Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $window) {
+Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $window, flash) {
   var Transitionable = $famous['famous/transitions/Transitionable'];
-
+  var EventHandler = $famous['famous/core/EventHandler'];
+  $scope.eventHandler = new EventHandler();
   var translateTrans = new Transitionable([0,0,0]);
   $scope.success = translateTrans.get.bind(translateTrans);
+  $scope.showError = false;
+  $scope.hideError = true;
 
   $scope.submit = function(email, password) {
     var credentials = {
@@ -14,18 +17,28 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
 
     $http({
       method: 'POST',
-      url: "http://localhost:3000/api/v1/tokens/new",
+      url: "https://guavaplan-staging.herokuapp.com/api/v1/tokens",
       data: credentials
     }).success(function(data, status, headers, config) {
-      $window.sessionStorage.token = data.token;
-      console.log(data);
-      translateTrans.set([-287,0,0  ], {duration: 500, curve: 'easeOut'}, function() {
-      $state.go('goal');
-      });
-      $scope.message = 'Welcome';
+      if (data.message){
+          delete $window.sessionStorage.token;
+          flash.error = data.message;
+          $scope.showError = true;
+          $scope.hideError = false;
+      }
+      else {
+          $window.sessionStorage.token = data.token;
+          translateTrans.set([-287, 0, 0  ], {duration: 500, curve: 'easeOut'}, function () {
+              $state.go('goal');
+          });
+          flash.success = 'Welcome back!';
+          $scope.alert = 'error-alert-show';
+      }
     }).error(function(data, status, headers, config) {
       delete $window.sessionStorage.token;
-      $scope.message = 'Error: Invalid user or password';
+      flash.error = data.message;
+        $scope.showError = true;
+        $scope.hideError = false;
     });
   };
 });
