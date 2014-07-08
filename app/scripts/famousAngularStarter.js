@@ -39,7 +39,7 @@ Affordably.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
     controller: 'WaitCtrl',
   })
   .state('mfa', {
-    url: '/mfa',
+    url: '/mfa/:type/:text/:inst/:challenge/:session/:image/:choice1/:choice2/:choice3',
     templateUrl: 'partials/mfa.html',
     controller: 'MfaCtrl',
   })

@@ -21,7 +21,6 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
       }
     }
     $scope.fields = fields;
-    console.log(fields)
   }).error(function(error) {
     console.log(error);
   });
@@ -39,8 +38,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
   	//     parameters = arguments[1];
   	//     callback = arguments[2];
   	// }
-    console.log(user_id);
-    console.log(password);
+
 
 	  $http({
 	    method: 'POST',
@@ -54,26 +52,33 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
 	    	institution: $stateParams.id
 	    }
 	  }).success(function(data) {
-      $state.go('wait', {job: data.job})
+      if(data.job) {
+        $state.go('wait', {job: data.job});
+      } else {
+        if(data.choices) {
+          $state.go('mfa', {
+            type: data.type,
+            text: data.text,
+            inst: data.institution,
+            challenge: data.challenge_node_id,
+            session: data.challenge_session_id,
+            image: data.image,
+            choice1: data.choices[0].text,
+            choice2: data.choices[1].text,
+            choice3: data.choices[2].text,
+          });
+        } else {
+          $state.go('mfa', {
+            type: data.type,
+            text: data.text,
+            inst: data.institution,
+            challenge: data.challenge_node_id,
+            session: data.challenge_session_id,
+            image: data.image,
+          });
+        }
+      };
 	  }).error(function(error) {
-      console.log(error.id);
-	  	// $http({
-	  	//   method: 'POST',
-	  	//   url: "http://localhost:3000/api/v1/refresh_submit",
-	  	//   params: {
-	  	//   	username: user_id,
-  	 //  	  auth_token: $window.sessionStorage.token,
-  	 //  	  password: password,
-  	 //  	  pin: pin,
-  	 //  	  count: 1,
-  	 //  	  institution: $stateParams.id,
-  	 //  	  login_id: error.id
-	  	//   }
-	  	// }).success(function(data) {
-    //     $state.go('wait', {job: data.job});
-		  // }).error(function(error) {
-  	 //  	// console.log("error", error)
-		  // });
 	  });
   };
 });

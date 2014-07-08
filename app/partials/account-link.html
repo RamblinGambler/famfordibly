@@ -9,24 +9,23 @@
 		    <h5 class="title">Sign into your {{inst.institution_name}} account</h5>
         </div>
         <div class="linkAccountForm">
-            <!-- <div ng-repeat="field in fields"  class="linkAccountContainer"> -->
-                <div ng-show="fields[0].display_order == '1' || fields[1].display_order == '1'">
+                <div ng-show="fields[0].display_order == '1' || fields[1].display_order == '1' || fields[2].display_order == '1'">
                     <p class="linkAccountLabel">User ID</p>
                     <hr class="inputLine">
                     <input type="text" name="user_id" data-ng-model="user_id" class="linkInput"/>
                     <br>
                 </div>
-                <div ng-show="fields[1].display_order == '2' || fields[0].display_order == '2'">
+                <div ng-show="fields[1].display_order == '2' || fields[0].display_order == '2' || fields[2].display_order == '2'">
                     <p class="linkAccountLabel"> Password</p>
                     <hr class="inputLine">
                     <input type="password" name="password" data-ng-model="password" class="linkInput"/>
                     <br>
                 </div>
-               <!-- <div ng-if="field.display_order == '3'">
+               <div ng-show="fields[0].display_order == '3' || fields[1].display_order == '3' || fields[2].display_order == '3'">
                     <p ng-bind="field.description" class="linkAccountLabel"></p>
                     <hr class="inputLine">
                     <input type="password" name="PIN" data-ng-model="pin" class="linkInput"/>
-                </div> -->
+                </div>
             <!-- </div> -->
             <div ng-bind="link.content"></div>
             <button type="submit" ng-click="submit(user_id, password, pin)" class="linkButton">Link Account</button>
