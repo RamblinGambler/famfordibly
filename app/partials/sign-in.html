@@ -2,28 +2,30 @@
   <fa-surface fa-background-color="'#ffffff'"></fa-surface>
 </fa-modifier>
 <fa-modifier fa-size="[undefined, 300]" fa-origin="[0,.25]" fa-translate="success">
-  <fa-surface>
-	  <div class="sign">
-			<h1 class="logo">Affordably</h1>
-			<h5 class="title">The Fitness Coach for Your Finances</h5>
-			<form class="signIn signForm">
-                <div class="email linkAccountContainer">
-                    <p class="linkAccountLabel">Email</p>
-                    <hr class="inputLine">
-                    <input type="text" placeholder="Email" data-ng-model="email" class="linkInput"/>
-                    <br>
-                </div>
-                <div class="password linkAccountContainer">
-                    <p class="linkAccountLabel">Password</p>
-                    <hr class="inputLine">
-                    <input type="password" placeholder="Password" data-ng-model="password" class="linkInput"/>
-                    <br>
-                </div>
-                <button type="submit" ng-click="submit(email, password)" class="signInButton">Log In</button>
-                <div ng-model="message"></div>
-            </form>
-			<p id="noAccountMessage">Don't have an account?</p>
-			<h4 id="signUpLink"><a ui-sref="signUp">Sign Up</a></h4>
-	  </div>
-	</fa-surface>
+    <fa-scroll-view>
+        <fa-surface>
+          <div class="sign">
+                <h1 class="logo">Affordably</h1>
+                <h5 class="title">The Fitness Coach for Your Finances</h5>
+                <form class="signIn signForm">
+                    <div class="email linkAccountContainer">
+                        <p class="linkAccountLabel">Email</p>
+                        <hr class="inputLine">
+                        <input type="text" placeholder="Email" data-ng-model="email" class="linkInput" required/>
+                        <br>
+                    </div>
+                    <div class="password linkAccountContainer">
+                        <p class="linkAccountLabel">Password</p>
+                        <hr class="inputLine">
+                        <input type="password" placeholder="Password" data-ng-model="password" class="linkInput" required/>
+                        <br>
+                    </div>
+                    <button type="submit" ng-click="submit(email, password)" class="signInButton">Log In</button>
+                    <div ng-model="message"></div>
+                </form>
+                <p id="noAccountMessage">Don't have an account?</p>
+                <h4 id="signUpLink"><a ui-sref="signUp">Sign Up</a></h4>
+          </div>
+        </fa-surface>
+    </fa-scroll-view>
 </fa-modifier>

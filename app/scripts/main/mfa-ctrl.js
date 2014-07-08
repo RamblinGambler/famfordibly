@@ -11,7 +11,7 @@ Affordably.controller('MfaCtrl', function ($scope, $famous, $state, $http, $wind
   var fields = [];
   $http({
     method: 'GET',
-    url: "http://localhost:3000/api/v1/institution",
+    url: "https://guavaplan-staging.herokuapp.com/api/v1/institution",
     params: {bank: $stateParams.id, auth_token: $window.sessionStorage.token}
   }).success(function(data) {
   	$scope.inst = data.result.institution_detail;
@@ -52,7 +52,7 @@ Affordably.controller('MfaCtrl', function ($scope, $famous, $state, $http, $wind
   	// PARAMS: institution: count:(for MFA) password2: password3:
 	  $http({
 	    method: 'POST',
-	    url: "http://localhost:3000/api/v1/add_account",
+	    url: "https://guavaplan-staging.herokuapp.com/api/v1/add_account",
 	    params: {username: user_id, auth_token: $window.sessionStorage.token, password: password, pin: pin, count: 1, institution: $stateParams.id}
 	  }).success(function(data) {
 	  	console.log(data)

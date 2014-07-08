@@ -14,15 +14,21 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
 
     $http({
       method: 'POST',
-      url: "http://localhost:3000/api/v1/tokens/new",
+      url: "https://guavaplan-staging.herokuapp.com/api/v1/tokens",
       data: credentials
     }).success(function(data, status, headers, config) {
-      $window.sessionStorage.token = data.token;
-      console.log(data);
-      translateTrans.set([-287,0,0  ], {duration: 500, curve: 'easeOut'}, function() {
-      $state.go('goal');
-      });
-      $scope.message = 'Welcome';
+      if (data.message){
+          delete $window.sessionStorage.token;
+          $scope.message = data.message;
+      }
+      else {
+          $window.sessionStorage.token = data.token;
+          console.log(data);
+          translateTrans.set([-287, 0, 0  ], {duration: 500, curve: 'easeOut'}, function () {
+              $state.go('goal');
+          });
+          $scope.message = 'Welcome';
+      }
     }).error(function(data, status, headers, config) {
       delete $window.sessionStorage.token;
       $scope.message = 'Error: Invalid user or password';

@@ -19,7 +19,7 @@ Affordably.controller('WaitCtrl', function ($scope, $famous, $state, $http, $sta
     count ++
       $http({
         method: 'GET',
-        url: "http://localhost:3000/api/v1/status",
+        url: "https://guavaplan-staging.herokuapp.com/api/v1/status",
         params: {
           job_id: $stateParams.job
         }
