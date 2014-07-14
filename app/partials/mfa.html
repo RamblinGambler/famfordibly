@@ -13,26 +13,47 @@
 	  <fa-surface ng-if="data.type=='choice'">
       <div class="linkAccountForm">
         <div>
-          <p class="linkAccountLabel">Choice</p>
           <p ng-bind="data.text"></p>
           <hr class="inputLine">
-          <input type="text" name="user_id" data-ng-model="choice" class="linkInput"/>
+          <select name="user_id" data-ng-model="choice" class="linkInput" ng-options="choice for choice in choices">
+          	<option value="">-- Select Answer --</option>
+          </select>
           <br>
         </div>
       </div>
+      <button ng-click="submit(choice)" class="goalButton">Submit</button>
 	  </fa-surface>
 	</fa-modifier>
   <fa-modifier fa-align="[0,.2]">
 	  <fa-surface ng-if="data.type=='text'">
       <div class="linkAccountForm">
         <div>
-          <p class="linkAccountLabel">Text</p>
           <p ng-bind="data.text"></p>
           <hr class="inputLine">
-          <input type="text" name="user_id" data-ng-model="choice" class="linkInput"/>
+          <input type="text" name="user_id" data-ng-model="text" class="linkInput"/>
           <br>
         </div>
       </div>
+      <button type="submit" ng-click="submit(text)" class="goalButton">Submit</button>
+	  </fa-surface>
+  </fa-modifier>
+  <fa-modifier fa-align="[0,.2]">
+	  <fa-surface ng-if="data.type=='multi-text'">
+      <div class="linkAccountForm">
+        <div>
+          <p ng-bind="data.text1"></p>
+          <hr class="inputLine">
+          <input type="text" name="user_id" data-ng-model="textOne" class="linkInput"/>
+          <br>
+        </div>
+        <div>
+          <p ng-bind="data.text2"></p>
+          <hr class="inputLine">
+          <input type="text" name="user_id" data-ng-model="textTwo" class="linkInput"/>
+          <br>
+        </div>
+      </div>
+      <button type="submit" ng-click="submitMulti(textOne, textTwo)" class="goalButton">Submit</button>
 	  </fa-surface>
   </fa-modifier>
   <fa-modifier fa-align="[0,.2]">
@@ -42,15 +63,11 @@
           <p class="linkAccountLabel">Image</p>
           <p ng-bind="data.text"></p>
           <hr class="inputLine">
-          <input type="text" name="user_id" data-ng-model="choice" class="linkInput"/>
+          <input type="text" name="user_id" data-ng-model="image" class="linkInput"/>
           <br>
         </div>
       </div>
+      <button type="submit" ng-click="submit(image)" class="goalButton">Submit</button>
 	  </fa-surface>
   </fa-modifier>
-  <fa-modifier fa-align="[0,.4]">
-	  <fa-surface>
-		  <button type="submit" ng-click="submit(goal)" class="goalButton">Submit</button>
-		</fa-surface>
-	</fa-modifier>
 </fa-modifier>

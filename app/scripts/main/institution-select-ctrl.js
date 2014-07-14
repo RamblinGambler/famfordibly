@@ -19,10 +19,8 @@ Affordably.controller('InstitutionSelectCtrl', function ($scope, $famous, $state
     var f = new Fuse(institutiondata, options);
 
     $scope.search = function (bank) {
-      // $scope.banks = [];
       var result = f.search(bank);
       $scope.banks = result;
-      $scope.$broadcast('bankChange', result);
     }
   });
 

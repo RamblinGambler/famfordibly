@@ -4,7 +4,7 @@
             <fa-surface fa-index="0" fa-pipe-to="eventHandler" class="cashContainer">
             <div class="center">
 
-                <canvas donutchart id="dailyCircle"options="myChartOptions" data="myChartData" width="500" height="235"></canvas>
+                <canvas donutchart id="dailyCircle"options="myChartOptions" data="myChartData" width="350" height="220"></canvas>
 
                 <div class="dailyCenter">
                     <h3 class="dailyCash"><span class="dollarBills"></span><span class="cashText" ng-bind="data.daily_cash | noFractionCurrency"></span></h3>
@@ -27,10 +27,11 @@
 	    </fa-modifier>
 	    <fa-modifier fa-size="[undefined,250]">
             <fa-surface fa-index="2" fa-pipe-to="eventHandler" class="graphSurface">
-                <p class="chartTitle">Week of Spending</p>
-                <!-- <canvas id="dailyChart"></canvas> -->
+                <div class="graph">
+                    <p class="chartTitle">Week of Spending</p>
 
-                <canvas linechart id="dailyChart" options="options" data="chart" width="300" height="175"></canvas>
+                    <canvas linechart id="dailyChart" options="options" data="chart" width="300" height="175"></canvas>
+                </div>
             </fa-surface>
 	    </fa-modifier>
 	</fa-scroll-view>

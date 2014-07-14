@@ -9,7 +9,6 @@ Affordably.controller('GoalCtrl', function ($scope, $famous, $state, mainData, $
 
 
   $scope.submit = function (goal) {
-    console.log(goal);
     $http({
       method: 'POST',
       url: "https://guavaplan-staging.herokuapp.com/api/v1/goal",

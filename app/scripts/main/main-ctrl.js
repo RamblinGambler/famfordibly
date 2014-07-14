@@ -53,8 +53,6 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
     $scope.data.banking = data.data.banking;
     $scope.data.budget = data.data.budget;
     $scope.data.monthly_fixed = currencyFilter(data.data.monthly_fixed, '');
-    // console.log(data.data.users_daily[0].values);
-
     $scope.myChartData = [
       {
         value: 50,
@@ -68,13 +66,13 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
 
   $scope.myChartOptions =  {
       //Boolean - Whether we should show a stroke on each segment
-      segmentShowStroke : true,
+      segmentShowStroke : false,
 
       //String - The colour of each segment stroke
       segmentStrokeColor : "#DBDBDB",
 
       //The percentage of the chart that we cut out of the middle.
-      percentageInnerCutout : 90,
+      percentageInnerCutout : 85,
 
       //Boolean - Whether we should animate the chart
       animation : true,
@@ -138,7 +136,7 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
 
       scaleFontStyle: "normal",
 
-      scaleFontColor: "#40719e",
+      scaleFontColor: "#fff",
 
       scaleLineColor: "#40719e",
 

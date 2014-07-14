@@ -97,10 +97,10 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 	    		        duration: 400
 	    		      });
 	    	    	}, 300);
-	    	    	// transactions.outgoings[draggable.dragId].category_id = 2
 	    	    	$scope.fixed = false;
-	    	    	// item.commit($scope.transaction);
-	    	    	// console.log(item);
+	    	    	// item.setContent("stuff");
+	    	    	// node.add(item);
+	    	    	console.log(item.setContent("stuff"));
 				    }
 				    else if (e.position[0] == -160) {
 				    	var that = this
@@ -144,22 +144,16 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 				      lineHeight: "75px",
 				      textAlign: "center",
               zIndex: 4,
-              content: "<h1 class='transactionPrice'><poodqwerewq2e12r343grfdgnyjmdsvbfghjmhnbdsfbgrenhte</h1>"
-              // '<img class="transactionIcon" src="' + image + '"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>'
 				    }
 				  });
 
 				  if(transactions.outgoings[i].category_id == 1) {
 				  	var image = '/images/coin.png';
-				  	// item.setContent('<img class="transactionIcon" src="' + image + '"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
+				  	item.setContent('<img class="transactionIcon" src="' + image + '"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
 				  } else if(transactions.outgoings[i].category_id == 2) {
 				  	var image = '/images/box.png';
-					  // item.setContent('<img class="transactionIcon" src="' + image +'" ng-show="fixed"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
+					  item.setContent('<img class="transactionIcon" src="' + image +'" ng-show="fixed"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
 				  };
-				  item.on('mouseup', function() {
-				    // draggable.setPosition([0,0,0], trans);
-	    	    	item.setContent('<img class="transactionIcon" src="' + image + '"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
-				  });
 
 
 				  var backgroundYesModifier = new StateModifier({
@@ -191,13 +185,13 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 				    }
 				  });
 
-	              var spacer = new Surface({
-	                size: [undefined, 6],
-	                properties: {
-	                    backgroundColor: "#f4f8fb",
-	                    zIndex: '6'
-	                }
-	              });
+          var spacer = new Surface({
+            size: [undefined, 6],
+            properties: {
+                backgroundColor: "#f4f8fb",
+                zIndex: '6'
+            }
+          });
 
 				  var node = new RenderNode(draggable);
 				  node.add(item);
@@ -224,43 +218,43 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 
 				  draggable.on('update', function() {
 
-				      var draggable   = this[0];
-				      var opacityMod  = this[1];
-				      var yesMod  = this[2];
+			      var draggable   = this[0];
+			      var opacityMod  = this[1];
+			      var yesMod  = this[2];
 
-				      var position = draggable.getPosition();
+			      var position = draggable.getPosition();
 
-				      if (position[0] < 0) {
-					      if ( position[0] > fadeStartf ) {
+			      if (position[0] < 0) {
+				      if ( position[0] > fadeStartf ) {
 
-					          opacityMod.setOpacity(0);
+				          opacityMod.setOpacity(0);
 
-					      } else if ( position[0] > fadeEndf ) {
+				      } else if ( position[0] > fadeEndf ) {
 
-					          var opacity = (position[0] - fadeStartf) / ( fadeEndf - fadeStartf );
+				          var opacity = (position[0] - fadeStartf) / ( fadeEndf - fadeStartf );
 
-					          opacityMod.setOpacity(opacity);
+				          opacityMod.setOpacity(opacity);
 
-					      } else {
+				      } else {
 
-					          opacityMod.setOpacity(1);
-					      }
-					    } else {
-					      if ( position[0] < fadeStartd ) {
+				          opacityMod.setOpacity(1);
+				      }
+				    } else {
+				      if ( position[0] < fadeStartd ) {
 
-					          yesMod.setOpacity(0);
+				          yesMod.setOpacity(0);
 
-					      } else if ( position[0] < fadeEndd ) {
+				      } else if ( position[0] < fadeEndd ) {
 
-					          var opacity = (position[0] - fadeStartd) / ( fadeEndd - fadeStartd );
+				          var opacity = (position[0] - fadeStartd) / ( fadeEndd - fadeStartd );
 
-					          yesMod.setOpacity(opacity);
+				          yesMod.setOpacity(opacity);
 
-					      } else {
+				      } else {
 
-					          yesMod.setOpacity(1);
-					      }
-					    }
+				          yesMod.setOpacity(1);
+				      }
+				    }
 
 				  }.bind([draggable,backgroundNoModifier,backgroundYesModifier]));
 				}

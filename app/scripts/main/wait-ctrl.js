@@ -25,9 +25,11 @@ Affordably.controller('WaitCtrl', function ($scope, $famous, $state, $http, $sta
         }
       }).success(function(data) {
         var active = JSON.parse(data.message);
+        console.log(active);
         switch (active.id) {
           case 1:
             console.log("DOESN'T WORK");
+            clearInterval(load);
             $state.go('main');
             break;
 
@@ -37,16 +39,19 @@ Affordably.controller('WaitCtrl', function ($scope, $famous, $state, $http, $sta
 
           case 3:
             console.log("WORKS");
+            clearInterval(load);
             $state.go('main');
             break
 
           case  4:
             console.log("WORKS");
+            clearInterval(load);
             $state.go('main');
             break;
 
           case 6:
             console.log("WORKS");
+            clearInterval(load);
             $state.go('main');
             break;
 
@@ -66,13 +71,9 @@ Affordably.controller('WaitCtrl', function ($scope, $famous, $state, $http, $sta
             console.log("DOESN'T WORK");
             break;
 
-          // case 11:
-          //  activateButton();
-          //  break;
           default:
             if(count > 120) {
             console.log("DOESN'T WORK");
-              // activateErrorButton();
             };
         };
       })

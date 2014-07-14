@@ -1,27 +1,32 @@
-<fa-modifier fa-size="[33, undefined]" fa-align="[0,0]"	fa-background-color="'#BADA55'" fa-translate="getTranslater">
+<fa-modifier fa-size="[33, undefined]" fa-align="[0,0]" fa-translate="getTranslater">
 	 <fa-surface fa-tap="back($event)"></fa-surface>
 </fa-modifier>
 
-<fa-modifier fa-size="[undefined,100]" fa-align="[1,0]" fa-translate="getTranslate">
-	<fa-surface fa-tap="back()" class="inputPlaceholder">
-        <input type="text" my-on-key-down-call="" placeholder="Search Banks" id="searchBanks">
+<fa-modifier fa-size="[undefined,undefined]" fa-align="[1,0]" fa-translate="getTranslate">
+    <fa-surface class="inputPlaceholder" fa-background-color="'#fff'">
     </fa-surface>
 </fa-modifier>
 
-<fa-modifier fa-align='[1,.1]'  fa-translate="getTranslate" fa-size="[undefined,100]">
+
+<fa-modifier fa-align='[1,-.37]'  fa-translate="getTranslate" fa-size="[undefined,100]">
     <fa-view>
-	    <fa-scroll-view fa-pipe-from="eventHandler" fa-size="[undefined,100]">
+        <fa-scroll-view fa-pipe-from="eventHandler" fa-size="[undefined,100]">
             <fa-view ng-repeat="institution in institutions">
-	            <fa-modifier fa-size="[undefined,50]">
-                    <fa-surface fa-pipe-to="eventHandler" class="bankSelections">
+                <fa-modifier fa-size="[undefined,50]" fa-translate="show">
+                    <fa-surface fa-pipe-to="eventHandler" class="bankSelections" fa-tap="select(institution)">
                         <span>
                             <img src="images/magnify.png" class="bankLetter" />
-                            <p class="bankText">{{institution.name}}</p>
+                            <p class="bankText">{{institution.institution_name}}</p>
                         </span>
                     </fa-surface>
-	            </fa-modifier>
-	        </fa-view>
+                </fa-modifier>
+            </fa-view>
         </fa-scroll-view>
     </fa-view>
 </fa-modifier>
 
+<fa-modifier fa-size="[undefined,100]" fa-align="[1,0]" fa-translate="getTranslating">
+	<fa-surface class="inputPlaceholder">
+        <input type="text" ng-model="institution" ng-change="search(institution)" placeholder="Search Banks" id="searchBanks">
+    </fa-surface>
+</fa-modifier>

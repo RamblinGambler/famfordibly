@@ -5,7 +5,7 @@ var Affordably = angular.module('famousAngularStarter',
     'ngTouch', 'ngSanitize',
     'ngResource', 'ui.router',
     'famous.angular', 'angles','angular-flash.service',
-    'angular-flash.flash-alert-directive']);
+    'angular-flash.flash-alert-directive', 'angularSpinner']);
 
 Affordably.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
   $stateProvider
@@ -40,7 +40,7 @@ Affordably.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
     controller: 'WaitCtrl'
   })
   .state('mfa', {
-    url: '/mfa/:type/:text/:inst/:challenge/:session/:image/:choice1/:choice2/:choice3',
+    url: '/mfa/:type/:text/:inst/:challenge/:session/:image/:choice1/:choice2/:choice3/:text1/:text2',
     templateUrl: 'partials/mfa.html',
     controller: 'MfaCtrl'
   })

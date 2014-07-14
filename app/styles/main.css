@@ -214,6 +214,12 @@ input[type=text] {
     margin-top: 15px;
 }
 
+select {
+    border: 0px;
+    font-size: 1em;
+    margin-top: 15px;
+}
+
 input[type=password] {
     border: 0px;
     font-size: 1em;
@@ -377,7 +383,8 @@ button {
 
 #dailyCircle {
     position: relative;
-    right: 18%;
+    /*left: 5%;*/
+    right:5%;
 }
 
 .dollarBills{
@@ -391,9 +398,7 @@ button {
 .dailyCashText{
     position: relative;
     right: 18%;
-    /*margin-left:25%;*/
-    /*padding-top:10%;*/
-    /*margin-top:0px;*/
+    margin-top:0px;
     font-family: 'proxima-nova', sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -401,8 +406,8 @@ button {
 }
 
 .dailyCenter{
-    /*margin-left: 11%;*/
-    margin-top: -65%;
+    margin-left: 20%;
+    margin-top: -77%;
 }
 
 /* Overview Surface */
@@ -413,6 +418,7 @@ button {
 .overviewContent{
     width: 80%;
     padding-left: 10%;
+    padding-top: 5%;
     padding-right: 20%;
 }
 
@@ -439,6 +445,10 @@ button {
 /* Graph Surface */
 .graphSurface{
     background-color:#5698d5;
+}
+
+.graph {
+    padding-top: 5%;
 }
 
 
