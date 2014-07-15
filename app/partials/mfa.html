@@ -58,16 +58,10 @@
   </fa-modifier>
   <fa-modifier fa-align="[0,.2]">
 	  <fa-surface ng-if="data.type=='image'">
-      <div class="linkAccountForm">
-        <div>
-          <p class="linkAccountLabel">Image</p>
-          <p ng-bind="data.text"></p>
-          <hr class="inputLine">
-          <input type="text" name="user_id" data-ng-model="image" class="linkInput"/>
-          <br>
-        </div>
-      </div>
-      <button type="submit" ng-click="submit(image)" class="goalButton">Submit</button>
+            <p>
+                Your bank requires extra authentication that needs to be completed on the web.
+                Please log in at <a href="https://www.affordably.me">affordably.me</a> and try again.
+            </p>
 	  </fa-surface>
   </fa-modifier>
 </fa-modifier>
