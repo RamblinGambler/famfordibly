@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9e491af-9d46-4694-9a95-54f12265b3b5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/account-link.html" afterPath="$PROJECT_DIR$/app/partials/account-link.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/main/link-ctrl.js" afterPath="$PROJECT_DIR$/app/scripts/main/link-ctrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/sign-in.html" afterPath="$PROJECT_DIR$/app/partials/sign-in.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/sign-up.html" afterPath="$PROJECT_DIR$/app/partials/sign-up.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -29,21 +27,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="sign-in.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sign-in.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/partials/sign-in.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23801653" vertical-offset="0" max-vertical-offset="702">
-              <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+            <state vertical-scroll-proportion="-4.6666665" vertical-offset="18" max-vertical-offset="702">
+              <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sign-up.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="sign-up.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/partials/sign-up.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.6666665" vertical-offset="18" max-vertical-offset="810">
-              <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.20826447" vertical-offset="18" max-vertical-offset="810">
+              <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -95,9 +93,9 @@
         <option value="$PROJECT_DIR$/app/scripts/main/mfa-ctrl.js" />
         <option value="$PROJECT_DIR$/app/partials/mfa.html" />
         <option value="$PROJECT_DIR$/app/scripts/main/link-ctrl.js" />
-        <option value="$PROJECT_DIR$/app/partials/sign-up.html" />
-        <option value="$PROJECT_DIR$/app/partials/sign-in.html" />
         <option value="$PROJECT_DIR$/app/partials/account-link.html" />
+        <option value="$PROJECT_DIR$/app/partials/sign-in.html" />
+        <option value="$PROJECT_DIR$/app/partials/sign-up.html" />
       </list>
     </option>
   </component>
@@ -685,18 +683,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/sign-up.html">
+    <entry file="file://$PROJECT_DIR$/app/partials/sign-in.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6666665" vertical-offset="18" max-vertical-offset="810">
-          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        <state vertical-scroll-proportion="-4.6666665" vertical-offset="18" max-vertical-offset="702">
+          <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/sign-in.html">
+    <entry file="file://$PROJECT_DIR$/app/partials/sign-up.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23801653" vertical-offset="0" max-vertical-offset="702">
-          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.20826447" vertical-offset="18" max-vertical-offset="810">
+          <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
           <folding />
         </state>
       </provider>
