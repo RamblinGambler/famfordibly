@@ -9,6 +9,17 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
   $scope.showError = false;
   $scope.hideError = true;
 
+
+  $scope.scroll = function () {
+    console.log("EFWRGAETRYT");
+    translateTrans.set([0,-167,0], {duration: 500, curve: 'easeOut'});
+  };
+
+  $scope.scrollBack = function () {
+    console.log("EFWRGAETRYT");
+    translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'});
+  };
+
   $scope.submit = function(email, password) {
     var credentials = {
       password: password,
