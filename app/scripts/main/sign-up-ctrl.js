@@ -7,6 +7,16 @@ var signUp = Affordably.controller('SignUpCtrl', function ($scope, $famous, $sta
     var translateTrans = new Transitionable([0,0,0]);
     $scope.success = translateTrans.get.bind(translateTrans);
 
+    $scope.scroll = function () {
+      console.log("EFWRGAETRYT");
+      translateTrans.set([0,-167,0], {duration: 500, curve: 'easeOut'});
+    };
+
+    $scope.scrollBack = function () {
+      console.log("EFWRGAETRYT");
+      translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'});
+    };
+
     $scope.submit = function(email, password, passwordConfirm) {
         var credentials = {
             password: password,

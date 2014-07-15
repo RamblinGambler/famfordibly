@@ -20,13 +20,13 @@
                     <div class="password linkAccountContainer">
                         <p class="linkAccountLabel">Password</p>
                         <hr class="inputLine">
-                        <input type="password" placeholder="Password" ng-model="password" class="linkInput" required/>
+                        <input type="password" placeholder="Password" ng-model="password" class="linkInput" required ng-focus="scroll()" ng-blur="scrollBack()"/>
                         <br>
                     </div>
                     <div class="password linkAccountContainer">
                         <p class="linkAccountLabel">Confirm Password</p>
                         <hr class="inputLine">
-                        <input type="password" placeholder="Re-type Password" ng-model="password_confirm" class="linkInput" ui-validate=" '$value==password' " ui-validate-watch=" 'password' "/>
+                        <input type="password" placeholder="Re-type Password" ng-model="password_confirm" class="linkInput" ui-validate=" '$value==password' " ui-validate-watch=" 'password' " ng-focus="scroll()" ng-blur="scrollBack()"/>
                         <br>
                     </div>
                     <button type="submit" ng-click="submit(email, password)" class="signUpButton">Sign Up</button>

@@ -98,9 +98,9 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 	    		      });
 	    	    	}, 300);
 	    	    	$scope.fixed = false;
-	    	    	// item.setContent("stuff");
-	    	    	// node.add(item);
-	    	    	console.log(item.setContent("stuff"));
+	    	    	item.setContent('stuff');
+	    	    	item.deploy($scope.transaction);
+	    	    	console.log(item);
 				    }
 				    else if (e.position[0] == -160) {
 				    	var that = this
@@ -138,6 +138,7 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 
 				  var item = new Surface({
 				    size: [undefined, 65],
+				    content: '',
 				    properties: {
 				      backgroundColor: "white",
 				      borderBottom: "1px solid #e6eaed",
@@ -165,7 +166,7 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 				    content: "Fixed",
 				    size: [160, 65],
 				    properties: {
-				      backgroundColor: "rgba(0,255,0,0.2)",
+				      backgroundColor: "#5698D5",
 				      lineHeight: "75px",
 				      textAlign: "center"
 				    }
