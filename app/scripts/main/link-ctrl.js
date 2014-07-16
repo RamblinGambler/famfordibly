@@ -1,5 +1,5 @@
 'use strict';
-Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $window, $stateParams) {
+Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $window, $stateParams, flash) {
   var Transitionable = $famous['famous/transitions/Transitionable'];
 
   var translateTrans = new Transitionable([0,0,0]);
@@ -15,6 +15,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
     params: {bank: $stateParams.id, auth_token: $window.sessionStorage.token}
   }).success(function(data) {
     $scope.inst = data.result.institution_detail;
+    console.log(data)
     for(var i = 0;i < data.result.institution_detail.keys.key.length; i++) {
       if (data.result.institution_detail.keys.key[i].display_flag == 'true') {
         fields.push(data.result.institution_detail.keys.key[i]);
@@ -39,7 +40,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
 	    	institution: $stateParams.id
 	    }
 	  }).success(function(data) {
-      if (data.status === 200) {
+      // if (data.status === 200) {
           if (data.job) {
               $state.go('wait', {job: data.job});
           } else {
@@ -82,11 +83,13 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
                   });
               }
           }
-      } else{
-          flash.error = data.message;
-          $scope.spin = false
-      }
-	  }).error(function(error) {
+      // }else{
+      //   console.log(data.status );
+      //     flash.error = data.message;
+      //     $scope.spin = false
+      // }
+    }).error(function(error) {
+        $scope.spin = false
 	  });
   };
 });
