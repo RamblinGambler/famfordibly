@@ -29,12 +29,17 @@
                         <input type="password" placeholder="Re-type Password" ng-model="password_confirm" class="linkInput" ui-validate=" '$value==password' " ui-validate-watch=" 'password' " ng-focus="scroll()" ng-blur="scrollBack()"/>
                         <br>
                     </div>
-                    <button type="submit" ng-click="submit(email, password)" class="signUpButton">Sign Up</button>
+                    <input type="checkbox" ng-model="tos"/>
+                    <label for="">By checking this box you agree to our <a href="#">Terms of Service</a>.</label>
+                    <button type="submit" ng-disabled="!tos" ng-click="submit(email, password)" class="signUpButton">Sign Up</button>
                     <div ng-model="message"></div>
                 </form>
                 <p id="noAccountMessage">Already have an account?</p>
-                <h4 id="signUpLink"><a ui-sref="signIn">Sign In</a></h4>
+                <h4 id="signUpLink" ><a ui-sref="signIn">Sign In</a></h4>
             </div>
+        </fa-surface>
+        <fa-surface ng-show="spin">
+            <span us-spinner></span>
         </fa-surface>
     </fa-scroll-view>
 </fa-modifier>

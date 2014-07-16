@@ -5,7 +5,8 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
   var translateTrans = new Transitionable([0,0,0]);
   $scope.success = translateTrans.get.bind(translateTrans);
 
-  $scope.inst = $stateParams.id
+  $scope.inst = $stateParams.id;
+  $scope.spin = false;
 
   var fields = [];
   $http({
@@ -25,20 +26,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
   });
 
   $scope.submit = function(user_id, password, pin) {
-  	// var id = arguments[0], parameters, callback;
-  	// if (arguments.length == 2) { // only two arguments supplied
-  	//   if (Object.prototype.toString.call(arguments[1]) == "[object Function]") {
-  	//     callback = arguments[1]; // if is a function, set as 'callback'
-  	//   } else {
-  	//     parameters = arguments[1]; // if not a function, set as 'parameters'
-  	//     console.log("Error handling");
-  	//   }
-  	// } else if (arguments.length == 3) { // three arguments supplied
-  	//     parameters = arguments[1];
-  	//     callback = arguments[2];
-  	// }
-
-
+    $scope.spin = true;
 	  $http({
 	    method: 'POST',
 	    url: "https://guavaplan-staging.herokuapp.com/api/v1/add_account",
@@ -96,6 +84,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
           }
       } else{
           flash.error = data.message;
+          $scope.spin = false
       }
 	  }).error(function(error) {
 	  });

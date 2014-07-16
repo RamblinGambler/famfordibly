@@ -7,6 +7,7 @@ var signUp = Affordably.controller('SignUpCtrl', function ($scope, $famous, $sta
     var translateTrans = new Transitionable([0,0,0]);
     $scope.success = translateTrans.get.bind(translateTrans);
 
+    $scope.spin = false;
     $scope.scroll = function () {
       translateTrans.set([0,-167,0], {duration: 500, curve: 'easeOut'});
     };
@@ -16,6 +17,7 @@ var signUp = Affordably.controller('SignUpCtrl', function ($scope, $famous, $sta
     };
 
     $scope.submit = function(email, password, passwordConfirm) {
+        $scope.spin = true;
         var credentials = {
             password: password,
             password_confirmation: passwordConfirm,
@@ -30,6 +32,7 @@ var signUp = Affordably.controller('SignUpCtrl', function ($scope, $famous, $sta
             if (data.message){
                 delete $window.sessionStorage.token;
                 flash.error = data.message;
+                $scope.spin = false;
             }
             else {
                 $window.sessionStorage.token = data.token;
@@ -41,6 +44,7 @@ var signUp = Affordably.controller('SignUpCtrl', function ($scope, $famous, $sta
         }).error(function(data, status, headers, config) {
             delete $window.sessionStorage.token;
             flash.error = data.message;
+            $scope.spin = false;
         });
     };
 });
