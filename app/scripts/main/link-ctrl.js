@@ -1,5 +1,4 @@
 'use strict';
-
 Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $window, $stateParams) {
   var Transitionable = $famous['famous/transitions/Transitionable'];
 
@@ -52,51 +51,53 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
 	    	institution: $stateParams.id
 	    }
 	  }).success(function(data) {
-      console.log("COMING FROM SERVER", data)
-      if(data.job) {
-        $state.go('wait', {job: data.job});
-      } else {
-        if (data.type==="choice") {
-          $state.go('mfa', {
-            type: data.type,
-            text: data.text,
-            inst: data.institution,
-            challenge: data.challenge_node_id,
-            session: data.challenge_session_id,
-            choice1: data.choices[0].text,
-            choice2: data.choices[1].text,
-            choice3: data.choices[2].text,
-          });
-        } else if (data.type==="multi-text") {
-          $state.go('mfa', {
-            type: data.type,
-            text1: data.text[0].text,
-            text2: data.text[1].text,
-            inst: data.institution,
-            challenge: data.challenge_node_id,
-            session: data.challenge_session_id,
-          });
-        } else if (data.type==="text") {
-          $state.go('mfa', {
-            type: data.type,
-            text: data.text,
-            inst: data.institution,
-            challenge: data.challenge_node_id,
-            session: data.challenge_session_id,
-          });
-        } else if (data.type==="image") {
-          $state.go('mfa', {
-            type: data.type,
-            text: data.text,
-            inst: data.institution,
-            challenge: data.challenge_node_id,
-            session: data.challenge_session_id,
-            image: data.image,
-          });
-        };
-      };
+      if (data.status === 200) {
+          if (data.job) {
+              $state.go('wait', {job: data.job});
+          } else {
+              if (data.type === "choice") {
+                  $state.go('mfa', {
+                      type: data.type,
+                      text: data.text,
+                      inst: data.institution,
+                      challenge: data.challenge_node_id,
+                      session: data.challenge_session_id,
+                      choice1: data.choices[0].text,
+                      choice2: data.choices[1].text,
+                      choice3: data.choices[2].text
+                  });
+              } else if (data.type === "multi-text") {
+                  $state.go('mfa', {
+                      type: data.type,
+                      text1: data.text[0].text,
+                      text2: data.text[1].text,
+                      inst: data.institution,
+                      challenge: data.challenge_node_id,
+                      session: data.challenge_session_id
+                  });
+              } else if (data.type === "text") {
+                  $state.go('mfa', {
+                      type: data.type,
+                      text: data.text,
+                      inst: data.institution,
+                      challenge: data.challenge_node_id,
+                      session: data.challenge_session_id
+                  });
+              } else if (data.type === "image") {
+                  $state.go('mfa', {
+                      type: data.type,
+                      text: data.text,
+                      inst: data.institution,
+                      challenge: data.challenge_node_id,
+                      session: data.challenge_session_id,
+                      image: data.image
+                  });
+              }
+          }
+      } else{
+          flash.error = data.message;
+      }
 	  }).error(function(error) {
-
 	  });
   };
 });
