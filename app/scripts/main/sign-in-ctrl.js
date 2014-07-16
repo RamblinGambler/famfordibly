@@ -11,12 +11,10 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
 
 
   $scope.scroll = function () {
-    console.log("EFWRGAETRYT");
     translateTrans.set([0,-167,0], {duration: 500, curve: 'easeOut'});
   };
 
   $scope.scrollBack = function () {
-    console.log("EFWRGAETRYT");
     translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'});
   };
 
@@ -36,6 +34,7 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
           flash.error = data.message;
           $scope.showError = true;
           $scope.hideError = false;
+          $state.go('signUp');
       }
       else {
           $window.sessionStorage.token = data.token;
@@ -50,6 +49,7 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
       flash.error = data.message;
         $scope.showError = true;
         $scope.hideError = false;
+        $state.go('signUp');
     });
   };
 });

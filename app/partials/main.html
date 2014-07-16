@@ -1,5 +1,6 @@
-<fa-modifier fa-align='[0,.085]' fa-translate="[0,0,0,]" fa-size="[undefined,520]">
-    <fa-scroll-view fa-pipe-from="eventHandler" fa size="[500,0]">
+<fa-modifier fa-size="size" fa-align="[0,0]">
+<fa-modifier fa-align='[0,.085]' fa-translate="[0,0,0,]" fa-size="scroll">
+    <fa-scroll-view fa-pipe-from="eventHandler">
 	    <fa-modifier fa-size="[undefined,235]">
             <fa-surface fa-index="0" fa-pipe-to="eventHandler" class="cashContainer">
             <div class="center">
@@ -13,7 +14,7 @@
             </div>
             </fa-surface>
 	    </fa-modifier>
-	    <fa-modifier fa-size="[undefined,245]">
+	    <fa-modifier fa-size="[undefined,300]">
             <fa-surface fa-index="1" fa-pipe-to="eventHandler" class="overviewSurface overviewContainer">
                 <div class="overviewContent">
                     <p class="sectionTitle">Overview</p>
@@ -25,36 +26,37 @@
                 </div>
             </fa-surface>
 	    </fa-modifier>
-	    <fa-modifier fa-size="[undefined,250]">
+	    <fa-modifier fa-size="[undefined,275]">
             <fa-surface fa-index="2" fa-pipe-to="eventHandler" class="graphSurface">
                 <div class="graph">
                     <p class="chartTitle">Week of Spending</p>
 
-                    <canvas linechart id="dailyChart" options="options" data="chart" width="300" height="175"></canvas>
+                    <canvas linechart id="dailyChart" options="options" data="chart" width="350" height="175"></canvas>
                 </div>
             </fa-surface>
 	    </fa-modifier>
-	</fa-scroll-view>
+    </fa-scroll-view>
 </fa-modifier>
 
 <fa-modifier fa-size="[undefined, 50]" fa-translate="[0,0,0]" fa-align="[0,-.004]">
     <fa-surface fa-background-color="'#fff'"></fa-surface>
         <fa-grid-layout fa-options='{dimensions: [3,1]}'>
-	        <fa-modifier fa-origin="[.2, .5]" fa-scale="[1.2, 1.2]">
-	            <fa-surface fa-size="[true, true]" fa-background-color="'#ffffff'" fa-color="'#BADA55'">
-	                <a ui-sref=".menu" class="topButton"><img src="images/hamburger.png" class="hamburgerIcon" /></a>
-	            </fa-surface>
-	        </fa-modifier>
+            <fa-modifier fa-origin="[.2, 1]" fa-scale="[1, 1]">
+                <fa-surface fa-size="[32, 32]" fa-background-color="'#ffffff'" fa-color="'#BADA55'">
+                    <a ui-sref=".menu" class="topButton"><img src="images/hamburger.png" class="hamburgerIcon" /></a>
+                </fa-surface>
+            </fa-modifier>
             <fa-modifier fa-align="[0, -.2]" fa-scale="[1.5, 1.5]" fa-size="[undefined, 50]">
                 <fa-surface>
                     <p class="pageTitle">Affordably</p>
                 </fa-surface>
             </fa-modifier>
-            <fa-modifier fa-origin="[.8, .5]" fa-scale="[1.2, 1.2]">
-                <fa-surface fa-size="[true, true]" fa-background-color="'#ffffff'">
+            <fa-modifier fa-origin="[.9, 1]" fa-scale="[1, 1]">
+                <fa-surface fa-size="[32, 32]" fa-background-color="'#ffffff'">
                     <a ui-sref=".institutions" class="topButton"><img src="images/plus.png" class="hamburgerIcon" /></a>
                 </fa-surface>
             </fa-modifier>
         </fa-grid-layout>
 </fa-modifier>
-<ui-view>
+<ui-view/>
+</fa-modifier>

@@ -371,8 +371,6 @@ button {
 /* Daily Surface */
 .dailyCash{
     position: relative;
-    right: 18%;
-    /*margin-left: 26%;*/
     margin-bottom: 0px;
     padding-top: 20%;
     font-size: 300%;
@@ -383,8 +381,6 @@ button {
 
 #dailyCircle {
     position: relative;
-    /*left: 5%;*/
-    right:5%;
 }
 
 .dollarBills{
@@ -397,7 +393,6 @@ button {
 
 .dailyCashText{
     position: relative;
-    right: 18%;
     margin-top:0px;
     font-family: 'proxima-nova', sans-serif;
     font-weight: 700;
@@ -406,7 +401,6 @@ button {
 }
 
 .dailyCenter{
-    margin-left: 20%;
     margin-top: -77%;
 }
 
@@ -418,7 +412,7 @@ button {
 .overviewContent{
     width: 80%;
     padding-left: 10%;
-    padding-top: 5%;
+    padding-top: 10%;
     padding-right: 20%;
 }
 
@@ -448,7 +442,7 @@ button {
 }
 
 .graph {
-    padding-top: 5%;
+    padding-top: 10%;
 }
 
 

@@ -30,6 +30,12 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
       budget: ""
     }
 
+    // function(){
+  // var size = mainContext.getSize();
+        // return [0.5 * size[0],0.5 * size[1]];
+    // }
+  $scope.size = [window.innerWidth,window.innerHeight];
+  $scope.scroll = [window.innerWidth,window.innerHeight - 50];
 
   var data = mainData.loadMain();
   data.then(function(data) {

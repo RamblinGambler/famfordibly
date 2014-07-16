@@ -8,12 +8,10 @@ var signUp = Affordably.controller('SignUpCtrl', function ($scope, $famous, $sta
     $scope.success = translateTrans.get.bind(translateTrans);
 
     $scope.scroll = function () {
-      console.log("EFWRGAETRYT");
       translateTrans.set([0,-167,0], {duration: 500, curve: 'easeOut'});
     };
 
     $scope.scrollBack = function () {
-      console.log("EFWRGAETRYT");
       translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'});
     };
 
@@ -35,7 +33,6 @@ var signUp = Affordably.controller('SignUpCtrl', function ($scope, $famous, $sta
             }
             else {
                 $window.sessionStorage.token = data.token;
-                console.log(data);
                 translateTrans.set([-287, 0, 0  ], {duration: 500, curve: 'easeOut'}, function () {
                     $state.go('goal');
                 });
