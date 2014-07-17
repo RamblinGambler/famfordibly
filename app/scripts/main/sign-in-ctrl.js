@@ -46,7 +46,7 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
       }
     }).error(function(data, status, headers, config) {
       delete $window.sessionStorage.token;
-      flash.error = data.message;
+        flash.error = data.message;
         $scope.showError = true;
         $scope.hideError = false;
         $state.go('signUp');
