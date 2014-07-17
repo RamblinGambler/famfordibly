@@ -1,16 +1,16 @@
-<fa-modifier fa-size="[33, undefined]" fa-align="[.9,0]"	fa-background-color="'#BADA55'" fa-translate="getTranslater">
+<fa-modifier fa-size="[33, undefined]" fa-align="[.9,0]" fa-translate="getTranslater">
     <fa-surface fa-tap="main($event)"></fa-surface>
 </fa-modifier>
 
 <fa-modifier fa-align='[-1,0]' fa-translate="getTranslated">
     <fa-sequential-layout>
 	    <fa-view>
-		    <fa-modifier fa-size="[undefined,62]">
+		    <fa-modifier fa-size="[undefined,112]">
                 <fa-surface class="menuSpace"></fa-surface>
             </fa-modifier>
         </fa-view>
         <fa-view>
-		    <fa-modifier fa-size="[290,52]" fa-align="[.09,0]">
+		    <fa-modifier fa-size="[undefined,50]">
                 <fa-surface fa-background-color="'#ffffff'" class="menuSelections">
 	                <a ui-sref=".accounts" ng-click="select()" class="menuLink">
                         <img src="images/servers.png" class="menuIcon accountsIcon" />
@@ -20,7 +20,7 @@
 		    </fa-modifier>
         </fa-view>
         <fa-view>
-		    <fa-modifier fa-size="[290,50]" fa-align="[.09,0]">
+		    <fa-modifier fa-size="[undefined,50]">
                 <fa-surface fa-background-color="'#ffffff'" class="menuSelections">
 	                <a ui-sref=".transactions" ng-click="select()" class="menuLink">
                         <img src="images/coins.png" class="menuIcon" />
@@ -35,7 +35,7 @@
             </fa-modifier>
         </fa-view>
         <fa-view>
-		    <fa-modifier fa-size="[290,50]" fa-align="[.09,0]">
+		    <fa-modifier fa-size="[undefined,50]">
                 <fa-surface fa-background-color="'#ffffff'" class="menuSelections">
 	                <a ui-sref=".settings" ng-click="select()" class="menuLink">
                         <img src="images/settings.png" class="menuIcon" />
@@ -45,12 +45,12 @@
 		    </fa-modifier>
         </fa-view>
         <fa-view>
-		    <fa-modifier fa-size="[290,50]" fa-align="[.09,0]">
+		    <fa-modifier fa-size="[undefined,50]" fa-align="[0,0]">
                 <fa-surface class="menuButtonContainer"></fa-surface>
 		    </fa-modifier>
 		</fa-view>
         <fa-view>
-		    <fa-modifier fa-size="[290,50]" fa-align="[.09,0]">
+		    <fa-modifier fa-size="[undefined,50]">
                 <fa-surface fa-background-color="'#ffffff'" class="menuSelections">
 	                <a ui-sref=".finances" ng-click="select()" class="menuLink">
                         <img src="images/box.png" class="menuIcon" />
@@ -60,7 +60,7 @@
 		    </fa-modifier>
         </fa-view>
         <fa-view>
-		    <fa-modifier fa-size="[290,50]" fa-align="[.09,0]">
+		    <fa-modifier fa-size="[undefined,50]">
                 <fa-surface class="menuSpace nameContainer">
                     <img src="images/magnify.png" class="menuIcon" />
                     <p class="menuText">Gamble McAdam</p>
@@ -68,12 +68,12 @@
 		    </fa-modifier>
         </fa-view>
         <fa-view>
-		    <fa-modifier fa-size="[undefined,40]">
+		    <fa-modifier fa-size="[undefined,60]">
                 <fa-surface class="menuSpace noBorder"></fa-surface>
             </fa-modifier>
         </fa-view>
         <fa-view>
-		    <fa-modifier fa-size="[290,70]" fa-align="[.09,0]">
+		    <fa-modifier fa-size="[undefined,70]">
                 <fa-surface class="menuButtonContainer">
                     <button class="menuButton addAccounts" ng-click="account()">Add Accounts</button>
                     <button class="menuButton questions">Questions</button>
@@ -81,7 +81,7 @@
 		    </fa-modifier>
         </fa-view>
         <fa-view>
-		    <fa-modifier fa-size="[290,50]" fa-align="[.09,0]">
+		    <fa-modifier fa-size="[undefined,50]">
                 <fa-surface fa-background-color="'#ffffff'" fa-tap="main()" class="menuSelections">
                     <img src="images/coin.png" class="menuIcon cashIcon" />
                     <p class="menuText dailyCashMenuText">Daily Cash</p>

@@ -8,6 +8,10 @@ Affordably.controller('MenuCtrl', function ($scope, $famous, $state) {
   translateTrans.set([287,0,0], {duration: 500, curve: 'easeOut'});
   translateTranny.set([0,0,0]);
 
+  $scope.size = [window.innerWidth,window.innerHeight];
+
+
+
   $scope.getTranslated = translateTrans.get.bind(translateTrans);
   $scope.getTranslater = translateTranny.get.bind(translateTranny);
   $(".mainContainer").addClass("faded");

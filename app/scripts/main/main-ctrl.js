@@ -6,6 +6,12 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
   // var Transitionable = $famous['famous/transitions/Transitionable'];
 
   $scope.eventHandler = new EventHandler();
+  $scope.menu = function() {
+    $state.go('.menu');
+  }
+  $scope.banks = function() {
+    $state.go('.institutions');
+  };
 
 
   $scope.data = {

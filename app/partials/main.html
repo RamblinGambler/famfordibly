@@ -42,7 +42,7 @@
     <fa-surface fa-background-color="'#fff'"></fa-surface>
         <fa-grid-layout fa-options='{dimensions: [3,1]}'>
             <fa-modifier fa-origin="[.2, 1]" fa-scale="[1, 1]">
-                <fa-surface fa-size="[32, 32]" fa-background-color="'#ffffff'" fa-color="'#BADA55'">
+                <fa-surface fa-size="[32, 32]" fa-background-color="'#ffffff'" fa-color="'#BADA55'" fa-tap="menu()">
                     <a ui-sref=".menu" class="topButton"><img src="images/hamburger.png" class="hamburgerIcon" /></a>
                 </fa-surface>
             </fa-modifier>
@@ -52,7 +52,7 @@
                 </fa-surface>
             </fa-modifier>
             <fa-modifier fa-origin="[.9, 1]" fa-scale="[1, 1]">
-                <fa-surface fa-size="[32, 32]" fa-background-color="'#ffffff'">
+                <fa-surface fa-size="[32, 32]" fa-background-color="'#ffffff'" fa-tap="banks()">
                     <a ui-sref=".institutions" class="topButton"><img src="images/plus.png" class="hamburgerIcon" /></a>
                 </fa-surface>
             </fa-modifier>

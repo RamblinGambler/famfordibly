@@ -8,10 +8,10 @@ Affordably.controller('TransactionsCtrl', function ($scope, $famous, $state, $in
   var translateTra = new Transitionable([0,0,0]);
 
   $scope.getTranslating = translateT.get.bind(translateT);
-  translateT.set([0,-567,0], {duration: 500, curve: 'easeOut'});
+  translateT.set([0,-window.innerHeight,0], {duration: 500, curve: 'easeOut'});
 
   $scope.getTranslatinger = translateTra.get.bind(translateTra);
-  translateTra.set([-320,0,0], {duration: 500, curve: 'easeOut'});
+  translateTra.set([-window.innerWidth,0,0], {duration: 500, curve: 'easeOut'});
 
   $scope.back = function (deferred) {
     $scope.getTranslating = translateT.get.bind(translateT);

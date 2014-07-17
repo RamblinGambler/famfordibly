@@ -15,9 +15,6 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 	$scope.transaction = new View();
   $scope.eventHandler = new EventHandler();
 
-
-
-
 	require(['famous/modifiers/Draggable'], function(Draggable) {
 		require(['famous/modifiers/StateModifier'], function(StateModifier) {
 
