@@ -38,15 +38,21 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
       }
       else {
           $window.sessionStorage.token = data.token;
-          translateTrans.set([-287, 0, 0  ], {duration: 500, curve: 'easeOut'}, function () {
-              $state.go('goal');
-          });
+          if (data.account === 0){
+              translateTrans.set([-287, 0, 0  ], {duration: 500, curve: 'easeOut'}, function () {
+                  $state.go('goal');
+              });
+          } else {
+              translateTrans.set([-287, 0, 0  ], {duration: 500, curve: 'easeOut'}, function () {
+                  $state.go('main');
+              });
+          }
           flash.success = 'Welcome back!';
           $scope.alert = 'error-alert-show';
       }
     }).error(function(data, status, headers, config) {
       delete $window.sessionStorage.token;
-      flash.error = data.message;
+        flash.error = data.message;
         $scope.showError = true;
         $scope.hideError = false;
         $state.go('signUp');
