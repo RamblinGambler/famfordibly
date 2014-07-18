@@ -3,12 +3,12 @@
 Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $http, mainData, $filter) {
 
   var EventHandler = $famous['famous/core/EventHandler'];
-  // var Transitionable = $famous['famous/transitions/Transitionable'];
 
   $scope.eventHandler = new EventHandler();
   $scope.menu = function() {
     $state.go('.menu');
-  }
+  };
+
   $scope.banks = function() {
     $state.go('.institutions');
   };
@@ -36,10 +36,6 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
       budget: ""
     }
 
-    // function(){
-  // var size = mainContext.getSize();
-        // return [0.5 * size[0],0.5 * size[1]];
-    // }
   $scope.size = [window.innerWidth,window.innerHeight];
   $scope.scroll = [window.innerWidth,window.innerHeight - 50];
 
@@ -202,7 +198,7 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
       datasetFill : true,
 
       //String - A legend template
-      legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].lineColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
+      legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].lineColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
 
     };
     for (var i = 0; i < data.data.banking.bank.length; i++) {

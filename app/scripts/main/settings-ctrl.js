@@ -26,6 +26,19 @@ Affordably.controller('SettingsCtrl', function ($scope, $famous, $state, $window
     settings: {}
   };
 
+  $scope.logOut = function() {
+    $http({
+      method: 'DELETE',
+      url: 'https://guavaplan-staging.herokuapp.com/api/v1/tokens',
+      params: {
+        id: $window.sessionStorage.token
+      }
+    }).success(function(data) {
+      $state.go('signIn');
+    }).error(function(error) {
+    });
+  };
+
   $scope.save = function(weekly, daily, phone) {
 
     $http({
