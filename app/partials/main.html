@@ -15,7 +15,7 @@
             </fa-surface>
 	    </fa-modifier>
 	    <fa-modifier fa-size="[undefined,300]">
-            <fa-surface fa-index="1" fa-pipe-to="eventHandler" class="overviewSurface overviewContainer">
+            <fa-surface fa-index="1" fa-pipe-to="eventHandler">
                 <div class="overviewContent">
                     <p class="sectionTitle">Overview</p>
                     <h5 class="overviewLine"><span class="overviewLabel">Total Balance:</span><span class="overviewText" ng-bind="data.total_available | noFractionCurrency"></span></h5>
@@ -38,12 +38,12 @@
     </fa-scroll-view>
 </fa-modifier>
 
-<fa-modifier fa-size="[undefined, 50]" fa-translate="[0,0,0]" fa-align="[0,-.004]">
+<fa-modifier fa-size="[undefined, 50]" fa-translate="[0,0,0]" fa-align="[0,0]">
     <fa-surface fa-background-color="'#fff'"></fa-surface>
         <fa-grid-layout fa-options='{dimensions: [3,1]}'>
             <fa-modifier fa-origin="[.2, 1]" fa-scale="[1, 1]">
-                <fa-surface fa-size="[32, 32]" fa-background-color="'#ffffff'" fa-color="'#BADA55'" fa-tap="menu()">
-                    <a ui-sref=".menu" class="topButton"><img src="images/hamburger.png" class="hamburgerIcon" /></a>
+                <fa-surface fa-size="[32, 32]" fa-background-color="'#ffffff'" fa-tap="menu()">
+                    <img src="images/hamburger.png" class="hamburgerIcon"/>
                 </fa-surface>
             </fa-modifier>
             <fa-modifier fa-align="[0, -.2]" fa-scale="[1.5, 1.5]" fa-size="[undefined, 50]">
@@ -53,7 +53,7 @@
             </fa-modifier>
             <fa-modifier fa-origin="[.9, 1]" fa-scale="[1, 1]">
                 <fa-surface fa-size="[32, 32]" fa-background-color="'#ffffff'" fa-tap="banks()">
-                    <a ui-sref=".institutions" class="topButton"><img src="images/plus.png" class="hamburgerIcon" /></a>
+                    <img src="images/plus.png" class="hamburgerIcon"/>
                 </fa-surface>
             </fa-modifier>
         </fa-grid-layout>

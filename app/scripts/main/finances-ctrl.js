@@ -13,7 +13,7 @@ Affordably.controller('FinancesCtrl', function ($scope, $famous, $state, $filter
   $scope.getTranslater = translateTr.get.bind(translateTr);
     translateTr.set([-window.innerWidth,0,0], {duration: 500, curve: 'easeOut'});
 
-  $scope.back = function (deferred) {
+  $scope.back = function () {
       $scope.getTranslating = translateT.get.bind(translateT);
       $scope.$emit('back');
       translateTr.set([0,0,0], {duration: 500, curve: 'easeOut'});

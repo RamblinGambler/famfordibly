@@ -85,7 +85,9 @@ Affordably.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
         controller: 'SettingsCtrl'
       });
 
-  $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
+
+    $httpProvider.defaults.useXDomain = true;
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
     var interceptor = ['$location', '$rootScope', '$q', function($location, $rootScope, $q) {
         function success(response) {

@@ -21,7 +21,7 @@ Affordably.controller('MenuCtrl', function ($scope, $famous, $state) {
   };
 
   $scope.main = function($event) {
-  translateTranny.set([50,0,0]);
+  translateTranny.set([75,0,0]);
     $(".mainContainer").removeClass("faded");
     translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'}, function() {
       $state.go('main')

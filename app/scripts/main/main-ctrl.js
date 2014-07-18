@@ -87,7 +87,7 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
       percentageInnerCutout : 85,
 
       //Boolean - Whether we should animate the chart
-      animation : true,
+      animation : false,
 
       //Number - Amount of animation steps
       animationSteps : 100,
@@ -105,8 +105,33 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
       onAnimationComplete : null
     };
 
+    var d = new Date()
+    switch(d.getDay()) {
+      case 1:
+        var weekdays = ["M", "T", "W", "Th", "F", "S", "S"]
+        break;
+      case 2:
+        var weekdays = ["T", "W", "Th", "F", "S", "S", "M"]
+        break;
+      case 3:
+        var weekdays = ["W", "Th", "F", "S", "S", "M", "T"]
+        break;
+      case 4:
+        var weekdays = ["Th", "F", "S", "S", "M", "T", "W"]
+        break;
+      case 5:
+        var weekdays = ["F", "S", "S", "M", "T", "W", "Th"]
+        break;
+      case 6:
+        var weekdays = ["S", "S", "M", "T", "W", "Th", "F"]
+        break;
+      case 7:
+        var weekdays = ["S","M", "T", "W", "Th", "F", "S"]
+        break;
+    }
+
     $scope.chart = {
-      labels: ["M", "T", "W", "T", "F", "S", "S"],
+      labels: weekdays,
       datasets: [
         {
           label: "Spent",
