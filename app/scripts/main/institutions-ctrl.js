@@ -53,7 +53,7 @@ Affordably.controller('InstitutionsCtrl', function ($scope, $famous, $state, $ht
 
 
   $scope.back = function () {
-  translateTranny.set([-50,0,0]);
+    translateTranny.set([-80,0,0]);
     $(".mainContainer").removeClass("faded");
     translateTran.set([0,0,0], {duration: 500, curve: 'easeOut'});
     translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'}, function() {
