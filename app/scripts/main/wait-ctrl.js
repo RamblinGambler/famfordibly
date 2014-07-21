@@ -34,7 +34,9 @@ Affordably.controller('WaitCtrl', function ($scope, $famous, $state, $http, $sta
             break;
 
           case 2:
-            console.log("DOESN'T WORK");
+            console.log("WORKS");
+            clearInterval(load);
+            $state.go('main');
             break;
 
           case 3:
@@ -57,23 +59,33 @@ Affordably.controller('WaitCtrl', function ($scope, $famous, $state, $http, $sta
 
           case 7:
             console.log("DOESN'T WORK");
+            clearInterval(load);
+            $state.go('main');
             break;
 
           case 8:
             console.log("DOESN'T WORK");
+            clearInterval(load);
+            $state.go('main');
             break;
 
           case 9:
             console.log("DOESN'T WORK");
+            clearInterval(load);
+            $state.go('main');
             break;
 
           case 10:
             console.log("DOESN'T WORK");
+            clearInterval(load);
+            $state.go('main');
             break;
 
           default:
             if(count > 120) {
             console.log("DOESN'T WORK");
+            clearInterval(load);
+            $state.go('link');
             };
         };
       })
