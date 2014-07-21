@@ -63,11 +63,11 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
     $scope.data.monthly_fixed = currencyFilter(data.data.monthly_fixed, '');
     $scope.myChartData = [
       {
-        value: 50,
+        value: data.data.users_daily,
         color:"#49BC79"
       },
       {
-        value : 50,
+        value : data.data.daily_spent,
         color : "#DBDBDB"
       }
     ];

@@ -93,10 +93,76 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
            $scope.hideError = false;
        }
     }).error(function(data) {
-        console.log("Error");
-        console.log(data);
-        flash.error = data.message;
-        $scope.spin = false;
+          $http({
+            method: 'POST',
+            url: "https://guavaplan-staging.herokuapp.com/api/v1/add_account",
+            params: {
+              username: user_id,
+              auth_token: $window.sessionStorage.token,
+              password: password,
+              pin: pin,
+              count: 1,
+              institution: $stateParams.id
+            }
+          }).success(function(data) {
+                console.log("Success");
+                console.log(data);
+            // if (data.status === 200) {
+                if (data.job) {
+                    $state.go('wait', {job: data.job});
+                } else if (data.challenge_node_id) {
+                    if (data.type === "choice") {
+                        $state.go('mfa', {
+                            type: data.type,
+                            text: data.text,
+                            inst: data.institution,
+                            challenge: data.challenge_node_id,
+                            session: data.challenge_session_id,
+                            choice1: data.choices[0].text,
+                            choice2: data.choices[1].text,
+                            choice3: data.choices[2].text
+                        });
+                    } else if (data.type === "multi-text") {
+                        $state.go('mfa', {
+                            type: data.type,
+                            text1: data.text[0].text,
+                            text2: data.text[1].text,
+                            inst: data.institution,
+                            challenge: data.challenge_node_id,
+                            session: data.challenge_session_id
+                        });
+                    } else if (data.type === "text") {
+                        $state.go('mfa', {
+                            type: data.type,
+                            text: data.text,
+                            inst: data.institution,
+                            challenge: data.challenge_node_id,
+                            session: data.challenge_session_id
+                        });
+                    } else if (data.type === "image") {
+                        $state.go('mfa', {
+                            type: data.type,
+                            text: data.text,
+                            inst: data.institution,
+                            challenge: data.challenge_node_id,
+                            session: data.challenge_session_id,
+                            image: data.image
+                        });
+                    }
+                } else {
+                 console.log("Success but error");
+                 console.log(data);
+                 $scope.spin = false;
+                 flash.error = data.message;
+                 $scope.showError = true;
+                 $scope.hideError = false;
+             }
+          }).error(function(error) {
+            console.log("Error");
+            console.log(error);
+            flash.error = error.message;
+            $scope.spin = false;
+          })
 	  });
   };
 });
