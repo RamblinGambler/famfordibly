@@ -1,6 +1,6 @@
 'use strict';
 
-Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $http, mainData, $filter) {
+Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $http, mainData, $filter, $timeout) {
 
   var EventHandler = $famous['famous/core/EventHandler'];
 
@@ -61,16 +61,6 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
     $scope.data.banking = data.data.banking;
     $scope.data.budget = data.data.budget;
     $scope.data.monthly_fixed = currencyFilter(data.data.monthly_fixed, '');
-    $scope.myChartData = [
-      {
-        value: data.data.users_daily,
-        color:"#49BC79"
-      },
-      {
-        value : data.data.daily_spent,
-        color : "#DBDBDB"
-      }
-    ];
 
   $scope.myChartOptions =  {
       //Boolean - Whether we should show a stroke on each segment
@@ -100,6 +90,17 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
       //Function - Will fire on animation completion.
       onAnimationComplete : null
     };
+
+    $scope.myChartData = [
+      {
+        value: data.data.daily_cash,
+        color:"#49BC79"
+      },
+      {
+        value : data.data.daily_spent,
+        color : "#DBDBDB"
+      }
+    ];
 
     var d = new Date()
     switch(d.getDay()) {

@@ -2,17 +2,17 @@
 
 Affordably.controller('WaitCtrl', function ($scope, $famous, $state, $http, $stateParams) {
   var Transitionable = $famous['famous/transitions/Transitionable'];
+  var Timer = $famous['famous/utilities/Timer'];
   var times_run = 0;
   var load;
   var error;
   var count = 0;
   var translateTrans = new Transitionable([0,0,0]);
   $scope.success = translateTrans.get.bind(translateTrans);
-  console.log($stateParams.job);
   $scope.third = true;
 
   function plan_progress(){
-    load = window.setInterval(loadPlan,1000);
+    load = Timer.setInterval(loadPlan,1000);
   };
 
   function loadPlan(){
@@ -29,62 +29,62 @@ Affordably.controller('WaitCtrl', function ($scope, $famous, $state, $http, $sta
         switch (active.id) {
           case 1:
             console.log("DOESN'T WORK");
-            clearInterval(load);
+            Timer.clear(load);
             $state.go('main');
             break;
 
           case 2:
             console.log("WORKS");
-            clearInterval(load);
+            Timer.clear(load);
             $state.go('main');
             break;
 
           case 3:
             console.log("WORKS");
-            clearInterval(load);
+            Timer.clear(load);
             $state.go('main');
             break
 
           case  4:
             console.log("WORKS");
-            clearInterval(load);
+            Timer.clear(load);
             $state.go('main');
             break;
 
           case 6:
             console.log("WORKS");
-            clearInterval(load);
+            Timer.clear(load);
             $state.go('main');
             break;
 
           case 7:
             console.log("DOESN'T WORK");
-            clearInterval(load);
+            Timer.clear(load);
             $state.go('main');
             break;
 
           case 8:
             console.log("DOESN'T WORK");
-            clearInterval(load);
+            Timer.clear(load);
             $state.go('main');
             break;
 
           case 9:
             console.log("DOESN'T WORK");
-            clearInterval(load);
+            Timer.clear(load);
             $state.go('main');
             break;
 
           case 10:
             console.log("DOESN'T WORK");
-            clearInterval(load);
+            Timer.clear(load);
             $state.go('main');
             break;
 
           default:
             if(count > 120) {
             console.log("DOESN'T WORK");
-            clearInterval(load);
+            Timer.clear(load);
             $state.go('link');
             };
         };
