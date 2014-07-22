@@ -14,6 +14,10 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
     translateTrans.set([0,-167,0], {duration: 500, curve: 'easeOut'});
   };
 
+  $scope.signUp = function() {
+    $state.go('signUp')
+  };
+
   $scope.scrollBack = function () {
     translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'});
   };

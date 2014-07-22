@@ -35,7 +35,7 @@
                     <div ng-model="message"></div>
                 </form>
                 <p id="noAccountMessage">Already have an account?</p>
-                <h4 id="signUpLink" ><a ui-sref="signIn">Sign In</a></h4>
+                <h4 id="signUpLink" ng-click="signIn()"><a ui-sref="signIn">Sign In</a></h4>
             </div>
         </fa-surface>
         <fa-surface ng-show="spin">
