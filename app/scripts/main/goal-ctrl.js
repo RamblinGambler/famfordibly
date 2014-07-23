@@ -10,16 +10,20 @@ Affordably.controller('GoalCtrl', function ($scope, $famous, $state, mainData, $
 
   $scope.submit = function (goal) {
     $scope.spin = true;
-    $http({
-      method: 'POST',
-      url: 'https://guavaplan-staging.herokuapp.com/api/v1/goal',
-      params: {goal: goal, auth_token: $window.sessionStorage.token}
-    }).success(function() {
-      $scope.spin = false;
-      $state.go('institutionSelect');
-    }).error(function() {
-      $scope.spin = false;
-    });
+    if (isNAN(goal) {
+      $scope.message = "Please enter a number to continue."
+    } else {
+      $http({
+        method: 'POST',
+        url: 'https://guavaplan-staging.herokuapp.com/api/v1/goal',
+        params: {goal: goal, auth_token: $window.sessionStorage.token}
+      }).success(function() {
+        $scope.spin = false;
+        $state.go('institutionSelect');
+      }).error(function() {
+        $scope.spin = false;
+      });
+    }
   };
 
   $scope.getTranslating = translateT.get.bind(translateT);
