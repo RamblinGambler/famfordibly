@@ -10,7 +10,7 @@ Affordably.controller('WaitCtrl', function ($scope, $famous, $state, $http, $sta
   $scope.success = translateTrans.get.bind(translateTrans);
   $scope.third = true;
 
-  var plan_prgress = function(){
+  var plan_progress = function(){
     load = Timer.setInterval(loadPlan,1000);
   };
 
