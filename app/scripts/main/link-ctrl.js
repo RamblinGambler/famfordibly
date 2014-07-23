@@ -39,7 +39,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
 	    }
 	  }).success(function(data) {
           if (data.job) {
-              $state.go('wait', {job: data.job});
+              $state.go('wait', {job: data.job, id: $stateParams.id});
           } else if (data.challenge_node_id) {
               if (data.type === 'choice') {
                   $state.go('mfa', {
@@ -98,11 +98,8 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
               institution: $stateParams.id
             }
           }).success(function(data) {
-                console.log('Success');
-                console.log(data);
-            // if (data.status === 200) {
                 if (data.job) {
-                    $state.go('wait', {job: data.job});
+                    $state.go('wait', {job: data.job, id: $stateParams.id});
                 } else if (data.challenge_node_id) {
                     if (data.type === 'choice') {
                         $state.go('mfa', {

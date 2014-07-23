@@ -35,7 +35,7 @@ Affordably.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
     controller: 'LinkCtrl'
   })
   .state('wait', {
-    url: '/wait/:job',
+    url: '/wait/:job/:id',
     templateUrl: 'partials/wait.html',
     controller: 'WaitCtrl'
   })
