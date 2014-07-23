@@ -15,7 +15,7 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
   };
 
   $scope.signUp = function() {
-    $state.go('signUp')
+    $state.go('signUp');
   };
 
   $scope.scrollBack = function () {
@@ -30,11 +30,10 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
 
     $http({
       method: 'POST',
-      url: "https://guavaplan-staging.herokuapp.com/api/v1/tokens",
+      url: 'https://guavaplan-staging.herokuapp.com/api/v1/tokens',
       data: credentials
-    }).success(function(data, status, headers, config) {
+    }).success(function(data) {
       if (data.message){
-        console.log(data)
           delete $window.sessionStorage.token;
           flash.error = data.message;
           $scope.showError = true;
@@ -54,7 +53,7 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
           flash.success = 'Welcome back!';
           $scope.alert = 'error-alert-show';
       }
-    }).error(function(data, status, headers, config) {
+    }).error(function(data) {
       delete $window.sessionStorage.token;
         flash.error = data.message;
         $scope.showError = true;

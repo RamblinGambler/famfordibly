@@ -2,7 +2,6 @@
 
 Affordably.controller('SettingsCtrl', function ($scope, $famous, $state, $window, $http) {
   var Transitionable = $famous['famous/transitions/Transitionable'];
-  var EventHandler = $famous['famous/core/EventHandler'];
 
   var translateT = new Transitionable([0,0,0]);
   $scope.getTranslating = translateT.get.bind(translateT);
@@ -12,7 +11,7 @@ Affordably.controller('SettingsCtrl', function ($scope, $famous, $state, $window
   $scope.getTranslater = translateTr.get.bind(translateTr);
   translateTr.set([-window.innerWidth,0,0], {duration: 500, curve: 'easeOut'});
 
-  $scope.back = function (deferred) {
+  $scope.back = function () {
       $scope.getTranslating = translateT.get.bind(translateT);
       $scope.$emit('back');
       translateTr.set([0,0,0], {duration: 500, curve: 'easeOut'});
@@ -33,9 +32,9 @@ Affordably.controller('SettingsCtrl', function ($scope, $famous, $state, $window
       params: {
         id: $window.sessionStorage.token
       }
-    }).success(function(data) {
+    }).success(function() {
       $state.go('signIn');
-    }).error(function(error) {
+    }).error(function() {
     });
   };
 
@@ -50,11 +49,9 @@ Affordably.controller('SettingsCtrl', function ($scope, $famous, $state, $window
         phone_num: phone,
         auth_token: $window.sessionStorage.token
       }
-    }).success(function(data) {
-      console.log(data);
-      $scope.message = "Your settings have been saved"
-    }).error(function(error) {
-      console.log(error)
+    }).success(function() {
+      $scope.message = 'Your settings have been saved';
+    }).error(function() {
     });
   };
  });

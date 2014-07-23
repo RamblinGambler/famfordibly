@@ -1,15 +1,15 @@
 'use strict';
 
 Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe) {
-	var View     = require("famous/core/View");
-	var EventHandler     = require("famous/core/EventHandler");
-	var Surface    = require("famous/core/Surface");
-	var Scrollview = require("famous/views/Scrollview");
-  var Scroller = require("famous/views/Scroller");
+	var View     = require('famous/core/View');
+	var EventHandler     = require('famous/core/EventHandler');
+	var Surface    = require('famous/core/Surface');
+	var Scrollview = require('famous/views/Scrollview');
+  var Scroller = require('famous/views/Scroller');
 	var RenderNode = require('famous/core/RenderNode');
 	var Transform = require('famous/core/Transform');
-	var ContainerSurface = require("famous/surfaces/ContainerSurface");
-	var Transitionable = require("famous/transitions/Transitionable");
+	var ContainerSurface = require('famous/surfaces/ContainerSurface');
+	var Transitionable = require('famous/transitions/Transitionable');
 	var Easing = require('famous/transitions/Easing');
 
 	$scope.transaction = new View();
@@ -26,23 +26,23 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 
 			var transactions = {
 		    user: 'Loading...',
-		    message: "",
-		    time_remaining: "",
-		    daily_cash: "",
-		    total_available: "",
-		    daily_spent: "",
-		    fixed_left: "",
-		    money_leftover: "",
-		    saved: "",
-		    users_daily: "",
+		    message: '',
+		    time_remaining: '',
+		    daily_cash: '',
+		    total_available: '',
+		    daily_spent: '',
+		    fixed_left: '',
+		    money_leftover: '',
+		    saved: '',
+		    users_daily: '',
 		    outgoings: [],
 		    incomings: [],
 		    settings: {},
-		    income: "",
-		    housing: "",
+		    income: '',
+		    housing: '',
 		    banking: {},
-		    monthly_fixed: ""
-		  }
+		    monthly_fixed: ''
+		  };
 
 		  var data = mainData.loadMain();
 		  data.then(function(data) {
@@ -65,9 +65,9 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 						backgroundColor: 'red'
 					}
 			    });
-		    var monthNames = new Array("January", "February", "March",
-		    "April", "May", "June", "July", "August", "September",
-		    "October", "November", "December");
+		    var monthNames = new Array('January', 'February', 'March',
+		    'April', 'May', 'June', 'July', 'August', 'September',
+		    'October', 'November', 'December');
 
 				for (var i = 0; i < transactions.outgoings.length; i++) {
 				  var container = new ContainerSurface({
@@ -86,8 +86,8 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 				  draggable.dragId = i;
 
 				  draggable.on('end', function(e) {
-				    if (e.position[0] == 160) {
-	    	    	var that = this
+				    if (e.position[0] === 160) {
+	    	    	var that = this;
 	    	    	setTimeout(function() {
 	    		      that.setPosition([0,0,0], {
 	    		        curve: Easing.outBounce,
@@ -99,15 +99,15 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 	    	    	item.deploy($scope.transaction);
 	    	    	console.log(item);
 				    }
-				    else if (e.position[0] == -160) {
-				    	var that = this
+				    else if (e.position[0] === -160) {
+				    	var that = this;
 				    	setTimeout(function() {
 					      that.setPosition([0,0,0], {
 					        curve: Easing.outBounce,
 					        duration: 400
 					      });
 				    	}, 300);
-				    	transactions.outgoings[draggable.dragId].category_id = 1
+				    	transactions.outgoings[draggable.dragId].category_id = 1;
 				    } else {
 				    	this.setPosition([0,0,0], {
 				    	  curve: Easing.outBounce,
@@ -117,38 +117,40 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 				  });
 
 
-
+				  var date;
+				  var day;
+				  var month;
 				  var name = transactions.outgoings[i].name;
 				  name = capitaliseFirstLetter(name);
-				  if(name.length > 20) name = name.substring(0,20);
+				  if(name.length > 20) {name = name.substring(0,20);}
 
 				  var amount = transactions.outgoings[i].amount.toFixed(2);
-				  if(transactions.outgoings[i].posted_date != null) {
-				  	var date = new Date(transactions.outgoings[i].posted_date);
-				  	var day = date.getDate();
-				  	var month = monthNames[date.getMonth()];
+				  if(transactions.outgoings[i].posted_date !== null) {
+				  	date = new Date(transactions.outgoings[i].posted_date);
+				  	day = date.getDate();
+				  	month = monthNames[date.getMonth()];
 				  } else {
-				  	var day = "";
-				  	var month = "";
-				  };
+				  	day = '';
+				  	month = '';
+				  }
 
 
 				  var item = new Surface({
 				    size: [undefined, 65],
 				    content: '',
 				    properties: {
-				      backgroundColor: "white",
-				      borderBottom: "1px solid #e6eaed",
-				      lineHeight: "75px",
-				      textAlign: "center",
+				      backgroundColor: 'white',
+				      borderBottom: '1px solid #e6eaed',
+				      lineHeight: '75px',
+				      textAlign: 'center',
               zIndex: 4,
 				    }
 				  });
 
-				  if(transactions.outgoings[i].category_id == 1) {
+				  if(transactions.outgoings[i].category_id === 1) {
 				  	var image = '/images/coin.png';
 				  	item.setContent('<img class="transactionIcon" src="' + image + '"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
-				  } else if(transactions.outgoings[i].category_id == 2) {
+				  } else if(transactions.outgoings[i].category_id === 2) {
 				  	var image = '/images/box.png';
 					  item.setContent('<img class="transactionIcon" src="' + image +'" ng-show="fixed"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
 				  };
@@ -160,12 +162,12 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 				    opacity:0
 				  });
 				  var backgroundYes = new Surface({
-				    content: "Fixed",
+				    content: 'Fixed',
 				    size: [160, 65],
 				    properties: {
-				      backgroundColor: "#5698D5",
-				      lineHeight: "75px",
-				      textAlign: "center"
+				      backgroundColor: '#5698D5',
+				      lineHeight: '75px',
+				      textAlign: 'center'
 				    }
 				  });
 				  var backgroundNoModifier = new StateModifier({
@@ -174,19 +176,19 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe)
 				    opacity: 0
 				  });
 				  var backgroundNo = new Surface({
-				    content: "Discretionary",
+				    content: 'Discretionary',
 				    size: [160, 65],
 				    properties: {
-				      backgroundColor: "rgba(255,0,0,0.2)",
-				      lineHeight: "75px",
-				      textAlign: "center"
+				      backgroundColor: 'rgba(255,0,0,0.2)',
+				      lineHeight: '75px',
+				      textAlign: 'center'
 				    }
 				  });
 
           var spacer = new Surface({
             size: [undefined, 6],
             properties: {
-                backgroundColor: "#f4f8fb",
+                backgroundColor: '#f4f8fb',
                 zIndex: '6'
             }
           });

@@ -18,10 +18,10 @@ Affordably.controller('InstitutionsCtrl', function ($scope, $famous, $state, $ht
   translateTranny.set([0,0,0]);
   translateTrans.set([-287,0,0], {duration: 500, curve: 'easeOut'});
   translateTran.set([-287,0,1], {duration: 500, curve: 'easeOut'});
-  $(".mainContainer").addClass("faded");
+  $('.mainContainer').addClass('faded');
   $scope.eventHandler = new EventHandler();
 
-  require(["fuse/src/fuse.min"], function(Fuse) {
+  require(['fuse/src/fuse.min'], function(Fuse) {
 
     var institutiondata;
     var data = institutions.query();
@@ -40,7 +40,7 @@ Affordably.controller('InstitutionsCtrl', function ($scope, $famous, $state, $ht
         $scope.institutions = result;
         $scope.$broadcast('bankChange', result);
         translateTransy.set([0,275,0], {duration: 500, curve: 'easeOut'});
-      }
+      };
     });
   });
 
@@ -54,7 +54,7 @@ Affordably.controller('InstitutionsCtrl', function ($scope, $famous, $state, $ht
 
   $scope.back = function () {
     translateTranny.set([-80,0,0]);
-    $(".mainContainer").removeClass("faded");
+    $('.mainContainer').removeClass('faded');
     translateTran.set([0,0,0], {duration: 500, curve: 'easeOut'});
     translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'}, function() {
         $state.go('main');

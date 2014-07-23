@@ -1,25 +1,26 @@
+'use strict';
+
 Affordably.factory('mainData', [
   '$http', '$rootScope', '$window', function($http, $rootScope, $window) {
-    var indexData;
-    mainData = {
+    var mainData = {
       data: {
         user: 'Loading...',
-        message: "",
-        time_remaining: "",
-        daily_cash: "",
-        total_available: "",
-        daily_spent: "",
-        fixed_left: "",
-        money_leftover: "",
-        saved: "",
-        users_daily: "",
+        message: '',
+        time_remaining: '',
+        daily_cash: '',
+        total_available: '',
+        daily_spent: '',
+        fixed_left: '',
+        money_leftover: '',
+        saved: '',
+        users_daily: '',
         outgoings: [],
         incomings: [],
         settings: {},
-        income: "",
-        housing: "",
+        income: '',
+        housing: '',
         banking: {},
-        monthly_fixed: ""
+        monthly_fixed: ''
       },
       isLoaded: false
     };
@@ -40,11 +41,11 @@ Affordably.factory('mainData', [
         mainData.data.time_remaining = data.time_remaining;
         mainData.data.daily_cash = data.daily_cash;
         mainData.data.total_available = 0;
-        for (i = 0; i < data.banking.bank.length; i++) {
+        for (var i = 0; i < data.banking.bank.length; i++) {
           if (data.banking.bank[i].primary === true) {
-            mainData.data.total_available += data.banking.bank[i].balance
-          };
-        };
+            mainData.data.total_available += data.banking.bank[i].balance;
+          }
+        }
         mainData.data.daily_spent = data.daily_spent;
         mainData.data.fixed_left = data.fixed_left;
         mainData.data.money_leftover = data.money_leftover;

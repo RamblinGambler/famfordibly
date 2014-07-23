@@ -26,9 +26,9 @@ var signUp = Affordably.controller('SignUpCtrl', function ($scope, $famous, $sta
 
         $http({
             method: 'POST',
-            url: "https://guavaplan-staging.herokuapp.com/api/v1/tokens/new",
+            url: 'https://guavaplan-staging.herokuapp.com/api/v1/tokens/new',
             data: credentials
-        }).success(function(data, status, headers, config) {
+        }).success(function(data) {
             if (data.message){
                 delete $window.sessionStorage.token;
                 flash.error = data.message;
@@ -41,7 +41,7 @@ var signUp = Affordably.controller('SignUpCtrl', function ($scope, $famous, $sta
                 });
                 flash.success = 'Welcome back!';
             }
-        }).error(function(data, status, headers, config) {
+        }).error(function(data) {
             delete $window.sessionStorage.token;
             flash.error = data.message;
             $scope.spin = false;

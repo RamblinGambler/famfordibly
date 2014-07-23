@@ -91,17 +91,17 @@ Affordably.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
 
     var interceptor = ['$location', '$rootScope', '$q', function($location, $rootScope, $q) {
         function success(response) {
-            return response
-        };
+            return response;
+        }
 
         function error(response) {
-            if (response.status == 401) {
+            if (response.status === 401) {
                 $rootScope.$broadcast('event:unauthorized');
                 $location.path('/users/login');
                 return response;
-            };
+            }
             return $q.reject(response);
-        };
+        }
 
         return function(promise) {
             return promise.then(success, error);

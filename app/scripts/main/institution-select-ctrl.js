@@ -4,7 +4,7 @@ Affordably.controller('InstitutionSelectCtrl', function ($scope, $famous, $state
   var EventHandler = $famous['famous/core/EventHandler'];
   var Transitionable = $famous['famous/transitions/Transitionable'];
 
-  require(["fuse/src/fuse.min"], function(Fuse) {
+  require(['fuse/src/fuse.min'], function(Fuse) {
 
     var institutiondata;
     var data = institutions.query();
@@ -21,7 +21,7 @@ Affordably.controller('InstitutionSelectCtrl', function ($scope, $famous, $state
     $scope.search = function (bank) {
       var result = f.search(bank);
       $scope.banks = result;
-    }
+    };
   });
 
   var translateTrans = new Transitionable([0,0,0]);

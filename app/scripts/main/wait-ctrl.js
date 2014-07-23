@@ -5,7 +5,6 @@ Affordably.controller('WaitCtrl', function ($scope, $famous, $state, $http, $sta
   var Timer = $famous['famous/utilities/Timer'];
   var times_run = 0;
   var load;
-  var error;
   var count = 0;
   var translateTrans = new Transitionable([0,0,0]);
   $scope.success = translateTrans.get.bind(translateTrans);
@@ -16,10 +15,10 @@ Affordably.controller('WaitCtrl', function ($scope, $famous, $state, $http, $sta
   };
 
   var loadPlan = function(){
-    count ++
+    count ++;
       $http({
         method: 'GET',
-        url: "https://guavaplan-staging.herokuapp.com/api/v1/status",
+        url: 'https://guavaplan-staging.herokuapp.com/api/v1/status',
         params: {
           job_id: $stateParams.job
         }
@@ -40,7 +39,7 @@ Affordably.controller('WaitCtrl', function ($scope, $famous, $state, $http, $sta
           case 3:
             Timer.clear(load);
             $state.go('main');
-            break
+            break;
 
           case  4:
             Timer.clear(load);
@@ -76,9 +75,9 @@ Affordably.controller('WaitCtrl', function ($scope, $famous, $state, $http, $sta
             if(count > 120) {
             Timer.clear(load);
             $state.go('link');
-            };
-        };
-      })
-  }
+            }
+        }
+      });
+  };
   plan_progress();
 });

@@ -2,21 +2,23 @@
 
 Affordably.controller('GoalCtrl', function ($scope, $famous, $state, mainData, $window, $http) {
   var Transitionable = $famous['famous/transitions/Transitionable'];
-  var EventHandler = $famous['famous/core/EventHandler'];
 
   var translateT = new Transitionable([0,0,0]);
   var translateTr = new Transitionable([0,0,0]);
+  $scope.spin = false;
 
 
   $scope.submit = function (goal) {
+    $scope.spin = true;
     $http({
       method: 'POST',
-      url: "https://guavaplan-staging.herokuapp.com/api/v1/goal",
+      url: 'https://guavaplan-staging.herokuapp.com/api/v1/goal',
       params: {goal: goal, auth_token: $window.sessionStorage.token}
-    }).success(function(data) {
-      $state.go('institutionSelect')
-    }).error(function(error) {
-      console.log(error);
+    }).success(function() {
+      $scope.spin = false;
+      $state.go('institutionSelect');
+    }).error(function() {
+      $scope.spin = false;
     });
   };
 

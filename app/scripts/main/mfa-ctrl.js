@@ -8,18 +8,16 @@ Affordably.controller('MfaCtrl', function ($scope, $state, $http, $window, $stat
   choices.push($stateParams.choice1);
   choices.push($stateParams.choice2);
   choices.push($stateParams.choice3);
-  $scope.choices = choices
+  $scope.choices = choices;
 
-
-  console.log($scope.data)
   $scope.submit = function(data) {
     $http({
       method: 'POST',
-      url: "https://guavaplan-staging.herokuapp.com/api/v1/mfa_submit",
+      url: 'https://guavaplan-staging.herokuapp.com/api/v1/mfa_submit',
       params: {
         auth_token: $window.sessionStorage.token,
         answer: data,
-        provider: "intuit",
+        provider: 'intuit',
         challenge_session_id: $stateParams.challenge_session_id,
         challenge_node_id: $stateParams.challenge_node_id,
         institution: $stateParams.id

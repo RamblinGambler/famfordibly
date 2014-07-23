@@ -16,25 +16,25 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
 
   $scope.data = {
       user: 'Loading...',
-      message: "",
-      time_remaining: "",
-      daily_cash: "",
-      total_available: "",
-      daily_spent: "",
-      fixed_left: "",
-      money_leftover: "",
-      money_left: "",
-      saved: "",
-      users_daily: "",
+      message: '',
+      time_remaining: '',
+      daily_cash: '',
+      total_available: '',
+      daily_spent: '',
+      fixed_left: '',
+      money_leftover: '',
+      money_left: '',
+      saved: '',
+      users_daily: '',
       outgoings: [],
       incomings: [],
       settings: {},
-      income: "",
-      housing: "",
+      income: '',
+      housing: '',
       banking: {},
-      monthly_fixed: "",
-      budget: ""
-    }
+      monthly_fixed: '',
+      budget: ''
+    };
 
   $scope.size = [window.innerWidth,window.innerHeight];
   $scope.scroll = [window.innerWidth,window.innerHeight - 50];
@@ -67,7 +67,7 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
       segmentShowStroke : false,
 
       //String - The colour of each segment stroke
-      segmentStrokeColor : "#DBDBDB",
+      segmentStrokeColor : '#DBDBDB',
 
       //The percentage of the chart that we cut out of the middle.
       percentageInnerCutout : 85,
@@ -79,7 +79,7 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
       animationSteps : 100,
 
       //String - Animation easing effect
-      animationEasing : "easeOutBounce",
+      animationEasing : 'easeOutBounce',
 
       //Boolean - Whether we animate the rotation of the Doughnut
       animateRotate : true,
@@ -94,36 +94,36 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
     $scope.myChartData = [
       {
         value: data.data.daily_cash,
-        color:"#49BC79"
+        color:'#49BC79'
       },
       {
         value : data.data.daily_spent,
-        color : "#DBDBDB"
+        color : '#DBDBDB'
       }
     ];
-
-    var d = new Date()
+    var weekdays;
+    var d = new Date();
     switch(d.getDay()) {
       case 1:
-        var weekdays = ["M", "T", "W", "Th", "F", "S", "S"]
+        weekdays = ['M', 'T', 'W', 'Th', 'F', 'S', 'S'];
         break;
       case 2:
-        var weekdays = ["T", "W", "Th", "F", "S", "S", "M"]
+        weekdays = ['T', 'W', 'Th', 'F', 'S', 'S', 'M'];
         break;
       case 3:
-        var weekdays = ["W", "Th", "F", "S", "S", "M", "T"]
+        weekdays = ['W', 'Th', 'F', 'S', 'S', 'M', 'T'];
         break;
       case 4:
-        var weekdays = ["Th", "F", "S", "S", "M", "T", "W"]
+        weekdays = ['Th', 'F', 'S', 'S', 'M', 'T', 'W'];
         break;
       case 5:
-        var weekdays = ["F", "S", "S", "M", "T", "W", "Th"]
+        weekdays = ['F', 'S', 'S', 'M', 'T', 'W', 'Th'];
         break;
       case 6:
-        var weekdays = ["S", "S", "M", "T", "W", "Th", "F"]
+        weekdays = ['S', 'S', 'M', 'T', 'W', 'Th', 'F'];
         break;
       case 7:
-        var weekdays = ["S","M", "T", "W", "Th", "F", "S"]
+        weekdays = ['S','M', 'T', 'W', 'Th', 'F', 'S'];
         break;
     }
 
@@ -131,13 +131,13 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
       labels: weekdays,
       datasets: [
         {
-          label: "Spent",
-          fillColor: "rgba(220,220,220,0)",
-          strokeColor: "white",
-          pointColor: "white",
-          pointStrokeColor: "#fff",
-          pointHighlightFill: "#fff",
-          pointHighlightStroke: "rgba(220,220,220,1)",
+          label: 'Spent',
+          fillColor: 'rgba(220,220,220,0)',
+          strokeColor: 'white',
+          pointColor: 'white',
+          pointStrokeColor: '#fff',
+          pointHighlightFill: '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
           data: data.data.users_daily[0].values
         }
       ]
@@ -151,7 +151,7 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
       scaleShowGridLines : true,
 
       //String - Colour of the grid lines
-      scaleGridLineColor : "#40719e",
+      scaleGridLineColor : '#40719e',
 
       //Number - Width of the grid lines
       scaleGridLineWidth : 1,
@@ -164,15 +164,15 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
 
       scaleStartValue: 0,
 
-      scaleFontFamily: "'proxima-nova', sans-serif",
+      scaleFontFamily: 'proxima-nova',
 
       scaleFontSize: 18,
 
-      scaleFontStyle: "normal",
+      scaleFontStyle: 'normal',
 
-      scaleFontColor: "#fff",
+      scaleFontColor: '#fff',
 
-      scaleLineColor: "#40719e",
+      scaleLineColor: '#40719e',
 
       //Boolean - Whether the line is curved between points
       bezierCurve : false,
@@ -199,7 +199,7 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
       datasetFill : true,
 
       //String - A legend template
-      legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].lineColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
+      legendTemplate: '<ul class=\'<%=name.toLowerCase()%>-legend\'><% for (var i=0; i<datasets.length; i++){%><li><span style=\'background-color:<%=datasets[i].lineColor%>\'></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>'
 
     };
     for (var i = 0; i < data.data.banking.bank.length; i++) {

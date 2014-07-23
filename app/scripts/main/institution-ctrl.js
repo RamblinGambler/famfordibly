@@ -1,7 +1,6 @@
 'use strict';
 
-Affordably.controller('InstitutionCtrl', function ($scope, $famous, $state, $filter, $http,
-  $window) {
+Affordably.controller('InstitutionCtrl', function ($scope, $famous, $state) {
 
   var Transitionable = $famous['famous/transitions/Transitionable'];
 

@@ -1,8 +1,7 @@
 'use strict';
 
-Affordably.controller('TransactionsCtrl', function ($scope, $famous, $state, $injector, $q, $resolve, mainData) {
+Affordably.controller('TransactionsCtrl', function ($scope, $famous, $state) {
   var Transitionable = $famous['famous/transitions/Transitionable'];
-  var EventHandler = $famous['famous/core/EventHandler'];
 
   var translateT = new Transitionable([0,0,0]);
   var translateTra = new Transitionable([0,0,0]);

@@ -11,26 +11,24 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
   var fields = [];
   $http({
     method: 'GET',
-    url: "https://guavaplan-staging.herokuapp.com/api/v1/institution",
+    url: 'https://guavaplan-staging.herokuapp.com/api/v1/institution',
     params: {bank: $stateParams.id, auth_token: $window.sessionStorage.token}
   }).success(function(data) {
     $scope.inst = data.result.institution_detail;
-    console.log(data)
     for(var i = 0;i < data.result.institution_detail.keys.key.length; i++) {
-      if (data.result.institution_detail.keys.key[i].display_flag == 'true') {
+      if (data.result.institution_detail.keys.key[i].display_flag === 'true') {
         fields.push(data.result.institution_detail.keys.key[i]);
       }
     }
     $scope.fields = fields;
-  }).error(function(error) {
-    console.log(error);
+  }).error(function() {
   });
 
   $scope.submit = function(user_id, password, pin) {
     $scope.spin = true;
 	  $http({
 	    method: 'POST',
-	    url: "https://guavaplan-staging.herokuapp.com/api/v1/add_account",
+	    url: 'https://guavaplan-staging.herokuapp.com/api/v1/add_account',
 	    params: {
 	    	username: user_id,
 	    	auth_token: $window.sessionStorage.token,
@@ -40,13 +38,10 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
 	    	institution: $stateParams.id
 	    }
 	  }).success(function(data) {
-          console.log("Success");
-          console.log(data);
-      // if (data.status === 200) {
           if (data.job) {
               $state.go('wait', {job: data.job});
           } else if (data.challenge_node_id) {
-              if (data.type === "choice") {
+              if (data.type === 'choice') {
                   $state.go('mfa', {
                       type: data.type,
                       text: data.text,
@@ -57,7 +52,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
                       choice2: data.choices[1].text,
                       choice3: data.choices[2].text
                   });
-              } else if (data.type === "multi-text") {
+              } else if (data.type === 'multi-text') {
                   $state.go('mfa', {
                       type: data.type,
                       text1: data.text[0].text,
@@ -66,7 +61,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
                       challenge: data.challenge_node_id,
                       session: data.challenge_session_id
                   });
-              } else if (data.type === "text") {
+              } else if (data.type === 'text') {
                   $state.go('mfa', {
                       type: data.type,
                       text: data.text,
@@ -74,7 +69,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
                       challenge: data.challenge_node_id,
                       session: data.challenge_session_id
                   });
-              } else if (data.type === "image") {
+              } else if (data.type === 'image') {
                   $state.go('mfa', {
                       type: data.type,
                       text: data.text,
@@ -85,17 +80,15 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
                   });
               }
           } else {
-           console.log("Success but error");
-           console.log(data);
            $scope.spin = false;
            flash.error = data.message;
            $scope.showError = true;
            $scope.hideError = false;
        }
-    }).error(function(data) {
+    }).error(function() {
           $http({
             method: 'POST',
-            url: "https://guavaplan-staging.herokuapp.com/api/v1/add_account",
+            url: 'https://guavaplan-staging.herokuapp.com/api/v1/add_account',
             params: {
               username: user_id,
               auth_token: $window.sessionStorage.token,
@@ -105,13 +98,13 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
               institution: $stateParams.id
             }
           }).success(function(data) {
-                console.log("Success");
+                console.log('Success');
                 console.log(data);
             // if (data.status === 200) {
                 if (data.job) {
                     $state.go('wait', {job: data.job});
                 } else if (data.challenge_node_id) {
-                    if (data.type === "choice") {
+                    if (data.type === 'choice') {
                         $state.go('mfa', {
                             type: data.type,
                             text: data.text,
@@ -122,7 +115,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
                             choice2: data.choices[1].text,
                             choice3: data.choices[2].text
                         });
-                    } else if (data.type === "multi-text") {
+                    } else if (data.type === 'multi-text') {
                         $state.go('mfa', {
                             type: data.type,
                             text1: data.text[0].text,
@@ -131,7 +124,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
                             challenge: data.challenge_node_id,
                             session: data.challenge_session_id
                         });
-                    } else if (data.type === "text") {
+                    } else if (data.type === 'text') {
                         $state.go('mfa', {
                             type: data.type,
                             text: data.text,
@@ -139,7 +132,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
                             challenge: data.challenge_node_id,
                             session: data.challenge_session_id
                         });
-                    } else if (data.type === "image") {
+                    } else if (data.type === 'image') {
                         $state.go('mfa', {
                             type: data.type,
                             text: data.text,
@@ -150,19 +143,15 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
                         });
                     }
                 } else {
-                 console.log("Success but error");
-                 console.log(data);
                  $scope.spin = false;
                  flash.error = data.message;
                  $scope.showError = true;
                  $scope.hideError = false;
              }
           }).error(function(error) {
-            console.log("Error");
-            console.log(error);
             flash.error = error.message;
             $scope.spin = false;
-          })
+          });
 	  });
   };
 });

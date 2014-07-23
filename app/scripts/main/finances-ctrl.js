@@ -2,7 +2,6 @@
 
 Affordably.controller('FinancesCtrl', function ($scope, $famous, $state, $filter, $http, $window) {
   var Transitionable = $famous['famous/transitions/Transitionable'];
-  var EventHandler = $famous['famous/core/EventHandler'];
 
   var translateT = new Transitionable([0,0,0]);
   var translateTr = new Transitionable([0,0,0]);
@@ -34,9 +33,8 @@ Affordably.controller('FinancesCtrl', function ($scope, $famous, $state, $filter
       }
     }).success(function(data) {
       console.log(data);
-      $scope.message = "Your finances have been saved"
-    }).error(function(error) {
-      console.log(error)
+      $scope.message = 'Your finances have been saved';
+    }).error(function() {
     });
   };
 

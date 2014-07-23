@@ -1,3 +1,5 @@
+'use strict';
+
 Affordably.filter('noFractionCurrency',
   [ '$filter', '$locale',
   function(filter, locale) {
