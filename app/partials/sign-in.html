@@ -14,13 +14,13 @@
                     <div class="email linkAccountContainer">
                         <p class="linkAccountLabel">Email</p>
                         <hr class="inputLine">
-                        <input type="text" placeholder="Email" data-ng-model="email" class="linkInput" required/>
+                        <input type="text" placeholder="Email" data-ng-model="email" class="linkInput" required autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
                         <br>
                     </div>
                     <div class="password linkAccountContainer">
                         <p class="linkAccountLabel">Password</p>
                         <hr class="inputLine">
-                        <input type="password" placeholder="Password" data-ng-model="password" class="linkInput" required ng-focus="scroll()" ng-blur="scrollBack()"/>
+                        <input type="password" placeholder="Password" data-ng-model="password" class="linkInput" required ng-focus="scroll()" ng-blur="scrollBack()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
                         <br>
                     </div>
                     <button type="submit" ng-click="submit(email, password)" class="signInButton">Log In</button>

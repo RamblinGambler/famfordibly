@@ -15,19 +15,19 @@
                 <div ng-show="fields[0].display_order == '1' || fields[1].display_order == '1' || fields[2].display_order == '1'">
                     <p class="linkAccountLabel">User ID</p>
                     <hr class="inputLine">
-                    <input type="text" name="user_id" data-ng-model="user_id" class="linkInput"/>
+                    <input type="text" name="user_id" data-ng-model="user_id" class="linkInput" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
                     <br>
                 </div>
                 <div ng-show="fields[1].display_order == '2' || fields[0].display_order == '2' || fields[2].display_order == '2'">
                     <p class="linkAccountLabel"> Password</p>
                     <hr class="inputLine">
-                    <input type="password" name="password" data-ng-model="password" class="linkInput"/>
+                    <input type="password" name="password" data-ng-model="password" class="linkInput" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
                     <br>
                 </div>
                <div ng-show="fields[0].display_order == '3' || fields[1].display_order == '3' || fields[2].display_order == '3'">
                     <p ng-bind="field.description" class="linkAccountLabel"></p>
                     <hr class="inputLine">
-                    <input type="password" name="PIN" data-ng-model="pin" class="linkInput"/>
+                    <input type="password" name="PIN" data-ng-model="pin" class="linkInput" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
                 </div>
             <!-- </div> -->
             <div ng-bind="link.content"></div>
