@@ -11,11 +11,11 @@ Affordably.controller('WaitCtrl', function ($scope, $famous, $state, $http, $sta
   $scope.success = translateTrans.get.bind(translateTrans);
   $scope.third = true;
 
-  function plan_progress(){
+  var plan_prgress = function(){
     load = Timer.setInterval(loadPlan,1000);
   };
 
-  function loadPlan(){
+  var loadPlan = function(){
     count ++
       $http({
         method: 'GET',
