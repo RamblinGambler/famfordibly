@@ -10,10 +10,16 @@
     color: #4e83b9;
 }
 
+.name {
+    text-align: center;
+    margin-left: 40%;
+    margin-top: 5%;
+}
+
 .center {
     margin-top: 50px;
     width: 100%;
-    textAlign: center;
+    text-align: center;
 }
 
 .accountsIcon{

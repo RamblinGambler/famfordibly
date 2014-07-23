@@ -28,62 +28,52 @@ Affordably.controller('WaitCtrl', function ($scope, $famous, $state, $http, $sta
         console.log(active);
         switch (active.id) {
           case 1:
-            console.log("DOESN'T WORK");
             Timer.clear(load);
             $state.go('main');
             break;
 
           case 2:
-            console.log("WORKS");
             Timer.clear(load);
             $state.go('main');
             break;
 
           case 3:
-            console.log("WORKS");
             Timer.clear(load);
             $state.go('main');
             break
 
           case  4:
-            console.log("WORKS");
             Timer.clear(load);
             $state.go('main');
             break;
 
           case 6:
-            console.log("WORKS");
             Timer.clear(load);
             $state.go('main');
             break;
 
           case 7:
-            console.log("DOESN'T WORK");
             Timer.clear(load);
             $state.go('main');
             break;
 
           case 8:
-            console.log("DOESN'T WORK");
             Timer.clear(load);
             $state.go('main');
             break;
 
           case 9:
-            console.log("DOESN'T WORK");
             Timer.clear(load);
             $state.go('main');
             break;
 
           case 10:
-            console.log("DOESN'T WORK");
             Timer.clear(load);
             $state.go('main');
             break;
 
           default:
             if(count > 120) {
-            console.log("DOESN'T WORK");
             Timer.clear(load);
             $state.go('link');
             };

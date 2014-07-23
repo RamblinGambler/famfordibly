@@ -1,14 +1,15 @@
-<fa-modifier fa-translate="getTranslatinger" fa-size="[undefined,67]" fa-translate="getTranslatinger" fa-align="[1,0]">
+<fa-modifier fa-translate="getTranslatinger" fa-size="[undefined,100]" fa-translate="getTranslatinger" fa-align="[1,0]">
     <fa-surface class="titleHeader transactionHeader" fa-tap="back()">
         <img src="images/hamburger.png" class="hamburgerIcon2" />
-        <p class="transactionTitle pageTitle">Cash flow</p>
+        <p class="transactionTitle pageTitle">Cash Flow</p>
     </fa-surface>
     <fa-surface class="transactionButtons" fa-tap="back()">
-        <button class="outgoingButton button">Outgoing</button>
-        <button class="incomingButton button">Incoming</button>
+            <p class="swipe">Swipe to Categorize</p>
+            <button class="outgoingButton button">Outgoing</button>
+            <button class="incomingButton button">Incoming</button>
     </fa-surface>
 </fa-modifier>
-<fa-modifier fa-translate="getTranslating" fa-translate="[0,0,0]" fa-align="[1,.18]">
+<fa-modifier fa-translate="getTranslating" fa-translate="[0,0,0]" fa-align="[1,.24]">
     <fa-render-node fa-node="transaction" ng-controller="TransactionCtrl"></fa-render-node>
     <fa-surface fa-background-color="'#f4f8fb'" fa-size="size"></fa-surface>
 </fa-modifier>

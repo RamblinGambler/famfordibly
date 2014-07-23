@@ -10,6 +10,12 @@
     margin-left: 5%;
     margin-top:5%;
 }
+.swipe {
+    display: inline-block;
+    margin-left: 24%;
+    font-size: 1.2em;
+    /*margin-top: 5%;*/
+}
 
 .transactionButtons{
     background-color:#f4f8fb;
@@ -38,7 +44,6 @@
     width: 46%;
     margin-right: -10px;
     padding-right: 0px;
-    margin-top: 2.5%;
     height: 35px;
     background-color: #4bbc7a;
     border-bottom: 3px solid #3fa46a;
@@ -49,7 +54,6 @@
 .incomingButton{
     padding-left: 0px;
     width: 45%;
-    margin-top: 5%;
     height: 35px;
     background-color: #d2d6d9;
     border-bottom: 3px solid #abafb2;
@@ -75,12 +79,10 @@
 }
 
 .dateText{
-    /*position: relative;*/
     margin-top: -65px;
     margin-left: 17%;
     font-size: 0.7em;
     color: #666;
-    /*width:100%;*/
     float: left;
 }
 

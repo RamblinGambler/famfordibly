@@ -15,7 +15,6 @@
                 <fa-modifier fa-size="[undefined,50]" fa-translate="show">
                     <fa-surface fa-pipe-to="eventHandler" class="bankSelections" fa-tap="select(institution)">
                         <span>
-                            <img src="images/magnify.png" class="bankLetter" />
                             <p class="bankText">{{institution.institution_name}}</p>
                         </span>
                     </fa-surface>
@@ -27,6 +26,6 @@
 
 <fa-modifier fa-size="[undefined,100]" fa-align="[1,0]" fa-translate="getTranslating">
 	<fa-surface class="inputPlaceholder">
-        <input type="text" ng-model="institution" ng-change="search(institution)" placeholder="Search Banks" id="searchBanks">
+        <input type="text" ng-model="institution" ng-change="search(institution)" placeholder="Search Banks" id="searchBanks" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
     </fa-surface>
 </fa-modifier>

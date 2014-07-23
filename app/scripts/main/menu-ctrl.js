@@ -21,7 +21,6 @@ Affordably.controller('MenuCtrl', function ($scope, $famous, $state) {
   };
 
   $scope.go = function(state) {
-    console.log(state)
     $state.go(state);
   }
 
@@ -33,6 +32,7 @@ Affordably.controller('MenuCtrl', function ($scope, $famous, $state) {
     });
   };
 
+    console.log($scope.data)
 
     $scope.account = function () {
       translateTranny.set([50,0,0]);
