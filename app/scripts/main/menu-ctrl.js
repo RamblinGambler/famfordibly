@@ -20,6 +20,11 @@ Affordably.controller('MenuCtrl', function ($scope, $famous, $state) {
     translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'});
   };
 
+  $scope.go = function(state) {
+    console.log(state)
+    $state.go(state);
+  }
+
   $scope.main = function($event) {
   translateTranny.set([75,0,0]);
     $(".mainContainer").removeClass("faded");

@@ -11,7 +11,7 @@
         </fa-view>
         <fa-view>
 		    <fa-modifier fa-size="[undefined,50]">
-                <fa-surface fa-background-color="'#ffffff'" class="menuSelections" fa-properties="{textAlign: 'center', lineHeight: '20px'}">
+                <fa-surface fa-background-color="'#ffffff'" class="menuSelections" fa-tap="go('.accounts')">
 	                <a ui-sref=".accounts" ng-click="select()" class="menuLink">
                         <img src="images/servers.png" class="menuIcon accountsIcon" />
                         <p class="menuText accountsText">Accounts</p>
@@ -21,7 +21,7 @@
         </fa-view>
         <fa-view>
 		    <fa-modifier fa-size="[undefined,50]">
-                <fa-surface fa-background-color="'#ffffff'" class="menuSelections">
+                <fa-surface fa-background-color="'#ffffff'" class="menuSelections" fa-tap="go('.transactions')">
 	                <a ui-sref=".transactions" ng-click="select()" class="menuLink">
                         <img src="images/coins.png" class="menuIcon" />
                         <p class="menuText">Cash Flow</p>
@@ -36,7 +36,7 @@
         </fa-view>
         <fa-view>
 		    <fa-modifier fa-size="[undefined,50]">
-                <fa-surface fa-background-color="'#ffffff'" class="menuSelections">
+                <fa-surface fa-background-color="'#ffffff'" class="menuSelections" fa-tap="go('.settings')">
 	                <a ui-sref=".settings" ng-click="select()" class="menuLink">
                         <img src="images/settings.png" class="menuIcon" />
                         <p class="menuText">Settings</p>
@@ -51,7 +51,7 @@
 		</fa-view>
         <fa-view>
 		    <fa-modifier fa-size="[undefined,50]">
-                <fa-surface fa-background-color="'#ffffff'" class="menuSelections">
+                <fa-surface fa-background-color="'#ffffff'" class="menuSelections" fa-tap="go('.finances')">
 	                <a ui-sref=".finances" ng-click="select()" class="menuLink">
                         <img src="images/box.png" class="menuIcon" />
                         <p class="menuText">Finances</p>
