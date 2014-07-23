@@ -1,6 +1,6 @@
 'use strict';
 
-Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe) {
+Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe, mainData) {
 	var View     = require('famous/core/View');
 	var EventHandler     = require('famous/core/EventHandler');
 	var Surface    = require('famous/core/Surface');
