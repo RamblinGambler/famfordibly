@@ -269,6 +269,7 @@ button {
     border-radius: 4px;
     width: 85%;
     height: 42px;
+    text-align:center;
     font-size: 1em;
     background-color: #4bbc7a;
     border-bottom: 3px solid #3fa46a;

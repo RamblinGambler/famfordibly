@@ -34,11 +34,11 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
       data: credentials
     }).success(function(data, status, headers, config) {
       if (data.message){
+        console.log(data)
           delete $window.sessionStorage.token;
           flash.error = data.message;
           $scope.showError = true;
           $scope.hideError = false;
-          $state.go('signUp');
       }
       else {
           $window.sessionStorage.token = data.token;
