@@ -6,7 +6,7 @@ Affordably.controller('InstitutionsCtrl', function ($scope, $famous, $state, $ht
 
   var translateTrans = new Transitionable([0,0,0]);
   var translateTranny = new Transitionable([0,0,0]);
-  var translateTran = new Transitionable([0,0,0]);
+  var translateTran = new Transitionable([0,0,1]);
   var translateTransy = new Transitionable([0,0,0]);
 
   $scope.getTranslater = translateTranny.get.bind(translateTranny);
@@ -55,7 +55,7 @@ Affordably.controller('InstitutionsCtrl', function ($scope, $famous, $state, $ht
   $scope.back = function () {
     translateTranny.set([-80,0,0]);
     $('.mainContainer').removeClass('faded');
-    translateTran.set([0,0,0], {duration: 500, curve: 'easeOut'});
+    translateTran.set([0,0,1], {duration: 500, curve: 'easeOut'});
     translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'}, function() {
         $state.go('main');
     });
