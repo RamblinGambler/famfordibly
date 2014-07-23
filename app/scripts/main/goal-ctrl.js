@@ -10,7 +10,7 @@ Affordably.controller('GoalCtrl', function ($scope, $famous, $state, mainData, $
 
   $scope.submit = function (goal) {
     $scope.spin = true;
-    if (isNAN(goal) {
+    if (isNAN(goal)) {
       $scope.message = "Please enter a number to continue."
     } else {
       $http({
