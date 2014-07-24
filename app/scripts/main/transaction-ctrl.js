@@ -51,10 +51,13 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe,
 		    transactions.outgoings = data.data.outgoings;
 		    transactions.incomings = data.data.incomings;
 
-				var scrollview = new InfiniteScrollView({
-    margin: 1000,
-    offset: 1500
-});
+				var scrollview = new InfiniteScrollView(
+					{
+					  margin: 1000,
+					  offset: 1500
+					}
+				);
+
 				var surfaces = [];
 
 				scrollview.sequenceFrom(surfaces);
