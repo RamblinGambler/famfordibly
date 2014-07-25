@@ -14,13 +14,17 @@ var signUp = Affordably.controller('SignUpCtrl', function ($scope, $famous, $sta
     var firstPass;
     $scope.check = function(password) {
       if(password.length < 8) {
-        $scope.message = 'wrongdewcdfverfewrefre2wrfvr';
+        $scope.message = 'Passwords must be at least 8 characters long';
+      } else {
+        $scope.message = '';
       }
       firstPass = password
     }
 
     $scope.checkConfirm = function(password) {
       if (password != firstPass) {
+        $scope.message = 'Passwords do not match';
+      } else {
         $scope.message = '';
       }
     }
