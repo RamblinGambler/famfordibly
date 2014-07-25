@@ -20,20 +20,20 @@
                     <div class="password linkAccountContainer">
                         <p class="linkAccountLabel">Password</p>
                         <hr class="inputLine">
-                        <input type="password" placeholder="Password" ng-model="password" class="linkInput" required ng-focus="scroll()" ng-blur="scrollBack()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+                        <input type="password" placeholder="Password" ng-model="password" class="linkInput" required ng-focus="scroll()" ng-blur="scrollBack()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-class="error" ng-change="check(password)"/>
                         <br>
                     </div>
                     <div class="password linkAccountContainer">
                         <p class="linkAccountLabel">Confirm Password</p>
                         <hr class="inputLine">
-                        <input type="password" placeholder="Re-type Password" ng-model="password_confirm" class="linkInput" ui-validate=" '$value==password' " ui-validate-watch=" 'password' " ng-focus="scroll()" ng-blur="scrollBack()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+                        <input type="password" placeholder="Re-type Password" ng-model="password_confirm" class="linkInput" ui-validate=" '$value==password' " ui-validate-watch=" 'password' " ng-focus="scroll()" ng-blur="scrollBack()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-class="errorConfirm" ng-change="checkConfirm(password_confirm)"/>
                         <br>
                     </div>
                     <input type="checkbox" ng-model="tos"/>
                     <label for="">By checking this box you agree to our <a href="#">Terms of Service</a>.</label>
                     <button type="submit" ng-disabled="!tos" ng-click="submit(email, password)" class="signUpButton">Sign Up</button>
-                    <div ng-model="message"></div>
                 </form>
+                <div ng-model="message"></div>
                 <p id="noAccountMessage">Already have an account?</p>
                 <h4 id="signUpLink" ng-click="signIn()"><a ui-sref="signIn">Sign In</a></h4>
             </div>

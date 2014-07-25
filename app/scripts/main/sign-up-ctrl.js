@@ -11,6 +11,19 @@ var signUp = Affordably.controller('SignUpCtrl', function ($scope, $famous, $sta
     $scope.scroll = function () {
       translateTrans.set([0,-167,0], {duration: 500, curve: 'easeOut'});
     };
+    var firstPass;
+    $scope.check = function(password) {
+      if(password.length < 8) {
+        $scope.message = 'wrongdewcdfverfewrefre2wrfvr';
+      }
+      firstPass = password
+    }
+
+    $scope.checkConfirm = function(password) {
+      if (password != firstPass) {
+        $scope.message = '';
+      }
+    }
 
     $scope.scrollBack = function () {
       translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'});

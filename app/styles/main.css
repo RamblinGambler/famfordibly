@@ -7,6 +7,10 @@ body {
     border: solid 1px black;
 }*/
 
+.wrong {
+    border: 1px solid red;
+}
+
 
 @font-face {
     font-family: 'Rubrik';

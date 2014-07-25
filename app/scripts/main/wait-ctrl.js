@@ -12,7 +12,7 @@ Affordably.controller('WaitCtrl', function ($scope, $famous, $state, $http, $sta
   var translateTran = new Transitionable(0);
   $scope.success = translateTrans.get.bind(translateTrans);
   $scope.fadeIn = translateTran.get.bind(translateTran);
-  $scope.tip = "Dont buy starbucks every minute"
+  $scope.tip = "";
   translateTran.set(1, {duration : 500, curve: 'easeOut'});
 
 
