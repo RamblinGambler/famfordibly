@@ -28,7 +28,7 @@ Affordably.controller('SettingsCtrl', function ($scope, $famous, $state, $window
   $scope.logOut = function() {
     $http({
       method: 'DELETE',
-      url: 'https://guavaplan-staging.herokuapp.com/api/v1/tokens',
+      url: 'https://affordably.me/api/v1/tokens',
       params: {
         id: $window.sessionStorage.token
       }
@@ -42,7 +42,7 @@ Affordably.controller('SettingsCtrl', function ($scope, $famous, $state, $window
 
     $http({
       method: 'PUT',
-      url: 'https://guavaplan-staging.herokuapp.com/api/v1/settings',
+      url: 'https://affordably.me/api/v1/settings',
       params: {
         weekly: weekly,
         daily: daily,

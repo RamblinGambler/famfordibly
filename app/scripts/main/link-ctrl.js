@@ -11,7 +11,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
   var fields = [];
   $http({
     method: 'GET',
-    url: 'https://guavaplan-staging.herokuapp.com/api/v1/institution',
+    url: 'https://affordably.me/api/v1/institution',
     params: {bank: $stateParams.id, auth_token: $window.sessionStorage.token}
   }).success(function(data) {
     $scope.inst = data.result.institution_detail;
@@ -28,7 +28,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
     $scope.spin = true;
 	  $http({
 	    method: 'POST',
-	    url: 'https://guavaplan-staging.herokuapp.com/api/v1/add_account',
+	    url: 'https://affordably.me/api/v1/add_account',
 	    params: {
 	    	username: user_id,
 	    	auth_token: $window.sessionStorage.token,
@@ -88,7 +88,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
     }).error(function() {
           $http({
             method: 'POST',
-            url: 'https://guavaplan-staging.herokuapp.com/api/v1/add_account',
+            url: 'https://affordably.me/api/v1/add_account',
             params: {
               username: user_id,
               auth_token: $window.sessionStorage.token,

@@ -1,5 +1,5 @@
 'use strict';
 
 Affordably.factory('institutions', ['$resource', function($resource) {
-        return $resource('https://guavaplan-staging.herokuapp.com//api/v1/institutions');}
+        return $resource('https://affordably.me//api/v1/institutions');}
 ]);

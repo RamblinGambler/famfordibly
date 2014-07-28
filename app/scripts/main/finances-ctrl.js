@@ -24,7 +24,7 @@ Affordably.controller('FinancesCtrl', function ($scope, $famous, $state, $filter
   $scope.save = function(leftover, income, fixed) {
     $http({
       method: 'POST',
-      url: 'https://guavaplan-staging.herokuapp.com/api/v1/finances',
+      url: 'https://affordably.me/api/v1/finances',
       params: {
         income: income,
         monthly_fixed: fixed,

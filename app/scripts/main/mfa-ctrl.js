@@ -13,7 +13,7 @@ Affordably.controller('MfaCtrl', function ($scope, $state, $http, $window, $stat
   $scope.submit = function(data) {
     $http({
       method: 'POST',
-      url: 'https://guavaplan-staging.herokuapp.com/api/v1/mfa_submit',
+      url: 'https://affordably.me/api/v1/mfa_submit',
       params: {
         auth_token: $window.sessionStorage.token,
         answer: data,
