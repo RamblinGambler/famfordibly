@@ -8,9 +8,9 @@ var signUp = Affordably.controller('SignUpCtrl', function ($scope, $famous, $sta
     $scope.success = translateTrans.get.bind(translateTrans);
 
     $scope.spin = false;
-    $scope.scroll = function () {
-      translateTrans.set([0,-167,0], {duration: 500, curve: 'easeOut'});
-    };
+    // $scope.scroll = function () {
+    //   translateTrans.set([0,-167,0], {duration: 500, curve: 'easeOut'});
+    // };
     var firstPass;
     $scope.check = function(password) {
       if(password.length < 8) {
@@ -29,9 +29,9 @@ var signUp = Affordably.controller('SignUpCtrl', function ($scope, $famous, $sta
       }
     }
 
-    $scope.scrollBack = function () {
-      translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'});
-    };
+    // $scope.scrollBack = function () {
+    //   translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'});
+    // };
 
     $scope.submit = function(email, password, passwordConfirm) {
         $scope.spin = true;
@@ -43,7 +43,7 @@ var signUp = Affordably.controller('SignUpCtrl', function ($scope, $famous, $sta
 
         $http({
             method: 'POST',
-            url: 'https://affordably.me/api/v1/tokens/new',
+            url: 'https://www.affordably.me/api/v1/tokens/new',
             data: credentials
         }).success(function(data) {
             if (data.message){

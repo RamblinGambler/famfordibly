@@ -10,17 +10,17 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
   $scope.hideError = true;
 
 
-  $scope.scroll = function () {
-    translateTrans.set([0,-167,0], {duration: 500, curve: 'easeOut'});
-  };
+  // $scope.scroll = function () {
+  //   translateTrans.set([0,-167,0], {duration: 500, curve: 'easeOut'});
+  // };
 
   $scope.signUp = function() {
     $state.go('signUp');
   };
 
-  $scope.scrollBack = function () {
-    translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'});
-  };
+  // $scope.scrollBack = function () {
+  //   translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'});
+  // };
 
   $scope.submit = function(email, password) {
     var credentials = {
@@ -30,7 +30,7 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
 
     $http({
       method: 'POST',
-      url: 'https://affordably.me/api/v1/tokens',
+      url: 'https://www.affordably.me/api/v1/tokens',
       data: credentials
     }).success(function(data) {
       if (data.message){
