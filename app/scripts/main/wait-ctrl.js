@@ -38,7 +38,7 @@ Affordably.controller('WaitCtrl', function ($scope, $famous, $state, $http, $sta
   var loadPlan = function(){
       $http({
         method: 'GET',
-        url: 'https://www.affordably.me/api/v1/status',
+        url: 'https://guavaplan-staging.herokuapp.com/api/v1/status',
         params: {
           job_id: $stateParams.job
         }

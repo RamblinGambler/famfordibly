@@ -30,7 +30,7 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
 
     $http({
       method: 'POST',
-      url: 'https://www.affordably.me/api/v1/tokens',
+      url: 'https://guavaplan-staging.herokuapp.com/api/v1/tokens',
       data: credentials
     }).success(function(data) {
       if (data.message){

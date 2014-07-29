@@ -16,7 +16,7 @@ Affordably.controller('GoalCtrl', function ($scope, $famous, $state, mainData, $
     } else {
       $http({
         method: 'POST',
-        url: 'https://www.affordably.me/api/v1/goal',
+        url: 'https://guavaplan-staging.herokuapp.com/api/v1/goal',
         params: {goal: goal, auth_token: $window.sessionStorage.token}
       }).success(function() {
         $scope.spin = false;

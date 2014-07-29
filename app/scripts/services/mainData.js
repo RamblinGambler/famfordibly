@@ -27,7 +27,7 @@ Affordably.factory('mainData', [
     mainData.loadMain = function() {
       return $http({
       	method: 'GET',
-      	url: 'https://www.affordably.me/api/v1/index',
+      	url: 'https://guavaplan-staging.herokuapp.com/api/v1/index',
       	params: {
       		auth_token: $window.sessionStorage.token
 				}
