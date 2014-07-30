@@ -47,7 +47,7 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
     };
 
   $scope.size = [window.innerWidth,window.innerHeight];
-  $scope.scroll = [window.innerWidth,window.innerHeight - 50];
+  $scope.scroll = [window.innerWidth,window.innerHeight - 47];
 
   var data = mainData.loadMain();
   data.then(function(data) {
@@ -174,7 +174,7 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
 
       scaleStartValue: 0,
 
-      scaleFontFamily: 'proxima-nova',
+      scaleFontFamily: "'proxima-nova', sans-serif",
 
       scaleFontSize: 18,
 

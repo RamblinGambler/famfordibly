@@ -1,11 +1,11 @@
 <fa-modifier fa-size="size" fa-align="[0,0]">
 <fa-modifier fa-align='[0,.085]' fa-size="scroll">
     <fa-scroll-view fa-pipe-from="eventHandler">
-	    <fa-modifier fa-size="[undefined,235]">
+	    <fa-modifier fa-size="[undefined,235]" fa-align='[0,.03]'>
             <fa-surface fa-index="0" fa-pipe-to="eventHandler" class="cashContainer">
-            <div class="center">
+            <div class="centerg">
 
-                <canvas donutchart id="dailyCircle"options="myChartOptions" data="myChartData" width="350" height="220"></canvas>
+                <canvas donutchart id="dailyCircle"options="myChartOptions" data="myChartData" width="size[0]" height="220"></canvas>
 
                 <div class="dailyCenter">
                     <h3 class="dailyCash"><span class="dollarBills"></span><span class="cashText" ng-bind="data.daily_cash | noFractionCurrency"></span></h3>
@@ -31,28 +31,28 @@
                 <div class="graph">
                     <p class="chartTitle">Week of Spending</p>
 
-                    <canvas linechart id="dailyChart" options="options" data="chart" width="350" height="175"></canvas>
+                    <canvas linechart id="dailyChart" options="options" data="chart" width="275" height="175"></canvas>
                 </div>
             </fa-surface>
 	    </fa-modifier>
     </fa-scroll-view>
 </fa-modifier>
 
-<fa-modifier fa-size="[undefined, 50]" fa-align="[0,-.005]" fa-translate="[0,0,0]">
+<fa-modifier fa-size="[undefined, 65]" fa-align="[0,0]" fa-translate="[0,0,0]">
     <fa-surface fa-background-color="'#fff'"></fa-surface>
         <fa-grid-layout fa-options='{dimensions: [3,1]}'>
-            <fa-modifier fa-align="[.2, .2]" fa-scale="[1, 1]">
-                <fa-surface fa-size="[45, 45]"  fa-tap="menu()" fa-properties="{textAlign:'center'}">
+            <fa-modifier fa-align="[.2,.5]" fa-scale="[1, 1]">
+                <fa-surface fa-size="[45, 45]"  fa-tap="menu()">
                     <img src="images/hamburger.png" class="hamburgerIcon"/>
                 </fa-surface>
             </fa-modifier>
-            <fa-modifier fa-align="[0, -.2]" fa-scale="[1.5, 1.5]" fa-size="[undefined, 50]">
+            <fa-modifier fa-align="[0, 0]" fa-scale="[1.5, 1.5]" fa-size="[undefined, 50]">
                 <fa-surface>
                     <p class="pageTitle">Affordably</p>
                 </fa-surface>
             </fa-modifier>
-            <fa-modifier fa-align="[.6, .2]" fa-scale="[1, 1]">
-                <fa-surface fa-size="[45, 45]" fa-background-color="'#ffffff'" fa-tap="banks()">
+            <fa-modifier fa-align="[.6,.5]" fa-scale="[1, 1]">
+                <fa-surface fa-size="[45, 45]" fa-tap="banks()">
                     <img src="images/plus.png" class="hamburgerIcon"/>
                 </fa-surface>
             </fa-modifier>

@@ -7,6 +7,12 @@ body {
     border: solid 1px black;
 }*/
 
+.image {
+    background-image: url(images/box.png);
+    height:100px;
+    height:100px;
+}
+
 
 
 @font-face {
@@ -100,7 +106,6 @@ p{
 .signForm{
     margin-top: 15%;
     width: 70% !important;
-    /* margin-left: 15%; */
     margin-top: 10%;
     text-align: left;
 }
@@ -168,8 +173,7 @@ p{
 }
 
 .transaction {
-    /*height:80px;*/
-    /*background-color: #ffffff;*/
+
 }
 
 .mainContainer{
@@ -178,6 +182,7 @@ p{
 
 .cashContainer{
     background-color: #ffffff;
+    text-align: center;
 }
 
 .faded{
@@ -369,16 +374,16 @@ button {
 
 }
 
-.center {
-    position:absolute;
+.centerg {
+    margin-top: 20px;
     text-align: center;
 }
 
 /* Daily Surface */
 .dailyCash{
-    position: relative;
+    /*position: relative;*/
     margin-bottom: 0px;
-    padding-top: 20%;
+    padding-top: 10%;
     font-size: 300%;
     font-family: 'proxima-nova', sans-serif;
     font-weight: 700;
@@ -386,7 +391,7 @@ button {
 }
 
 #dailyCircle {
-    position: relative;
+    margin-bottom: 50px;
 }
 
 .dollarBills{
@@ -398,7 +403,6 @@ button {
 }
 
 .dailyCashText{
-    position: relative;
     margin-top:0px;
     font-family: 'proxima-nova', sans-serif;
     font-weight: 700;
@@ -407,7 +411,7 @@ button {
 }
 
 .dailyCenter{
-    margin-top: -77%;
+    margin-top: -90%;
 }
 
 /* Overview Surface */
@@ -448,7 +452,8 @@ button {
 }
 
 .graph {
-    padding-top: 10%;
+    padding-top: 7%;
+    padding-left: 5%;
 }
 
 
