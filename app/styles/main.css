@@ -150,6 +150,8 @@ p{
     top: 0;
     left: 0;
     right: 0;
+    width: 320px;
+    height: 568px;
 }
 
 .rightMenu{

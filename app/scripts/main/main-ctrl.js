@@ -10,6 +10,12 @@ Affordably.controller('MainCtrl', function ($scope, $famous, $window, $state, $h
 
   translateTran.set([0,0,1]);
 
+  $scope.scroller = {
+    clipSize: 525,
+    edgePeriod: 500,
+    edgeDamp: .75
+  };
+
 
 
   $scope.eventHandler = new EventHandler();
