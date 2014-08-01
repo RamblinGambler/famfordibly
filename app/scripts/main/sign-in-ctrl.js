@@ -5,14 +5,16 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
   var EventHandler = $famous['famous/core/EventHandler'];
   $scope.eventHandler = new EventHandler();
   var translateTrans = new Transitionable([0,0,0]);
+  var translateTran = new Transitionable([0,0,0]);
   $scope.success = translateTrans.get.bind(translateTrans);
+  $scope.header = translateTran.get.bind(translateTran);
   $scope.showError = false;
   $scope.hideError = true;
 
 
-  // $scope.scroll = function () {
-  //   translateTrans.set([0,-167,0], {duration: 500, curve: 'easeOut'});
-  // };
+  $scope.scroll = function () {
+    translateTran.set([0,147,0]);
+  };
 
   $scope.signUp = function() {
     $state.go('signUp');
@@ -43,11 +45,11 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
       else {
           $window.sessionStorage.token = data.token;
           if (data.account === 0){
-              translateTrans.set([-287, 0, 0  ], {duration: 500, curve: 'easeOut'}, function () {
+              translateTrans.set([-287, 0, 0], {duration: 500, curve: 'easeOut'}, function () {
                   $state.go('goal');
               });
           } else {
-              translateTrans.set([-287, 0, 0  ], {duration: 500, curve: 'easeOut'}, function () {
+              translateTrans.set([-287, 0, 0], {duration: 500, curve: 'easeOut'}, function () {
                   $state.go('main');
               });
           }

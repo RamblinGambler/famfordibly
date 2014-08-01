@@ -7,7 +7,7 @@ Affordably.controller('FinancesCtrl', function ($scope, $famous, $state, $filter
   var translateTr = new Transitionable([0,0,0]);
 
   $scope.getTranslating = translateT.get.bind(translateT);
-    translateT.set([0,-window.innerHeight,1], {duration: 500, curve: 'easeOut'});
+    translateT.set([0,-window.innerHeight+20,1], {duration: 500, curve: 'easeOut'});
 
   $scope.getTranslater = translateTr.get.bind(translateTr);
     translateTr.set([-window.innerWidth,0,0], {duration: 500, curve: 'easeOut'});

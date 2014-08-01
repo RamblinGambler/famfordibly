@@ -1,14 +1,28 @@
-<fa-modifier fa-translate="getTranslater" fa-translate="[0,0,1]" fa-size="[undefined,50]" fa-align="[1,0]">
-    <fa-surface class="titleHeader">
-        <img src="images/hamburger.png" class="hamburgerIcon2" ng-click="back()"/>
-        <p class="transactionTitle pageTitle">Finances</p>
-        <p class="rightMenu" ng-click="save(data.money_leftover, data.income, data.monthly_fixed)">Save</p>
-    </fa-surface>
+<fa-modifier fa-translate="getTranslater" fa-translate="[0,0,1]" fa-size="[undefined,65]" fa-align="[1,0]">
+    <fa-surface fa-background-color="'#fff'"></fa-surface>
+        <fa-grid-layout fa-options='{dimensions: [3,1]}'>
+            <fa-modifier fa-align="[.2,.5]" fa-scale="[1, 1]">
+                <fa-surface fa-size="[45, 45]"  fa-tap="back()">
+                    <img src="images/hamburger.png" class="hamburgerIcon"/>
+                </fa-surface>
+            </fa-modifier>
+            <fa-modifier fa-align="[-.1, .4]" fa-size="[undefined, 50]">
+                <fa-surface>
+                    <p class="transactionTitle pageTitle">Finances</p>
+                </fa-surface>
+            </fa-modifier>
+            <fa-modifier fa-align="[.4,.5]" fa-scale="[1, 1]">
+                <fa-surface fa-size="[45, 45]" fa-tap="banks()">
+                    <p class="rightMenu" ng-click="save(data.money_leftover, data.income, data.monthly_fixed)">Save</p>
+                </fa-surface>
+            </fa-modifier>
+        </fa-grid-layout>
 </fa-modifier>
 <fa-modifier fa-translate="getTranslating">
-	<fa-modifier fa-align="[0,1.077]" >
+    <fa-modifier fa-align="[0,1.077]" >
         <fa-view>
             <fa-surface fa-tap="select()" class="settingBackground">
+                <div ng-bind="message"></div>
                 <div class="form-container">
                     <p class="labelText">Money left in your account at the end of the month?</p>
                     <div class="fieldHolder">
@@ -27,7 +41,6 @@
                         $<input type="text" ng-model="data.monthly_fixed" class="financeForm"/>
                     </div>
                 </div>
-                <div ng-bind="message"></div>
             </fa-surface>
         </fa-view>
 	</fa-modifier>
