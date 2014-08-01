@@ -13,7 +13,7 @@
                     <div class="email linkAccountContainer">
                         <p class="linkAccountLabel">Email</p>
                         <hr class="inputLine">
-                        <input type="text" placeholder="Email" data-ng-model="email" class="linkInput" required autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+                        <input type="text" placeholder="Email" data-ng-model="email" ng-blur="scrollBack()" class="linkInput" required autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
                         <br>
                     </div>
                     <div class="password linkAccountContainer">

@@ -18,9 +18,10 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
     $state.go('signUp');
   };
 
-  // $scope.scrollBack = function () {
-  //   translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'});
-  // };
+  $scope.scrollBack = function () {
+    // translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'});
+    $window.scrollTo(0, 0);
+  };
 
   $scope.submit = function(email, password) {
     var credentials = {

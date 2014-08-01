@@ -48,8 +48,8 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe,
 
 		  // var data = mainData.loadMain();
 		  // data.then(function(data) {
-		    transactions.outgoings = $scope.data.outgoings;
-		    transactions.incomings = $scope.data.incomings;
+		    transactions.outgoings = mainData.data.outgoings;
+		    transactions.incomings = mainData.data.incomings;
 
 				var scrollview = new InfiniteScrollView(
 					{
@@ -156,6 +156,13 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe,
 				    }
 				  });
 
+				  if(transactions.outgoings[i].category_id === 1) {
+				  	var image = '/images/coin.png';
+				  	item.setContent('<img class="transactionIcon" src="' + image + '"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
+				  } else if(transactions.outgoings[i].category_id === 2) {
+				  	var image = '/images/box.png';
+					  item.setContent('<img class="transactionIcon" src="' + image +'" ng-show="fixed"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
+				  };
 
 
 				  var backgroundYesModifier = new StateModifier({
@@ -196,14 +203,6 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe,
           });
 
 				  var node = new RenderNode(draggable);
-
-				  if(transactions.outgoings[i].category_id === 1) {
-				  	var image = '/images/coin.png';
-				  } else if(transactions.outgoings[i].category_id === 2) {
-				  	var image = '/images/box.png';
-				  };
-
-			  	item.setContent('<div class="image transactionIcon"></div><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
 				  node.add(item);
 				  //try to put the draggable in front of the background
 
@@ -271,9 +270,12 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe,
 
 			scrollview.on('infiniteScroll', function(data) {
 			    scrollview.infiniteScrollDisabled = true;
+
+			    console.log('infiniteScroll');
 			    			var newCount = count;
 			    				for (var i = newCount; i < (newCount+50); i++) {
 			    					count++;
+			    					console.log(i);
 			    				  var container = new ContainerSurface({
 			    				    size: [undefined, 65],
 			    				    properties: {
@@ -351,13 +353,13 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe,
 			    				    }
 			    				  });
 
-			    				  // if(transactions.outgoings[i].category_id === 1) {
-			    				  // 	var image = '/images/coin.png';
-			    				  // 	item.setContent('<img class="transactionIcon" src="' + image + '"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
-			    				  // } else if(transactions.outgoings[i].category_id === 2) {
-			    				  // 	var image = '/images/box.png';
-			    				  // };
-			    					  item.setContent('<img class="transactionIcon" src="' + '" ng-show="fixed"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
+			    				  if(transactions.outgoings[i].category_id === 1) {
+			    				  	var image = '/images/coin.png';
+			    				  	item.setContent('<img class="transactionIcon" src="' + image + '"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
+			    				  } else if(transactions.outgoings[i].category_id === 2) {
+			    				  	var image = '/images/box.png';
+			    					  item.setContent('<img class="transactionIcon" src="' + image +'" ng-show="fixed"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
+			    				  };
 
 
 			    				  var backgroundYesModifier = new StateModifier({
