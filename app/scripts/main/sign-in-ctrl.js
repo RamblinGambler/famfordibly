@@ -1,6 +1,6 @@
 'use strict';
 
-Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $window, flash) {
+Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $window, flash, $analytics) {
   var Transitionable = $famous['famous/transitions/Transitionable'];
   var EventHandler = $famous['famous/core/EventHandler'];
   $scope.eventHandler = new EventHandler();
@@ -40,7 +40,11 @@ Affordably.controller('SignInCtrl', function ($scope, $famous, $state, $http, $w
           $scope.hideError = false;
       }
       else {
+          $analytics.setUsername(data.user_id);
+          $analytics.setUserProperties({email: email});
+          $analytics.eventTrack('Sign Up');
           $window.sessionStorage.token = data.token;
+          $window.sessionStorage.tracking_id = data.user_id;
           if (data.account === 0){
               translateTrans.set([-287, 0, 0  ], {duration: 500, curve: 'easeOut'}, function () {
                   $state.go('goal');

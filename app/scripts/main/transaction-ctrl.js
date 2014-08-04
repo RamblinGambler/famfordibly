@@ -5,7 +5,7 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe,
 	var EventHandler     = require('famous/core/EventHandler');
 	var Surface    = require('famous/core/Surface');
 	// var Scrollview = require('famous/views/Scrollview');
-  var Scroller = require('famous/views/Scroller');
+    var Scroller = require('famous/views/Scroller');
 	var RenderNode = require('famous/core/RenderNode');
 	var Transform = require('famous/core/Transform');
 	var ContainerSurface = require('famous/surfaces/ContainerSurface');
@@ -13,7 +13,7 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe,
 	var Easing = require('famous/transitions/Easing');
 
 	$scope.transaction = new View();
-  $scope.eventHandler = new EventHandler();
+    $scope.eventHandler = new EventHandler();
 
 	require(['famous/modifiers/Draggable'], function(Draggable) {
 		require(['famous/modifiers/StateModifier'], function(StateModifier) {
@@ -216,14 +216,14 @@ Affordably.controller('TransactionCtrl', function ($scope, $famous, $famousPipe,
 				  item.pipe(draggable);
 				  item.pipe(scrollview);
 				  surfaces.push(container);
-          surfaces.push(spacer);
+                  surfaces.push(spacer);
 				  $scope.transaction.add(scrollview);
 
 
-				  var fadeStartf = -10;
-				  var fadeEndf   = -100;
-				  var fadeStartd = 10;
-				  var fadeEndd   = 100;
+				   var fadeStartf = -10;
+				   var fadeEndf   = -100;
+				   var fadeStartd = 10;
+				   var fadeEndd   = 100;
 
 				  draggable.on('update', function() {
 

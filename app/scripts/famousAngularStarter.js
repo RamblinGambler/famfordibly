@@ -5,7 +5,8 @@ var Affordably = angular.module('famousAngularStarter',
     'ngTouch', 'ngSanitize',
     'ngResource', 'ui.router',
     'famous.angular', 'angles','angular-flash.service',
-    'angular-flash.flash-alert-directive', 'angularSpinner']);
+    'angular-flash.flash-alert-directive', 'angularSpinner',
+    'angulartics', 'angulartics.mixpanel']);
 
 Affordably.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
   $stateProvider

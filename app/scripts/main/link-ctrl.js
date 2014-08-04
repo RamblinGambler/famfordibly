@@ -1,5 +1,5 @@
 'use strict';
-Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $window, $stateParams, flash) {
+Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $window, $stateParams, flash,  $analytics) {
   var Transitionable = $famous['famous/transitions/Transitionable'];
 
   var translateTrans = new Transitionable([0,0,0]);
@@ -14,6 +14,8 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
     url: 'https://www.affordably.me/api/v1/institution',
     params: {bank: $stateParams.id, auth_token: $window.sessionStorage.token}
   }).success(function(data) {
+    $analytics.setUsername($window.sessionStorage.tracking_id);
+    $analytics.eventTrack('Found Institution');
     $scope.inst = data.result.institution_detail;
     for(var i = 0;i < data.result.institution_detail.keys.key.length; i++) {
       if (data.result.institution_detail.keys.key[i].display_flag === 'true') {
@@ -99,9 +101,13 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
             }
           }).success(function(data) {
                 if (data.job) {
+                    $analytics.setUsername($window.sessionStorage.tracking_id);
+                    $analytics.eventTrack('Successfully linked account');
                     $state.go('wait', {job: data.job, id: $stateParams.id});
                 } else if (data.challenge_node_id) {
                     if (data.type === 'choice') {
+                        $analytics.setUsername($window.sessionStorage.tracking_id);
+                        $analytics.eventTrack('Asked to do choice MFA');
                         $state.go('mfa', {
                             type: data.type,
                             text: data.text,
@@ -113,6 +119,8 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
                             choice3: data.choices[2].text
                         });
                     } else if (data.type === 'multi-text') {
+                        $analytics.setUsername($window.sessionStorage.tracking_id);
+                        $analytics.eventTrack('Asked to do multi-text MFA');
                         $state.go('mfa', {
                             type: data.type,
                             text1: data.text[0].text,
@@ -122,6 +130,8 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
                             session: data.challenge_session_id
                         });
                     } else if (data.type === 'text') {
+                        $analytics.setUsername($window.sessionStorage.tracking_id);
+                        $analytics.eventTrack('Asked to do single-text MFA');
                         $state.go('mfa', {
                             type: data.type,
                             text: data.text,
@@ -130,6 +140,8 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
                             session: data.challenge_session_id
                         });
                     } else if (data.type === 'image') {
+                        $analytics.setUsername($window.sessionStorage.tracking_id);
+                        $analytics.eventTrack('Asked to do image MFA');
                         $state.go('mfa', {
                             type: data.type,
                             text: data.text,

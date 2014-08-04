@@ -1,6 +1,6 @@
 'use strict';
 
-var signUp = Affordably.controller('SignUpCtrl', function ($scope, $famous, $state, $http, $window, flash) {
+var signUp = Affordably.controller('SignUpCtrl', function ($scope, $famous, $state, $http, $window, flash, $analytics) {
     var Transitionable = $famous['famous/transitions/Transitionable'];
     var EventHandler = $famous['famous/core/EventHandler'];
     $scope.eventHandler = new EventHandler();
@@ -19,7 +19,7 @@ var signUp = Affordably.controller('SignUpCtrl', function ($scope, $famous, $sta
         $scope.message = '';
       }
       firstPass = password
-    }
+    };
 
     $scope.checkConfirm = function(password) {
       if (password != firstPass) {
@@ -27,7 +27,7 @@ var signUp = Affordably.controller('SignUpCtrl', function ($scope, $famous, $sta
       } else {
         $scope.message = '';
       }
-    }
+    };
 
     $scope.scrollBack = function () {
       translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'});
@@ -52,11 +52,15 @@ var signUp = Affordably.controller('SignUpCtrl', function ($scope, $famous, $sta
                 $scope.spin = false;
             }
             else {
+                $analytics.setUsername(data.user_id);
+                $analytics.setUserProperties({email: email});
+                $analytics.eventTrack('Sign Up');
                 $window.sessionStorage.token = data.token;
+                $window.sessionStorage.tracking_id = data.user_id;
                 translateTrans.set([-287, 0, 0  ], {duration: 500, curve: 'easeOut'}, function () {
                     $state.go('goal');
                 });
-                flash.success = 'Welcome back!';
+                flash.success = 'Welcome!';
             }
         }).error(function(data) {
             delete $window.sessionStorage.token;
