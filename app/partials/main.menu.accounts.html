@@ -1,8 +1,21 @@
-<fa-modifier fa-translate="getTranslater" fa-translate="[0,0,1]" fa-size="[undefined,50]" fa-align="[1,0]">
-    <fa-surface class="titleHeader" fa-tap="back()">
+<fa-modifier fa-translate="getTranslater" fa-translate="[0,0,1]" fa-size="[undefined,65]" fa-align="[1,0]">
+<fa-surface fa-translate="[0,0,0]" fa-background-color="'#fff'"></fa-surface>
+    <fa-grid-layout fa-options='{dimensions: [3,1]}'>
+        <fa-modifier fa-align="[.2,.5]" fa-translate="[0,0,1]" fa-scale="[1, 1]">
+            <fa-surface fa-size="[45, 45]"  fa-tap="back()">
+                <img src="images/hamburger.png" class="hamburgerIcon"/>
+            </fa-surface>
+        </fa-modifier>
+        <fa-modifier fa-align="[-.1, .4]" fa-size="[undefined, 50]" fa-translate="[0,0,1]">
+            <fa-surface>
+                <p class="transactionTitle pageTitle">Accounts</p>
+            </fa-surface>
+        </fa-modifier>
+    </fa-grid-layout>
+<!--     <fa-surface class="titleHeader" fa-tap="back()">
         <img src="images/hamburger.png" class="hamburgerIcon2" />
         <p class="transactionTitle pageTitle">Accounts</p>
-    </fa-surface>
+    </fa-surface> -->
 </fa-modifier>
 <fa-modifier fa-translate="getTranslating" fa-align="[0,1.077]">
     <!-- <fa-modifier  > -->

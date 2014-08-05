@@ -5,7 +5,7 @@ Affordably.controller('SettingsCtrl', function ($scope, $famous, $state, $window
 
   var translateT = new Transitionable([0,0,0]);
   $scope.getTranslating = translateT.get.bind(translateT);
-  translateT.set([0,-window.innerHeight,1], {duration: 500, curve: 'easeOut'});
+  translateT.set([0,-window.innerHeight+20,1], {duration: 500, curve: 'easeOut'});
 
   var translateTr = new Transitionable([0,0,0]);
   $scope.getTranslater = translateTr.get.bind(translateTr);

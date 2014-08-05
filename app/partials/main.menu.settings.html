@@ -1,13 +1,24 @@
-<fa-modifier fa-translate="getTranslater" fa-size="[undefined,50]" fa-align="[1,0]">
-    <fa-surface>
-        <div class="titleHeader">
-            <img src="images/hamburger.png" class="hamburgerIcon2" ng-click="back()"/>
-            <p class="transactionTitle pageTitle">Settings</p>
-            <p class="rightMenu" ng-click="save(data.settings.weekly, data.settings.daily, data.settings.phone_num)">Save</p>
-        </div>
-    </fa-surface>
+<fa-modifier fa-translate="getTranslater" fa-translate="[0,0,1]" fa-size="[undefined,65]" fa-align="[1,0]">
+    <fa-surface fa-translate="[0,0,0]" fa-background-color="'#fff'"></fa-surface>
+        <fa-grid-layout fa-options='{dimensions: [3,1]}'>
+            <fa-modifier fa-align="[.2,.5]" fa-translate="[0,0,1]" fa-scale="[1, 1]">
+                <fa-surface fa-size="[45, 45]"  fa-tap="back()">
+                    <img src="images/hamburger.png" class="hamburgerIcon"/>
+                </fa-surface>
+            </fa-modifier>
+            <fa-modifier fa-align="[-.1, .4]" fa-size="[undefined, 50]" fa-translate="[0,0,1]">
+                <fa-surface>
+                    <p class="transactionTitle pageTitle">Settings</p>
+                </fa-surface>
+            </fa-modifier>
+            <fa-modifier fa-translate="[0,0,1]" fa-align="[.4,.5]" fa-scale="[1, 1]">
+                <fa-surface fa-size="[45, 45]" fa-tap="banks()">
+                    <p class="rightMenu" ng-click="save(data.settings.weekly, data.settings.daily, data.settings.phone_num)">Save</p>
+                </fa-surface>
+            </fa-modifier>
+        </fa-grid-layout>
 </fa-modifier>
-<fa-modifier fa-translate="getTranslating" fa-align="[0,1.09]">
+<fa-modifier fa-translate="getTranslating" fa-align="[0,1.077]">
     <fa-view>
         <fa-surface fa-tap="select()" class="settingBackground">
             <div class="form-container">
