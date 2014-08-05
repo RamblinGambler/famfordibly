@@ -12,13 +12,9 @@
             </fa-surface>
         </fa-modifier>
     </fa-grid-layout>
-<!--     <fa-surface class="titleHeader" fa-tap="back()">
-        <img src="images/hamburger.png" class="hamburgerIcon2" />
-        <p class="transactionTitle pageTitle">Accounts</p>
-    </fa-surface> -->
 </fa-modifier>
 <fa-modifier fa-translate="getTranslating" fa-align="[0,1.077]">
-    <!-- <fa-modifier  > -->
+    <fa-modifier fa-origin="[0,0]">
         <fa-view>
             <fa-surface fa-tap="select()" class="settingBackground">
                 <div class="form-container">
@@ -29,5 +25,29 @@
                 </div>
             </fa-surface>
         </fa-view>
-    <!-- </fa-modifier> -->
+    </fa-modifier>
+    <fa-modifier fa-origin="[0,-.2]">
+        <fa-view>
+            <fa-surface fa-tap="select()" class="settingBackground">
+                <div class="form-container">
+                    <p class="labelText" ng-bind="data.banking.bank[1].name"></p>
+                    <div class="fieldHolder">
+                        <p>Savings - {{data.banking.bank[1].balance | currency}}</p>
+                    </div>
+                </div>
+            </fa-surface>
+        </fa-view>
+    </fa-modifier>
+    <fa-modifier fa-origin="[0,-.4]">
+        <fa-view>
+            <fa-surface fa-tap="select()" class="settingBackground">
+                <div class="form-container">
+                    <p class="labelText" ng-bind="data.banking.bank[2].name"></p>
+                    <div class="fieldHolder">
+                        <p>Debt - {{data.banking.bank[2].balance | currency}}</p>
+                    </div>
+                </div>
+            </fa-surface>
+        </fa-view>
+    </fa-modifier>
 </fa-modifier>
