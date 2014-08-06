@@ -1,7 +1,6 @@
-<fa-modifier fa-align="[0,0]">
-<fa-modifier fa-align='[0,.085]'>
+<fa-modifier fa-align='[0,.077]'>
     <fa-scroll-view fa-pipe-from="eventHandler" fa-options="scroller">
-	    <fa-modifier fa-size="[undefined,240]" fa-align='[0,.03]'>
+	    <fa-modifier fa-size="[undefined,240]">
             <fa-surface fa-index="0" fa-pipe-to="eventHandler" class="cashContainer">
             <div class="centerg">
 
@@ -38,10 +37,10 @@
     </fa-scroll-view>
 </fa-modifier>
 
-<fa-modifier fa-size="[undefined, 65]" fa-align="[0,0]" fa-translate="[0,0,0]">
+<fa-modifier fa-size="[undefined, 50]" fa-translate="[0,0,0]">
     <fa-surface fa-background-color="'#fff'"></fa-surface>
         <fa-grid-layout fa-options='{dimensions: [3,1]}'>
-            <fa-modifier fa-align="[.2,.5]" fa-scale="[1, 1]">
+            <fa-modifier fa-align="[.2,.3]" fa-scale="[1, 1]">
                 <fa-surface fa-size="[45, 45]"  fa-tap="menu()">
                     <img src="images/hamburger.png" class="hamburgerIcon"/>
                 </fa-surface>
@@ -51,7 +50,7 @@
                     <p class="pageTitle">Affordably</p>
                 </fa-surface>
             </fa-modifier>
-            <fa-modifier fa-align="[.6,.5]" fa-scale="[1, 1]">
+            <fa-modifier fa-align="[.6,.3]" fa-scale="[1, 1]">
                 <fa-surface fa-size="[45, 45]" fa-tap="banks()">
                     <img src="images/plus.png" class="hamburgerIcon"/>
                 </fa-surface>
@@ -59,7 +58,3 @@
         </fa-grid-layout>
 </fa-modifier>
 <ui-view/>
-<fa-modifier fa-translate="[0,0,3]">
-    <fa-surface fa-background-color="'#fff'" fa-size="[undefined,18]"></fa-surface>
-</fa-modifier>
-</fa-modifier>

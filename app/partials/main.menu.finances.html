@@ -1,25 +1,25 @@
-<fa-modifier fa-translate="getTranslater" fa-translate="[0,0,1]" fa-size="[undefined,65]" fa-align="[1,0]">
-    <fa-surface fa-translate="[0,0,0]" fa-background-color="'#fff'"></fa-surface>
-        <fa-grid-layout fa-options='{dimensions: [3,1]}'>
-            <fa-modifier fa-translate="[0,0,1]" fa-align="[.2,.5]" fa-scale="[1, 1]">
-                <fa-surface fa-size="[45, 45]"  fa-tap="back()">
-                    <img src="images/hamburger.png" class="hamburgerIcon"/>
-                </fa-surface>
-            </fa-modifier>
-            <fa-modifier fa-translate="[0,0,1]" fa-align="[-.1, .4]" fa-size="[undefined, 50]">
-                <fa-surface>
-                    <p class="transactionTitle pageTitle">Finances</p>
-                </fa-surface>
-            </fa-modifier>
-            <fa-modifier fa-translate="[0,0,1]" fa-align="[.4,.5]" fa-scale="[1, 1]">
-                <fa-surface fa-size="[45, 45]" fa-tap="save(data.finances.money_leftover, data.finances.income, data.finances.monthly_fixed)">
-                    <p class="rightMenu">Save</p>
-                </fa-surface>
-            </fa-modifier>
-        </fa-grid-layout>
+<fa-modifier fa-translate="getTranslater" fa-translate="[0,0,1]" fa-size="[undefined,50]" fa-align="[1,0]">
+  <fa-modifier fa-translate="[0,0,1]">
+      <fa-surface fa-background-color="'#fff'" fa-size="[undefined,50]"></fa-surface>
+  </fa-modifier>
+  <fa-modifier fa-align="[0.07,0.3]" fa-translate="[0,0,2]" fa-scale="[1, 1]">
+      <fa-surface fa-size="[50, 50]" fa-tap="back()">
+          <img src="images/hamburger.png" class="hamburgerIcon"/>
+      </fa-surface>
+  </fa-modifier>
+  <fa-modifier fa-align="[.12, 0]" fa-size="[undefined, 50]" fa-translate="[0,0,2]">
+      <fa-surface>
+          <p class="transactionTitle pageTitle">Settings</p>
+      </fa-surface>
+  </fa-modifier>
+  <fa-modifier fa-translate="[0,0,1]" fa-align="[.8,.3]" fa-scale="[1, 1]">
+      <fa-surface fa-size="[45, 45]" fa-tap="save(data.settings.weekly, data.settings.daily, data.settings.phone_num)">
+          <p class="rightMenu">Save</p>
+      </fa-surface>
+  </fa-modifier>
 </fa-modifier>
 <fa-modifier fa-translate="getTranslating">
-    <fa-modifier fa-align="[0,1.077]" >
+    <fa-modifier fa-align="[0,1.05]" >
         <fa-view>
             <fa-surface class="settingBackground">
                 <div ng-bind="message"></div>

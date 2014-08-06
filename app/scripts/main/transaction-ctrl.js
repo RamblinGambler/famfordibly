@@ -42,7 +42,7 @@ Affordably.controller('TransactionCtrl', ['$scope', '$famous', '$famousPipe', 'm
 				scrollview.sequenceFrom(surfaces);
 
 				var inFrontModifier = new StateModifier({
-				    transform: Transform.translate(0, 0, 1)
+				    transform: Transform.translate(0, 0, 0)
 				});
 
 			    var opacityMod = new StateModifier({
@@ -84,7 +84,7 @@ Affordably.controller('TransactionCtrl', ['$scope', '$famous', '$famousPipe', 'm
 	    	    	}, 300);
 	    	    	$scope.fixed = false;
 	    	    	item.setContent('stuff');
-	    	    	item.deploy($scope.transaction);
+	    	    	// item.deploy($scope.transaction);
 
 				    }
 				    else if (e.position[0] === -160) {
@@ -179,7 +179,7 @@ Affordably.controller('TransactionCtrl', ['$scope', '$famous', '$famousPipe', 'm
             size: [undefined, 6],
             properties: {
                 backgroundColor: '#f4f8fb',
-                zIndex: '6'
+                zIndex: 6
             }
           });
 
@@ -376,7 +376,7 @@ Affordably.controller('TransactionCtrl', ['$scope', '$famous', '$famousPipe', 'm
 			                size: [undefined, 6],
 			                properties: {
 			                    backgroundColor: '#f4f8fb',
-			                    zIndex: '6'
+			                    zIndex: 6
 			                }
 			              });
 

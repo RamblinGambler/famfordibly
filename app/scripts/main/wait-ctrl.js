@@ -43,70 +43,70 @@ Affordably.controller('WaitCtrl', function ($scope, $famous, $state, $http, $sta
           job_id: $stateParams.job
         }
       }).success(function(data) {
-        tips = data.tips;
-        var active = JSON.parse(data.message);
-        switch (active.id) {
-          case 1:
-            Timer.clear(load);
-            Timer.clear(tipLoad);
-            $state.go('main');
-            break;
+      //   tips = data.tips;
+      //   var active = JSON.parse(data.message);
+      //   switch (active.id) {
+      //     case 1:
+      //       Timer.clear(load);
+      //       Timer.clear(tipLoad);
+      //       $state.go('main');
+      //       break;
 
-          case 2:
-            Timer.clear(load);
-            Timer.clear(tipLoad);
-            $state.go('main');
-            break;
+      //     case 2:
+      //       Timer.clear(load);
+      //       Timer.clear(tipLoad);
+      //       $state.go('main');
+      //       break;
 
-          case 3:
-            Timer.clear(load);
-            Timer.clear(tipLoad);
-            $state.go('main');
-            break;
+      //     case 3:
+      //       Timer.clear(load);
+      //       Timer.clear(tipLoad);
+      //       $state.go('main');
+      //       break;
 
-          case  4:
-            Timer.clear(load);
-            Timer.clear(tipLoad);
-            $state.go('main');
-            break;
+      //     case  4:
+      //       Timer.clear(load);
+      //       Timer.clear(tipLoad);
+      //       $state.go('main');
+      //       break;
 
-          case 6:
-            Timer.clear(load);
-            Timer.clear(tipLoad);
-            $state.go('main');
-            break;
+      //     case 6:
+      //       Timer.clear(load);
+      //       Timer.clear(tipLoad);
+      //       $state.go('main');
+      //       break;
 
-          case 7:
-            Timer.clear(load);
-            Timer.clear(tipLoad);
-            $state.go('main');
-            break;
+      //     case 7:
+      //       Timer.clear(load);
+      //       Timer.clear(tipLoad);
+      //       $state.go('main');
+      //       break;
 
-          case 8:
-            Timer.clear(load);
-            Timer.clear(tipLoad);
-            $state.go('main');
-            break;
+      //     case 8:
+      //       Timer.clear(load);
+      //       Timer.clear(tipLoad);
+      //       $state.go('main');
+      //       break;
 
-          case 9:
-            Timer.clear(load);
-            Timer.clear(tipLoad);
-            $state.go('main');
-            break;
+      //     case 9:
+      //       Timer.clear(load);
+      //       Timer.clear(tipLoad);
+      //       $state.go('main');
+      //       break;
 
-          case 10:
-            Timer.clear(load);
-            Timer.clear(tipLoad);
-            $state.go('main');
-            break;
+      //     case 10:
+      //       Timer.clear(load);
+      //       Timer.clear(tipLoad);
+      //       $state.go('main');
+      //       break;
 
-          default:
-            if(count > 120) {
-            Timer.clear(load);
-            Timer.clear(tipLoad);
-            $state.go('link', {id:$stateParams.id});
-            }
-        }
+      //     default:
+      //       if(count > 120) {
+      //       Timer.clear(load);
+      //       Timer.clear(tipLoad);
+      //       $state.go('link', {id:$stateParams.id});
+      //       }
+      //   }
       });
   };
   plan_progress();
