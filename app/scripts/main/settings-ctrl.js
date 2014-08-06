@@ -1,6 +1,6 @@
 'use strict';
 
-Affordably.controller('SettingsCtrl', function ($scope, $famous, $state, $window, $http) {
+Affordably.controller('SettingsCtrl', ['$scope', '$famous', '$state', '$window', '$http', 'mainData',function ($scope, $famous, $state, $window, $http, mainData) {
   var Transitionable = $famous['famous/transitions/Transitionable'];
 
   var translateT = new Transitionable([0,0,0]);
@@ -10,6 +10,10 @@ Affordably.controller('SettingsCtrl', function ($scope, $famous, $state, $window
   var translateTr = new Transitionable([0,0,0]);
   $scope.getTranslater = translateTr.get.bind(translateTr);
   translateTr.set([-window.innerWidth,0,0], {duration: 500, curve: 'easeOut'});
+
+  $scope.data = {
+    settings: mainData.data.settings
+  };
 
   $scope.back = function () {
       $scope.getTranslating = translateT.get.bind(translateT);
@@ -21,9 +25,7 @@ Affordably.controller('SettingsCtrl', function ($scope, $famous, $state, $window
   };
 
 
-  $scope.data = {
-    settings: {}
-  };
+
 
   $scope.logOut = function() {
     $http({
@@ -54,4 +56,4 @@ Affordably.controller('SettingsCtrl', function ($scope, $famous, $state, $window
     }).error(function() {
     });
   };
- });
+ }]);

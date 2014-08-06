@@ -20,7 +20,8 @@ Affordably.factory('mainData', [
         income: '',
         housing: '',
         banking: {},
-        monthly_fixed: ''
+        monthly_fixed: '',
+        finances: {}
       },
       isLoaded: false
     };
@@ -48,13 +49,18 @@ Affordably.factory('mainData', [
         }
         mainData.data.daily_spent = data.daily_spent;
         mainData.data.fixed_left = data.fixed_left;
-        mainData.data.money_leftover = data.money_leftover;
+        // mainData.data.money_leftover = data.money_leftover;
         mainData.data.settings = data.settings;
         mainData.data.saved = data.saved;
-        mainData.data.income = data.income;
+        // mainData.data.income = data.income;
         mainData.data.housing = data.housing;
         mainData.data.banking = data.banking;
-        mainData.data.monthly_fixed = data.monthly_fixed;
+        // mainData.data.monthly_fixed = data.monthly_fixed;
+        mainData.data.finances = {
+          money_leftover: data.money_leftover,
+          income: data.income,
+          monthly_fixed: data.monthly_fixed,
+        };
       }).error(function() {
         console.error('Failed to load index.');
       });

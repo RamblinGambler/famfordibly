@@ -12,8 +12,8 @@
                 </fa-surface>
             </fa-modifier>
             <fa-modifier fa-translate="[0,0,1]" fa-align="[.4,.5]" fa-scale="[1, 1]">
-                <fa-surface fa-size="[45, 45]" fa-tap="banks()">
-                    <p class="rightMenu" ng-click="save(data.settings.weekly, data.settings.daily, data.settings.phone_num)">Save</p>
+                <fa-surface fa-size="[45, 45]" fa-tap="save(data.settings.weekly, data.settings.daily, data.settings.phone_num)">
+                    <p class="rightMenu">Save</p>
                 </fa-surface>
             </fa-modifier>
         </fa-grid-layout>
@@ -25,7 +25,7 @@
                 <p class="labelText">Weekly Emails: Short emails that give you a view of the week</p>
                 <div class="fieldHolder">
                     <label class='settingLabel'>Enable Emails?</label>
-                    <input type="checkbox" class="settingCheckbox" ng-model="data.settings.weekly"/>
+                    <input type="checkbox" class="settingCheckbox" ng-model="data.settings.weekly" />
                 </div>
             </div>
             <br/>
