@@ -82,10 +82,12 @@ Affordably.controller('TransactionCtrl', ['$scope', '$famous', '$famousPipe', 'm
 	    		        duration: 400
 	    		      });
 	    	    	}, 300);
-	    	    	$scope.fixed = false;
-	    	    	item.setContent('stuff');
-	    	    	// item.deploy($scope.transaction);
-
+	    	    	var index = this.dragId * 2;
+	    	    	var container = surfaces[index];
+	    	    	console.log('index', index);
+	    	    	console.log('container', container);
+	    	    	var newItem = container._container.childNodes[0].firstChild;
+	    	    	newItem.src = "images/coin.png";
 				    }
 				    else if (e.position[0] === -160) {
 				    	var that = this;
@@ -95,7 +97,12 @@ Affordably.controller('TransactionCtrl', ['$scope', '$famous', '$famousPipe', 'm
 					        duration: 400
 					      });
 				    	}, 300);
-				    	transactions.outgoings[draggable.dragId].category_id = 1;
+				    	var index = this.dragId * 2;
+				    	var container = surfaces[index];
+				    	console.log('index', index);
+				    	console.log('container', container);
+				    	var newItem = container._container.childNodes[0].firstChild;
+				    	newItem.src = "images/box.png";
 				    } else {
 				    	this.setPosition([0,0,0], {
 				    	  curve: Easing.outBounce,
@@ -281,9 +288,12 @@ Affordably.controller('TransactionCtrl', ['$scope', '$famous', '$famousPipe', 'm
 			    	    		        duration: 400
 			    	    		      });
 			    	    	    	}, 300);
-			    	    	    	$scope.fixed = false;
-			    	    	    	item.setContent('stuff');
-			    	    	    	item.deploy($scope.transaction);
+			    	    	    	var index = this.dragId * 2;
+			    	    	    	var container = surfaces[index];
+			    	    	    	console.log('index', index);
+			    	    	    	console.log('container', container);
+			    	    	    	var newItem = container._container.childNodes[0].firstChild;
+			    	    	    	newItem.src = "images/coin.png";
 
 			    				    }
 			    				    else if (e.position[0] === -160) {
@@ -294,7 +304,12 @@ Affordably.controller('TransactionCtrl', ['$scope', '$famous', '$famousPipe', 'm
 			    					        duration: 400
 			    					      });
 			    				    	}, 300);
-			    				    	transactions.outgoings[draggable.dragId].category_id = 1;
+			    				    	var index = this.dragId * 2;
+			    				    	var container = surfaces[index];
+			    				    	console.log('index', index);
+			    				    	console.log('container', container);
+			    				    	var newItem = container._container.childNodes[0].firstChild;
+			    				    	newItem.src = "images/box.png";
 			    				    } else {
 			    				    	this.setPosition([0,0,0], {
 			    				    	  curve: Easing.outBounce,
