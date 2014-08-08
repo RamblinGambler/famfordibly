@@ -9,6 +9,7 @@ Affordably.controller('InstitutionSelectCtrl', function ($scope, $famous, $state
     var institutiondata;
     var data = institutions.query();
 
+    $scope.spin = false;
     data.$promise.then(function(data) {
     institutiondata = data;
 
@@ -19,6 +20,7 @@ Affordably.controller('InstitutionSelectCtrl', function ($scope, $famous, $state
     var f = new Fuse(institutiondata, options);
 
     $scope.select = function(bank) {
+      $scope.spin = false;
       translateTrans.set([0,0,0], {duration: 500, curve: 'easeOut'}, function() {
         $state.go('link', {id: bank.intuit_inst_id});
       });

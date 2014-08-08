@@ -9,7 +9,7 @@
   </fa-modifier>
   <fa-modifier fa-align="[.12, 0]" fa-size="[undefined, 50]" fa-translate="[0,0,2]">
       <fa-surface>
-          <p class="transactionTitle pageTitle">Settings</p>
+          <p class="transactionTitle pageTitle">Finances</p>
       </fa-surface>
   </fa-modifier>
   <fa-modifier fa-translate="[0,0,1]" fa-align="[.8,.3]" fa-scale="[1, 1]">
@@ -22,9 +22,12 @@
     <fa-modifier fa-align="[0,1.015]" >
         <fa-view>
             <fa-surface class="settingBackground">
-                <div ng-bind="message"></div>
+
+                <div flash-alert="error" active-class="in" class="alert fade">
+                    <span class="alert-message alert-span" ng-class="{save: warn}" ng-bind="message"></span>
+                </div>
                 <div class="form-container">
-                    <p class="labelText">Money left in your account at the end of the month?</p>
+                    <p class="labelText">How much do you want left in your account at the end of this month?</p>
                     <div class="fieldHolder">
                         $<input type="text" ng-model="data.finances.money_leftover" class="financeForm"/>
                     </div>
@@ -32,7 +35,7 @@
                 <div class="form-container">
                     <p class="labelText">Monthly income after taxes?</p>
                     <div class="fieldHolder">
-                        $<input type="text" ng-model="data.finances.income" class="financeForm"/>
+                        $<input type="text" ng-model="data.income" class="financeForm"/>
                     </div>
                 </div>
                 <div class="form-container">

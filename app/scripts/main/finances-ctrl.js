@@ -13,8 +13,10 @@ Affordably.controller('FinancesCtrl', ['$scope', '$famous', '$state', '$filter',
     translateTr.set([-window.innerWidth,0,0], {duration: 500, curve: 'easeOut'});
 
   $scope.data = {
-    finances: mainData.data.finances
+    finances: mainData.data.finances,
+    income: Math.round(mainData.data.finances.income)
   };
+
   console.log($scope.data);
 
   $scope.back = function () {
@@ -37,6 +39,7 @@ Affordably.controller('FinancesCtrl', ['$scope', '$famous', '$state', '$filter',
         auth_token: $window.sessionStorage.token
       }
     }).success(function() {
+      $scope.warn = true
       $scope.message = 'Your finances have been saved';
     }).error(function() {
     });

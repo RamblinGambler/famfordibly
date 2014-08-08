@@ -4,7 +4,6 @@ Affordably.controller('TransactionCtrl', ['$scope', '$famous', '$famousPipe', 'm
 	var View     = require('famous/core/View');
 	var EventHandler     = require('famous/core/EventHandler');
 	var Surface    = require('famous/core/Surface');
-	// var Scrollview = require('famous/views/Scrollview');
   var Scroller = require('famous/views/Scroller');
 	var RenderNode = require('famous/core/RenderNode');
 	var Transform = require('famous/core/Transform');
@@ -15,10 +14,12 @@ Affordably.controller('TransactionCtrl', ['$scope', '$famous', '$famousPipe', 'm
 	$scope.transaction = new View();
   $scope.eventHandler = new EventHandler();
 
-	var transactions = {};
-  transactions.outgoings = mainData.data.outgoings;
-  transactions.incomings = mainData.data.incomings;
+	var transo = {};
+	var transi = {};
+  transo = mainData.data.outgoings;
+  transi = mainData.data.incomings;
 	var surfaces = [];
+	var trans = [];
 
 	var capitaliseFirstLetter = function(string) {
 	  return string.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
@@ -28,15 +29,22 @@ Affordably.controller('TransactionCtrl', ['$scope', '$famous', '$famousPipe', 'm
 	require(['famous/modifiers/Draggable'], function(Draggable) {
 		require(['famous-infinitescroll/infiniteScrollView'], function(InfiniteScrollView) {
 			require(['famous/modifiers/StateModifier'], function(StateModifier) {
+			var scrollview = new InfiniteScrollView(
+				{
+				  margin: 750,
+				  offset: 1000
+				}
+			);
 
 
-
-				var scrollview = new InfiniteScrollView(
-					{
-					  margin: 1000,
-					  offset: 1500
-					}
-				);
+				$scope.$on('changeTrans', function(event, data) {
+					if (data.type == "outgoing") {
+						surfaces = [];
+						trans = transo;
+					} else if (data.type == "incoming") {
+						surfaces = [];
+						trans = transi;
+					};
 
 
 				scrollview.sequenceFrom(surfaces);
@@ -115,13 +123,14 @@ Affordably.controller('TransactionCtrl', ['$scope', '$famous', '$famousPipe', 'm
 				  var date;
 				  var day;
 				  var month;
-				  var name = transactions.outgoings[i].name;
+				  console.log("Tranny", trans);
+				  var name = trans[i].name;
 				  name = capitaliseFirstLetter(name);
 				  if(name.length > 20) {name = name.substring(0,20);}
 
-				  var amount = transactions.outgoings[i].amount.toFixed(2);
-				  if(transactions.outgoings[i].posted_date !== null) {
-				  	date = new Date(transactions.outgoings[i].posted_date);
+				  var amount = trans[i].amount.toFixed(2);
+				  if(trans[i].posted_date !== null) {
+				  	date = new Date(trans[i].posted_date);
 				  	day = date.getDate();
 				  	month = monthNames[date.getMonth()];
 				  } else {
@@ -142,9 +151,9 @@ Affordably.controller('TransactionCtrl', ['$scope', '$famous', '$famousPipe', 'm
 				    }
 				  });
 
-				  if(transactions.outgoings[i].category_id === 1) {
+				  if(trans[i].category_id === 1) {
 				  	var image = 'images/coin.png';
-				  } else if(transactions.outgoings[i].category_id === 2) {
+				  } else if(trans[i].category_id === 2) {
 				  	var image = 'images/box.png';
 				  } else {
 				  	var image = "";
@@ -322,13 +331,13 @@ Affordably.controller('TransactionCtrl', ['$scope', '$famous', '$famousPipe', 'm
 			    				  var date;
 			    				  var day;
 			    				  var month;
-			    				  var name = transactions.outgoings[i].name;
+			    				  var name = trans[i].name;
 			    				  name = capitaliseFirstLetter(name);
 			    				  if(name.length > 20) {name = name.substring(0,20);}
 
-			    				  var amount = transactions.outgoings[i].amount.toFixed(2);
-			    				  if(transactions.outgoings[i].posted_date !== null) {
-			    				  	date = new Date(transactions.outgoings[i].posted_date);
+			    				  var amount = trans[i].amount.toFixed(2);
+			    				  if(trans[i].posted_date !== null) {
+			    				  	date = new Date(trans[i].posted_date);
 			    				  	day = date.getDate();
 			    				  	month = monthNames[date.getMonth()];
 			    				  } else {
@@ -349,10 +358,10 @@ Affordably.controller('TransactionCtrl', ['$scope', '$famous', '$famousPipe', 'm
 			    				    }
 			    				  });
 
-			    				  if(transactions.outgoings[i].category_id === 1) {
+			    				  if(trans[i].category_id === 1) {
 			    				  	var image = 'images/coin.png';
 			    				  	item.setContent('<img class="transactionIcon" src="' + image + '"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
-			    				  } else if(transactions.outgoings[i].category_id === 2) {
+			    				  } else if(trans[i].category_id === 2) {
 			    				  	var image = 'images/box.png';
 			    					  item.setContent('<img class="transactionIcon" src="' + image +'" ng-show="fixed"/><div class="transactionNameDate"><h3 class="nameText">' + name + '</h3></div><div class="transactionPrice"><h3>$' + amount + '</h3></div><br><p class="dateText">' + month + ' ' + day + '</p>');
 			    				  };
@@ -466,6 +475,8 @@ Affordably.controller('TransactionCtrl', ['$scope', '$famous', '$famousPipe', 'm
 			      scrollview.infiniteScrollDisabled = false;
 			    }.bind(this), 1000);
 			}.bind(this));
+			// });
+			});
 			});
 			// });
 		});

@@ -8,18 +8,20 @@ var signUp = Affordably.controller('SignUpCtrl', function ($scope, $famous, $sta
     $scope.success = translateTrans.get.bind(translateTrans);
 
     $scope.spin = false;
-    // $scope.scroll = function () {
-    //   translateTrans.set([0,-167,0], {duration: 500, curve: 'easeOut'});
-    // };
     var firstPass;
     $scope.check = function(password) {
-      if(password.length < 8) {
-        $scope.message = 'Passwords must be at least 8 characters long';
+      if(!password) {
+        $scope.message = '';
+        $scope.warn = false;
+      } else if (password.length < 8) {
+        $scope.message = 'Your password is too short';
+        $scope.warn = true;
       } else {
         $scope.message = '';
-      }
+        $scope.warn = false;
+      };
       firstPass = password
-    }
+    };
 
     $scope.checkConfirm = function(password) {
       if (password != firstPass) {

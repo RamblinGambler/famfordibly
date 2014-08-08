@@ -12,6 +12,10 @@ Affordably.controller('TransactionsCtrl', function ($scope, $famous, $state) {
   $scope.getTranslatinger = translateTra.get.bind(translateTra);
   translateTra.set([-window.innerWidth,0,0], {duration: 500, curve: 'easeOut'});
 
+  $scope.change = function(type) {
+    $scope.$broadcast('changeTrans', {type: type})
+  }
+
   $scope.back = function (deferred) {
     $scope.getTranslating = translateT.get.bind(translateT);
     $scope.$emit('back');

@@ -7,6 +7,14 @@ body {
     border: solid 1px black;
 }*/
 
+.flash {
+    background-color: #e9a260;
+}
+
+.save {
+    background-color: #4bbc7a;
+}
+
 .image {
     background-image: url(images/box.png);
     height:100px;
@@ -73,7 +81,8 @@ p{
 .alert-span{
     display: inline-block;
     margin-top: 15px;
-    float: left;
+    /*float: left;*/
+    text-align: center;
     width: 100%;
 }
 
@@ -104,9 +113,9 @@ p{
 }
 
 .signForm{
-    margin-top: 15%;
+    /*margin-top: 0%;*/
     width: 70% !important;
-    margin-top: 10%;
+    /*margin-top: 10%;*/
     text-align: left;
 }
 
@@ -203,7 +212,7 @@ p{
 /*SIGN IN*/
 
 .signIn{
-    margin-top: 0%;
+    margin-top: -7%;
     display: inline-block;
     width: 100%;
 }
@@ -351,7 +360,7 @@ button {
 }
 
 #noAccountMessage{
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 0px;
     padding-bottom: 0px;
     font-size: 0.8em;

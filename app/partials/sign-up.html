@@ -1,16 +1,14 @@
-<!-- <fa-modifier fa-translate="[0,0,3]" fa-align="[0,0]">
-    <fa-surface fa-background-color="'red'" fa-size="[undefined,18]"></fa-surface>
-</fa-modifier> -->
 <fa-modifier fa-size="[undefined, undefined]" fa-translate="success">
     <fa-surface fa-background-color="'#ffffff'"></fa-surface>
 </fa-modifier>
 <fa-modifier fa-size="[undefined, 300]" fa-origin="[0,.0]" fa-translate="success">
-        <fa-surface>
+    <fa-scroll-view fa-pipe-from="eventHandler">
+        <fa-surface fa-pipe-to="eventHandler">
             <div class="sign">
                 <h1 class="logo">Affordably</h1>
                 <h5 class="title">Ready to start saving?</h5>
                 <div flash-alert="error" active-class="in" class="alert fade">
-                    <span class="alert-message">{{flash.message}}</span>
+                    <span class="alert-message alert-span" ng-class="{flash: warn}" ng-bind="message">{{flash.message}}</span>
                 </div>
                 <form class="signIn signForm">
                     <div class="email linkAccountContainer">
@@ -35,7 +33,6 @@
                     <label for="">By checking this box you agree to our <a href="#">Terms of Service</a>.</label>
                     <button type="submit" ng-disabled="!tos" ng-click="submit(email, password)" class="signUpButton">Sign Up</button>
                 </form>
-                <div ng-bind="message"></div>
                 <p id="noAccountMessage">Already have an account?</p>
                 <h4 id="signUpLink" ng-click="signIn()"><a ui-sref="signIn">Sign In</a></h4>
             </div>
@@ -43,4 +40,5 @@
         <fa-surface ng-show="spin">
             <span us-spinner></span>
         </fa-surface>
+    </fa-scrollview>
 </fa-modifier>

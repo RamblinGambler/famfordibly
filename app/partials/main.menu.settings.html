@@ -21,6 +21,9 @@
 <fa-modifier fa-translate="getTranslating" fa-align="[0,1.015]">
     <fa-view>
         <fa-surface fa-tap="select()" class="settingBackground">
+            <div flash-alert="error" active-class="in" class="alert fade">
+                <span class="alert-message alert-span" ng-class="{save: warn}" ng-bind="message"></span>
+            </div>
             <div class="form-container">
                 <p class="labelText">Weekly Emails: Short emails that give you a view of the week</p>
                 <div class="fieldHolder">
@@ -30,7 +33,7 @@
             </div>
             <br/>
             <div class="form-container">
-                <p class="labelText">Daily Texts: Texts that arrive at an hour of your choosing letting you know your remaining daily cash</p>
+                <p class="labelText">Daily Texts: Texts that arrive every morning letting you know your remaining daily cash</p>
                 <div class="fieldHolder">
                     <label class='settingLabel'>Enable Texts?</label>
                     <input type="checkbox" class="settingCheckbox" ng-model="data.settings.daily"/>

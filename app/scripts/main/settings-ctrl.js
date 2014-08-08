@@ -52,6 +52,7 @@ Affordably.controller('SettingsCtrl', ['$scope', '$famous', '$state', '$window',
         auth_token: $window.sessionStorage.token
       }
     }).success(function() {
+      $scope.warn = true;
       $scope.message = 'Your settings have been saved';
     }).error(function() {
     });

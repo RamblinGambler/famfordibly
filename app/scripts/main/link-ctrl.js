@@ -6,7 +6,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
   $scope.success = translateTrans.get.bind(translateTrans);
 
   $scope.inst = $stateParams.id;
-  $scope.spin = false;
+  $scope.spin = true;
 
   var fields = [];
   $http({
@@ -19,6 +19,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
       if (data.result.institution_detail.keys.key[i].display_flag === 'true') {
         fields.push(data.result.institution_detail.keys.key[i]);
       }
+    $scope.spin = false;
     }
     $scope.fields = fields;
   }).error(function() {
