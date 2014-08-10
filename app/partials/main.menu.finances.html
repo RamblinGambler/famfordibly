@@ -2,7 +2,7 @@
   <fa-modifier fa-translate="[0,0,1]">
       <fa-surface fa-background-color="'#fff'" fa-size="[undefined,50]"></fa-surface>
   </fa-modifier>
-  <fa-modifier fa-align="[0.07,0.3]" fa-translate="[0,0,2]" fa-scale="[1, 1]">
+  <fa-modifier fa-align="[0.07,0.3]" fa-translate="[0,0,3]" fa-scale="[1, 1]">
       <fa-surface fa-size="[50, 50]" fa-tap="back()">
           <img src="images/hamburger.png" class="hamburgerIcon"/>
       </fa-surface>
@@ -12,9 +12,9 @@
           <p class="transactionTitle pageTitle">Finances</p>
       </fa-surface>
   </fa-modifier>
-  <fa-modifier fa-translate="[0,0,1]" fa-align="[.8,.3]" fa-scale="[1, 1]">
-      <fa-surface fa-size="[45, 45]" fa-tap="save(data.settings.weekly, data.settings.daily, data.settings.phone_num)">
-          <p class="rightMenu">Save</p>
+  <fa-modifier fa-translate="[0,0,3]" fa-align="[.8,.3]" fa-scale="[1, 1]">
+      <fa-surface fa-size="[45, 45]" fa-tap="finSave(data.settings.weekly, data.settings.daily, data.settings.phone_num)">
+          <p class="rightMenu" ng-click="finSave(data.settings.weekly, data.settings.daily, data.settings.phone_num)">Save</p>
       </fa-surface>
   </fa-modifier>
 </fa-modifier>
@@ -22,9 +22,8 @@
     <fa-modifier fa-align="[0,1.015]" >
         <fa-view>
             <fa-surface class="settingBackground">
-
                 <div flash-alert="error" active-class="in" class="alert fade">
-                    <span class="alert-message alert-span" ng-class="{save: warn}" ng-bind="message"></span>
+                    <span class="alert-message alert-span menu-flash" ng-bind="finMessage"></span>
                 </div>
                 <div class="form-container">
                     <p class="labelText">How much do you want left in your account at the end of this month?</p>

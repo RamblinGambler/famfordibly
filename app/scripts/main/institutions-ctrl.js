@@ -45,7 +45,7 @@ Affordably.controller('InstitutionsCtrl', function ($scope, $famous, $state, $ht
   });
 
   $scope.select = function(bank) {
-    $state.go('link', {id: bank.intuit_inst_id});
+    $state.go('link', {id: bank.intuit_inst_id, main: true});
   };
 
 

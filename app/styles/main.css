@@ -78,6 +78,10 @@ p{
     height: 40px;
 }
 
+.menu-flash{
+    margin-top: 20px;
+}
+
 .alert-span{
     display: inline-block;
     margin-top: 15px;

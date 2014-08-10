@@ -10,10 +10,12 @@ Affordably.controller('SettingsCtrl', ['$scope', '$famous', '$state', '$window',
   var translateTr = new Transitionable([0,0,0]);
   $scope.getTranslater = translateTr.get.bind(translateTr);
   translateTr.set([-window.innerWidth,0,0], {duration: 500, curve: 'easeOut'});
-
+console.log("working");
   $scope.data = {
     settings: mainData.data.settings
   };
+
+  $scope.setMessage = '';
 
   $scope.back = function () {
       $scope.getTranslating = translateT.get.bind(translateT);
@@ -40,8 +42,10 @@ Affordably.controller('SettingsCtrl', ['$scope', '$famous', '$state', '$window',
     });
   };
 
-  $scope.save = function(weekly, daily, phone) {
 
+
+  $scope.setSave = function(weekly, daily, phone) {
+    console.log(weekly, daily, phone);
     $http({
       method: 'PUT',
       url: 'https://guavaplan-staging.herokuapp.com/api/v1/settings',
@@ -52,8 +56,11 @@ Affordably.controller('SettingsCtrl', ['$scope', '$famous', '$state', '$window',
         auth_token: $window.sessionStorage.token
       }
     }).success(function() {
+    // $scope.$apply(function() {
+        $scope.setSave;
+    // });
       $scope.warn = true;
-      $scope.message = 'Your settings have been saved';
+      $scope.setMessage = 'Your settings have been saved';
     }).error(function() {
     });
   };

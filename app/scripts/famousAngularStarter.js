@@ -30,7 +30,7 @@ Affordably.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
     controller: 'InstitutionSelectCtrl'
   })
   .state('link', {
-    url: '/link/:id',
+    url: '/link/:id/:main',
     templateUrl: 'partials/account-link.html',
     controller: 'LinkCtrl'
   })

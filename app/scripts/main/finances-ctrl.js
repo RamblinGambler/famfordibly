@@ -5,6 +5,7 @@ Affordably.controller('FinancesCtrl', ['$scope', '$famous', '$state', '$filter',
 
   var translateT = new Transitionable([0,0,0]);
   var translateTr = new Transitionable([0,0,0]);
+  $scope.finMessage = '';
 
   $scope.getTranslating = translateT.get.bind(translateT);
     translateT.set([0,-window.innerHeight+20,1], {duration: 500, curve: 'easeOut'});
@@ -28,7 +29,7 @@ Affordably.controller('FinancesCtrl', ['$scope', '$famous', '$state', '$filter',
       });
   };
 
-  $scope.save = function(leftover, income, fixed) {
+  $scope.finSave = function(leftover, income, fixed) {
     $http({
       method: 'PUT',
       url: 'https://guavaplan-staging.herokuapp.com/api/v1/finances',
@@ -40,7 +41,7 @@ Affordably.controller('FinancesCtrl', ['$scope', '$famous', '$state', '$filter',
       }
     }).success(function() {
       $scope.warn = true
-      $scope.message = 'Your finances have been saved';
+      $scope.finMessage = 'Your finances have been saved';
     }).error(function() {
     });
   };

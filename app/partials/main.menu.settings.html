@@ -2,7 +2,7 @@
     <fa-modifier fa-translate="[0,0,1]">
         <fa-surface fa-background-color="'#fff'" fa-size="[undefined,50]"></fa-surface>
     </fa-modifier>
-    <fa-modifier fa-align="[0.07,0.3]" fa-translate="[0,0,2]" fa-scale="[1, 1]">
+    <fa-modifier fa-align="[0.07,0.3]" fa-translate="[0,0,3]" fa-scale="[1, 1]">
         <fa-surface fa-size="[50, 50]" fa-tap="back()">
             <img src="images/hamburger.png" class="hamburgerIcon"/>
         </fa-surface>
@@ -12,20 +12,20 @@
             <p class="transactionTitle pageTitle">Settings</p>
         </fa-surface>
     </fa-modifier>
-    <fa-modifier fa-translate="[0,0,1]" fa-align="[.8,.3]" fa-scale="[1, 1]">
-        <fa-surface fa-size="[45, 45]" fa-tap="save(data.settings.weekly, data.settings.daily, data.settings.phone_num)">
-            <p class="rightMenu">Save</p>
+    <fa-modifier fa-translate="[0,0,3]" fa-align="[.8,.3]" fa-scale="[1, 1]">
+        <fa-surface fa-size="[45, 45]" fa-tap="setSave(data.settings.weekly, data.settings.daily, data.settings.phone_num)">
+            <p class="rightMenu" ng-click="setSave(data.settings.weekly, data.settings.daily, data.settings.phone_num)">Save</p>
         </fa-surface>
     </fa-modifier>
 </fa-modifier>
-<fa-modifier fa-translate="getTranslating" fa-align="[0,1.015]">
+<fa-modifier fa-translate="getTranslating" fa-align="[0,1.02]">
     <fa-view>
         <fa-surface fa-tap="select()" class="settingBackground">
             <div flash-alert="error" active-class="in" class="alert fade">
-                <span class="alert-message alert-span" ng-class="{save: warn}" ng-bind="message"></span>
+                <span class="alert-message alert-span menu-flash" ng-bind="setMessage"></span>
             </div>
             <div class="form-container">
-                <p class="labelText">Weekly Emails: Short emails that give you a view of the week</p>
+                <p class="labelText">Weekly Emails: Emails that give you insight into your weekly spending</p>
                 <div class="fieldHolder">
                     <label class='settingLabel'>Enable Emails?</label>
                     <input type="checkbox" class="settingCheckbox" ng-model="data.settings.weekly" />
@@ -33,7 +33,7 @@
             </div>
             <br/>
             <div class="form-container">
-                <p class="labelText">Daily Texts: Texts that arrive every morning letting you know your remaining daily cash</p>
+                <p class="labelText">Daily Texts: Texts that arrive every evening around 5pm CST letting you know your remaining daily cash</p>
                 <div class="fieldHolder">
                     <label class='settingLabel'>Enable Texts?</label>
                     <input type="checkbox" class="settingCheckbox" ng-model="data.settings.daily"/>
@@ -59,7 +59,6 @@
                     <input type="text" placeholder="2AM" class="financeForm" ng-model="data.settings.not_hour" ng-change="notTime(data.settings.not_hour)"/>
                 </div> -->
             </div>
-            <div ng-bind="message"></div>
         </fa-surface>
     </fa-view>
 </fa-modifier>

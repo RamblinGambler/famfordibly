@@ -14,6 +14,7 @@ Affordably.controller('LinkCtrl', function ($scope, $famous, $state, $http, $win
     url: 'https://guavaplan-staging.herokuapp.com/api/v1/institution',
     params: {bank: $stateParams.id, auth_token: $window.sessionStorage.token}
   }).success(function(data) {
+    console.log(data);
     $scope.inst = data.result.institution_detail;
     for(var i = 0;i < data.result.institution_detail.keys.key.length; i++) {
       if (data.result.institution_detail.keys.key[i].display_flag === 'true') {
